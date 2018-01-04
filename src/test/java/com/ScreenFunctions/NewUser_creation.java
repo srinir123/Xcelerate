@@ -70,13 +70,13 @@ public class NewUser_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")
 	public static WebElement Btnt_Yes;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='bzreddy']")
+	@FindBy(how=How.XPATH,using="//*[text()='siri189']")
 	public static WebElement Click_NUser;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSetupUser']")
 	public static WebElement Click_MUser;
 	
-	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Create')]")
+	@FindBy(how=How.XPATH,using="(//*[contains(text(), 'Create')])")
 	public static WebElement Create_NUser;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='RoleAndPermissionsTab']")
@@ -88,84 +88,129 @@ public class NewUser_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnOpen']")
 	public static WebElement Btnt_Open;
 	
-	//@FindBy(how=How.XPATH,using="//*[@id='RoleAndPermissionsTab']")
-	//public static WebElement Btnt_RolesP;
-	
-	//@FindBy(how=How.XPATH,using="//*[@id='btnSaveAsNew']")
-	//public static WebElement Btnt_SaveANew;
+
 	
 	
 
 	public static <performDBLCLICK> void NewUser_creation() throws Exception
 	{   
-		waitForElement(Click_EntitySearch);
+		waitForElement1(Click_EntitySearch);
 		if(Click_EntitySearch.isDisplayed())
 		{
 			System.out.println("Clicking on entity search");
 			
 			Actions acc=new Actions(driver);
 			
+			
 			acc.moveToElement(Click_EntitySearch).click(Click_EntitySearch).build().perform();
 			Click_EntitySearch.click();
         }
+
 		waitForElement(Edi_EntitySearch);
 		
-		Click_EntitySearch.click();
+		//Click_EntitySearch.click();
 		waitForElement(Edi_EntitySearch);
 		Edi_EntitySearch.sendKeys("Insure group managers");
+		waitForElement(Btn_Search);
 		Btn_Search.click();
 		waitForElement(Click_SearchResults);
 		Click_SearchResults.click();
+		waitForElement(Btn_Open);
 		Btn_Open.click();
-		waitForElement(Click_Contactppl);
-//		waitForElement(Click_Contactppl);
-//		if(Click_Contactppl.isDisplayed())
-//		{
-//			System.out.println("Clicking on entity search");
-//			
-//			Actions acc=new Actions(driver);
-//			
-//			acc.moveToElement(Click_Contactppl).click(Click_Contactppl).build().perform();
-//			Click_Contactppl.click();
-//        }
-		Click_Contactppl.click();
-		waitForElement(Click_AddNewContact);
-		Click_AddNewContact.click();
-		//waitForElement(Dropd_Title);
-	//	waitUntilClickable(Dropd_Title);
-      Thread.sleep(11000);
-        Dropd_Title.sendKeys("Mrs");
-		Edi_FirstName.sendKeys("bzreddy");
-        Edi_Surname.sendKeys("z");
-	    Edi_Designation.sendKeys("Tester");
-	    Edi_IDNumber.sendKeys("S789456");
-	    Edi_Telephone.sendKeys("0113180332");
-        Edi_MobilePhone.sendKeys("0843353667");
-        Edi_Fax.sendKeys("0112532363");
-        Edi_EMailAddress.sendKeys("srinivas@repalas.com");
-	    Dropd_Messanger.sendKeys("MSN");
-	    Dropd_PositionID.sendKeys("Owner");
-        Dropd_EntityAddressID.sendKeys("Physical Address, IOM HOUSE, 6 ST GILESs, RANDBURG, RANDBURG, Gauteng");
+		waitForElement1(Click_Contactppl);
+		if(Click_Contactppl.isDisplayed())
+		{
+			System.out.println("Clicking on Contact people");
+			
+			Actions acc=new Actions(driver);
+			
+			acc.moveToElement(Click_Contactppl).click(Click_Contactppl).build().perform();
+			Click_Contactppl.click();
+        }
+		click_element1(Click_AddNewContact);
+        Thread.sleep(5000);
+
+		waitForElement(Dropd_Title);
+	
+        String Title=getData("Title","NewUser_creation",1);
+
+        Dropd_Title.sendKeys(Title);
+        LogEvent("pass","Data entered sucessfully for the field Title");
+        
+        String FirstName=getData("FirstName","NewUser_creation",1);
+
+		Edi_FirstName.sendKeys(FirstName);
+
+        String Surname=getData("Surname","NewUser_creation",1);
+
+		Edi_Surname.sendKeys(Surname);
+
+        String Designation=getData("Designation","NewUser_creation",1);
+
+		Edi_Designation.sendKeys(Designation);
+
+        String IDNumber=getData("IDNumber","NewUser_creation",1);
+
+		Edi_IDNumber.sendKeys(IDNumber);
+
+        String Telephone=getData("Telephone","NewUser_creation",1);
+
+		Edi_Telephone.sendKeys(Telephone);
+
+        String MobilePhone=getData("MobilePhone","NewUser_creation",1);
+
+		Edi_MobilePhone.sendKeys(MobilePhone);
+
+        String Fax=getData("Fax","NewUser_creation",1);
+
+		Edi_Fax.sendKeys(Fax);
+
+        String EMailAddress=getData("EMailAddress","NewUser_creation",1);
+
+		Edi_EMailAddress.sendKeys(EMailAddress);
+
+        String Messanger=getData("Messanger","NewUser_creation",1);
+
+		Dropd_Messanger.sendKeys(Messanger);
+		
+        String PositionID=getData("PositionID","NewUser_creation",1);
+
+	    Dropd_PositionID.sendKeys(PositionID);
+
+        String EntityAddressID=getData("EntityAddressID","NewUser_creation",1);
+
+	    Dropd_EntityAddressID.sendKeys(EntityAddressID);
 	    Btnt_Save.click();
 	    waitForElement(Btnt_Yes);
 	    Btnt_Yes.click();
-	    waitForElement(Click_NUser);
-		//performDBLCLICK(Click_NUser);
+	    waitForElement1(Click_NUser);
 		performDBLCLICK(Click_NUser);
+		
 		waitForElement(Click_MUser);
 		Click_MUser.click();
-		waitForElement(Create_NUser);;
-		Create_NUser.click();
-		waitForElement(Btnt_RolesP);;
-	    Btnt_RolesP.click();
-	    waitForElement(Btnt_SaveANew);
-	    Btnt_SaveANew.click();
-	    waitForElement(Btnt_Open);
-		Btnt_Open.click();
-
 		
+		waitForElement(Create_NUser);
+		Create_NUser.click();
+		
+		waitForElement1(Btnt_RolesP);
+		//Btnt_RolesP.click();
+		click_element1(Btnt_RolesP);
+		 //waitForElement1(Btnt_SaveANew);
+		 //click_element1(Btnt_SaveANew);
+		 //Btnt_SaveANew.click();
+		
+		waitForElement(Btnt_SaveANew);
+		 click_element1(Btnt_SaveANew);
+		 //Btnt_SaveANew.click();
+		 
+		 waitForElement(Btnt_Open);
+		 Btnt_Open.click();
+		 
+	    
+              
+		driver.quit();
 	}
-	
+
 
 }
 	 

@@ -22,29 +22,42 @@ public class PaymentImport extends GenericMethods{
 
 	public static void PaymentImport() throws Exception 
 	{   waitForElement(Dropd_Agreement);
-		Dropd_Agreement.sendKeys("Annuals - ABC - ST FSP");
-		waitForElement(Dropd_BucketID);
-		Dropd_BucketID.sendKeys("2017-11-01 TO 2017-12-15");
-		waitForElement(Dropd_BucketID);
+	String Agreement_Name=getData("Agreement_Name","PaymentImport",1);
+
+    Dropd_Agreement.sendKeys("Agreement_Name");
+
+	waitForElement(Dropd_BucketID);
+	
+	String BucketID=getData("BucketID","PaymentImport",1);
+
+	Dropd_BucketID.sendKeys(BucketID);
+		waitForElement(btn_PmtImport);
 		btn_PmtImport.click();
 		waitForElement(btn_PmtImportFile);
 		btn_PmtImportFile.click();
 		Thread.sleep(2000);
-		Runtime.getRuntime().exec("UploadingPMTattachment.exe");
-		
-		
-		
-		
-			}
-
-//private static WebElement Dropd_Agreement() {
-	// TODO Auto-generated method stub
-	//return null;
-//}
-
-	
-	
-	
-
+		String[]cmd={"UploadingPMTattachment.exe","C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Desktop\\New folder\\Xcelerate specs\\Sample Transactions\\sunday\\Payments\\1 Payment file.csv"}; 
+		Process autoitprocess=Runtime.getRuntime().exec(cmd);
+        
+		int i =1;
+		while (!(i==0))
+		{
+        	i=autoitprocess.waitFor();
+		}
+	      autoitprocess.destroy();	
+		Thread.sleep(2000);
+        driver.quit();
 }
+		
+		
+		
+}
+
+
+
+	
+	
+	
+
+
 	

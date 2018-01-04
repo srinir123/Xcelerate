@@ -23,7 +23,7 @@ public class Dashboard extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnOpen']")
 	public static WebElement Btn_Open;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='collapse2']/div/ul/li[2]/ul/li[1]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Collection Period Balances']")
 	public static WebElement Click_CollPeriodBalances;
 	
 	
@@ -44,9 +44,11 @@ public class Dashboard extends GenericMethods{
 				acc.moveToElement(Click_EntitySearch).click(Click_EntitySearch).build().perform();
 				Click_EntitySearch.click();
 			}
-			
 			waitForElement(Edi_EntitySearch);
-			Edi_EntitySearch.sendKeys("ABC concepts");
+			
+			String Entity_Name=getData("Entity_Name","Dashboard",2);
+			Edi_EntitySearch.sendKeys(Entity_Name);
+			waitForElement(Btn_Search);
 			Btn_Search.click();
 			waitForElement(Click_SearchResults);
 			Click_SearchResults.click();

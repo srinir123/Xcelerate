@@ -17,6 +17,7 @@ public class Tc_06_NewEntityCreation extends GenericMethods{
 	NewEntity_creation nec=PageFactory.initElements(driver, NewEntity_creation.class);
 
 	lgn.launch_Application1();
+	Thread.sleep(16000);
 	nec.NewEntity_creation();
 
 		}

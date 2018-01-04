@@ -20,7 +20,7 @@ public class Tc_01_ManualcaptureCollection extends GenericMethods{
 		lgn.launch_Application();
 		db.EntitySearch(); 
 		cpb.CollPeriodBalances();
-
+		
 
 	}
 

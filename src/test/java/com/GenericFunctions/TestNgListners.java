@@ -13,7 +13,7 @@ import com.ReportGeneration.GenerateReports;
 
 public class TestNgListners implements ITestListener,IInvokedMethodListener {
 	
-	public  String crtClass ;
+	public  static String crtClass ;
 	
 
 	@Override
@@ -39,11 +39,14 @@ public class TestNgListners implements ITestListener,IInvokedMethodListener {
 		// TODO Auto-generated method stub
 		
 	}
-
+////////////////////////////////////////////////////////////////////////////////////////
 	@Override
 	public void onTestFailure(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("error occured");
+		GenerateReports.LogEvent("fail","Error occured unable to proceed further");
+		GenerateReports.closeTest();
+
 	}
 
 	@Override
@@ -57,7 +60,7 @@ public class TestNgListners implements ITestListener,IInvokedMethodListener {
 		// TODO Auto-generated method stub
 		System.out.println("Test starting");
 		crtClass=res.getInstanceName().substring(res.getInstanceName().lastIndexOf('.')+1);
-		
+		//System.out.println(crtClass);
 		GenerateReports.intializeTest(crtClass);
 		
 		
@@ -85,6 +88,7 @@ public class TestNgListners implements ITestListener,IInvokedMethodListener {
 		// TODO Auto-generated method stub
 		
 		GenerateReports.startTest(crtClass);
+		System.out.println(crtClass);
 		System.out.println("before invocation");
 		
 	}

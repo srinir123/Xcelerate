@@ -1,5 +1,6 @@
 package com.ScreenFunctions;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
@@ -14,7 +15,7 @@ public class NewEntity_creation extends GenericMethods{
 	public static WebElement Edi_EntityName;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='LegalEntityTypeID']")
-	public static WebElement Dropd_LEnityType;
+	public static WebElement Dropd_LEntityType;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityTypeID']")
 	public static WebElement Dropd_EnityTypeID;
@@ -151,7 +152,7 @@ public class NewEntity_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnNext']")
 	public static WebElement Btnt_Next4;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='btnAdd']")
+	@FindBy(how=How.XPATH,using="(//*[@id='btnAdd'])[3]")
 	public static WebElement Btnt_AddnewLE;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityLinkTypeID']")
@@ -163,82 +164,185 @@ public class NewEntity_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="(//*[@id='btnSave'])[2]")
 	public static WebElement Btnt_SaveLE;
 	
-	@FindBy(how=How.XPATH,using="((//*[text()='Yes'])[2]")
+	@FindBy(how=How.XPATH,using="(//*[text()='Yes'])[2]")
 	public static WebElement Btnt_YesSLE;
 	
-	@FindBy(how=How.XPATH,using="((//*[text()='Yes'])[2]")
+	@FindBy(how=How.XPATH,using="//*[@id='btnNext']")
 	public static WebElement Btnt_Next5;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='Select0']")
+	public static WebElement Btnt_AddLc;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=btnNext']")
+	public static WebElement Btnt_AddLcNext;
+	
+	@FindBy(how=How.XPATH,using="(//*[@id='btnAdd'])[3]")
+	public static WebElement Btnt_AddLE;	
+	
+	@FindBy(how=How.XPATH,using="//*[@id='EntityLinkTypeID']")
+	public static WebElement Drop_EntLnkType;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='EntityID']")
+	public static WebElement Drop_Ent;
+	
+	@FindBy(how=How.XPATH,using="(//*[@id='btnSave'])[2]")
+	public static WebElement Btn_saveLE;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnNext']")
+	public static WebElement Btn_NextLE;
+	
+//	@FindBy(how=How.XPATH,using="(//*[text()='Yes'])[2]")
+//	public static WebElement Btn_subYes;
 	
 	
-	public static void NewEntity_creation() throws Exception
-	{   
-		waitForElement(Click_AddEntity);
-//	    if(Click_AddEntity.isDisplayed())
-//	{
-//		System.out.println("Clicking on entity search");
-//		
-//		Actions acc=new Actions(driver);
-//		
-//		acc.moveToElement(Click_AddEntity).click(Click_AddEntity).build().perform();
-//		Click_AddEntity.click();
-//    }
-		//Click_AddEntity.click();
-		click_element(Click_AddEntity);
-		//Thread.sleep(9000);
-		waitForElement(Edi_EntityName);
-		Edi_EntityName.sendKeys("NewEntity8_Test83");
-		Dropd_LEnityType.sendKeys("Company");
+	
+	
+	public static void NewEntity_creation() throws Exception   
+	{
+		//waitForElement(Click_AddEntity);
+        //click_element(Click_AddEntity);
+		Click_AddEntity.click();
+
+		
+        waitForElement(Edi_EntityName);
+        
+        //Thread.sleep(14000);
+		
+        String EntityName=getData("EntityName","NewEntity_creation",1);
+
+		Edi_EntityName.sendKeys(EntityName);
+		
+        String LEntityType=getData("LEntityType","NewEntity_creation",1);
+        		
+		Dropd_LEntityType.sendKeys(LEntityType);
+		
         Dropd_EnityTypeID.sendKeys("Insurer");
-        Edi_RegRIdType.sendKeys("1951/118625/26"); 
-        Btnt_Next.click();
-		//Thread.sleep(12000);
-        waitForElement(Click_AddNewEntity);
-		Click_AddNewEntity.click();
+        
+        String EnityTypeID=getData("EnityTypeID","NewEntity_creation",1);
+
+        Dropd_EnityTypeID.sendKeys(EnityTypeID);
+        
+        String RegRIdType=getData("RegRIdType","NewEntity_creation",1);
+
+        Edi_RegRIdType.sendKeys(RegRIdType); 
 		Thread.sleep(3000);
-		//waitForElement(Tick_PhysicalAddress);
-		Tick_PhysicalAddress.click();
-		Dropd_ProvinceId.sendKeys("Gauteng");
-        Edi_Building.sendKeys("IOM House");
-	    Edi_Street.sendKeys("6 St Giles street");
-	    Edi_Suburb.sendKeys("Johannesburg");
-	    Edi_Town.sendKeys("Midrand");
-        Edi_PostalCode.sendKeys("1686");
+
+///////        waitForElement(Btnt_Next);
+        Btnt_Next.click();
+        
+        Thread.sleep(3000);
+
+        waitForElement(Click_AddNewEntity);
+        Click_AddNewEntity.click();
+        Thread.sleep(3000);
+        //waitForElement(Tick_PhysicalAddress);
+        Tick_PhysicalAddress.click();
+
+        String ProvinceId=getData("ProvinceId","NewEntity_creation",1);
+
+        Dropd_ProvinceId.sendKeys(ProvinceId);
+
+        String Building=getData("Building","NewEntity_creation",1);
+
+        Edi_Building.sendKeys(Building);
+
+        String Street=getData("Street","NewEntity_creation",1);
+
+        Edi_Street.sendKeys(Street);
+
+        String Suburb=getData("Suburb","NewEntity_creation",1);
+
+        Edi_Suburb.sendKeys(Suburb);
+
+        String Town=getData("Town","NewEntity_creation",1);
+
+        Edi_Town.sendKeys(Town);
+
+        String PostalCode=getData("PostalCode","NewEntity_creation",1);
+
+        Edi_PostalCode.sendKeys(PostalCode);
         Edi_IsPostal.click();
         Btnt_Save.click();
         waitForElement(Btnt_Yes);
         //Thread.sleep(1000);
-	    Btnt_Yes.click();
-	    waitForElement(Btnt_Next1);
-		//Thread.sleep(6000);
-	    Btnt_Next1.click();
-	    waitForElement(Btnt_AddContact);
+        Btnt_Yes.click();
+
+        Thread.sleep(4000);
+
+        waitForElement(Btnt_Next1);
         //Thread.sleep(6000);
-	    Btnt_AddContact.click();
-	    waitForElement(Dropd_Title);
-	    //Thread.sleep(4000);
-        Dropd_Title.sendKeys("Mr");
-        Edi_FirstName.sendKeys("book");
-        Edi_Surname.sendKeys("I");
-	    Edi_Designation.sendKeys("Tester");
-	    Edi_IDNumber.sendKeys("S789456");
-	    Edi_Telephone.sendKeys("0113180332");
-        Edi_MobilePhone.sendKeys("0843353667");
-        Edi_Fax.sendKeys("0112532363");
-        Edi_EMailAddress.sendKeys("srinivas@repalas.com");
-	    Dropd_Messanger.sendKeys("MSN");
-	    Dropd_PositionID.sendKeys("Owner");
-        Dropd_EntityAddressID.sendKeys("Physical Address, IOM HOUSE, 6 ST GILESs, RANDBURG, RANDBURG, Gauteng");
-	    Tick_PrimContact.click();
+        Btnt_Next1.click();
+
+
+        waitForElement(Btnt_AddContact);
+        //Thread.sleep(6000);
+        Btnt_AddContact.click();
+        waitForElement(Dropd_Title);
+        //Thread.sleep(4000);
+
+        String Title=getData("Title","NewEntity_creation",1);
+
+        Dropd_Title.sendKeys(Title);
+
+        String FirstName=getData("FirstName","NewEntity_creation",1);
+
+        Edi_FirstName.sendKeys(FirstName);
+
+        String Surname=getData("Surname","NewEntity_creation",1);
+
+        Edi_Surname.sendKeys(Surname);
+
+        String Designation=getData("Designation","NewEntity_creation",1);
+
+        Edi_Designation.sendKeys(Designation);
+
+        String IDNumber=getData("IDNumber","NewEntity_creation",1);
+
+        Edi_IDNumber.sendKeys(IDNumber);
+
+        String Telephone=getData("Telephone","NewEntity_creation",1);
+
+        Edi_Telephone.sendKeys(Telephone);
+
+        String MobilePhone=getData("MobilePhone","NewEntity_creation",1);
+
+        Edi_MobilePhone.sendKeys(MobilePhone);
+
+
+        String Fax=getData("Fax","NewEntity_creation",1);
+
+        Edi_Fax.sendKeys(Fax);
+
+        String EMailAddress=getData("EMailAddress","NewEntity_creation",1);
+
+        Edi_EMailAddress.sendKeys(EMailAddress);
+
+        String Messanger=getData("Designation","NewEntity_creation",1);
+
+        Dropd_Messanger.sendKeys(Messanger);
+
+        String PositionID=getData("PositionID","NewEntity_creation",1);
+
+        Dropd_PositionID.sendKeys(PositionID);
+
+        String EntityAddressID=getData("EntityAddressID","NewEntity_creation",1);
+
+        Dropd_EntityAddressID.sendKeys(EntityAddressID);
+
+        Tick_PrimContact.click();
         Btnt_Save1.click();
         waitForElement(Btnt_Yes1);
-		//Thread.sleep(2000);
-		Btnt_Yes1.click();
-		waitForElement(Btnt_Next2);
-		//Thread.sleep(5000);
+        //Thread.sleep(2000);
+        Btnt_Yes1.click();
+
+        Thread.sleep(4000);
+
+        waitForElement(Btnt_Next2);
+        //Thread.sleep(5000);
         Btnt_Next2.click();
-        waitForElement(Tick_PhysicalAddress);
-		Thread.sleep(5000);
+        //waitForElement(Tick_PhysicalAddress);
+        //Thread.sleep(5000);
+        waitForElement(Dropd_UserID1);
         Dropd_UserID1.sendKeys("Lynette Van Der Walt");
         Dropd_UserID2.sendKeys("Barry Levy");
         Dropd_UserID3.sendKeys("Angelique Bruggemans");
@@ -246,30 +350,90 @@ public class NewEntity_creation extends GenericMethods{
         Dropd_UserID5.sendKeys("Dorathea Brits");
         Dropd_UserID6.sendKeys("Mpho Bogatsu");
         Dropd_SUserID1.sendKeys("Asiya Swaleh");
-		Dropd_SUserID2.sendKeys("Annelise Harrison");
-		Dropd_SUserID3.sendKeys("Sunitha Maistry");
-		waitForElement(Btnt_Next3);
-		//Thread.sleep(2000);
-		Btnt_Next3.click();
-		waitForElement(Select_LC);
-		//Thread.sleep(8000);
+        Dropd_SUserID2.sendKeys("Annelise Harrison");
+        Dropd_SUserID3.sendKeys("Sunitha Maistry");
+        waitForElement(Btnt_Next3);
+        //Thread.sleep(2000);
+        Btnt_Next3.click();
+        waitForElement(Select_LC);
+        //Thread.sleep(8000);
         Select_LC.click();
         Btnt_LCselect.click();
         Btnt_Next4.click();
         waitForElement(Btnt_AddnewLE);
-		//Thread.sleep(20000);
+        //Thread.sleep(20000);
         Btnt_AddnewLE.click();
-		Dropd_ELtype.sendKeys("Insurer");
-		Dropd_Entity.sendKeys("Absa Life Limited");
-		Btnt_SaveLE.click();
-		Btnt_YesSLE.click();
-		waitForElement(Btnt_Next5);
-		//Thread.sleep(20000);
-		Btnt_Next5.click();
+        waitForElement(Dropd_ELtype);
+        String ELtype=getData("ELtype","NewEntity_creation",1);
 
-
-		
+        Dropd_ELtype.sendKeys(ELtype);
+        waitForElement(Dropd_Entity);
+        String Entity=getData("Entity","NewEntity_creation",1);
+    
+        Dropd_Entity.sendKeys(Entity);
         
+        waitForElement(Btnt_SaveLE);
+        Btnt_SaveLE.click();
+        waitForElement(Btnt_YesSLE);
+        Btnt_YesSLE.click();
+            
+        waitForElement(Btn_NextLE);
+		Btn_NextLE.click();
+
+      
+
+        
+//         waitForElement(Btn_submitLE);
+//         Btn_submitLE.click();
+//         waitForElement(Btn_subYes);
+//         Btn_subYes.click();
+     
+        
+        //Btn_submitLE.click();
+        //Btn_submitLE.click();
+//        Thread.sleep(3000);
+//        waitForElement(Btnt_AddLc);
+//        Btnt_AddLc.click();
+//        Thread.sleep(3000);
+//
+//        waitForElement(Btnt_AddLcNext);
+//        Btnt_AddLcNext.click();
+//        //Thread.sleep(15000);
+//
+//
+//        waitForElement(Btnt_AddLE);
+//        Btnt_AddLE.click();
+//        //click_element(Btnt_AddLE);
+//        //waitForElement(Drop_EntLnkType);
+//
+//        String EntLnkType=getData("EntLnkType","NewEntity_creation",1);
+//
+//        Drop_EntLnkType.sendKeys(EntLnkType);
+//
+//        //waitForElement(Drop_Ent);
+//
+//        String EntityName1=getData("EntityName1","NewEntity_creation",1);
+//
+//        Drop_Ent.sendKeys(EntityName1);
+//
+//        waitForElement(Btn_saveLE);
+//
+//        Btn_saveLE.click();
+//
+//
+//
+//        driver.quit();
+//
+//
+
+
+
+
+        
+
+	
+
+
 	}
 }
 	 

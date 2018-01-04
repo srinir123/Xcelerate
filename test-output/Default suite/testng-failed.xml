@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Tc_06_NewEntityCreation">
+      <class name="com.TestScripts.Tc_00_TestBrowser">
         <methods>
-          <include name="evaluateTestcase"/>
+          <include name="Test"/>
         </methods>
-      </class> <!-- Tc_06_NewEntityCreation -->
+      </class> <!-- com.TestScripts.Tc_00_TestBrowser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

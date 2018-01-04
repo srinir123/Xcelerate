@@ -47,25 +47,82 @@ public class Login extends GenericMethods {
 		//***********************************************************************************************//
 		
 		public static void launch_Application()
-		{
+		{boolean status=true;
            String Username=getData("Username","Login",1);
+           String password=getData("Password","Login",1);
 			
-			System.out.println(Username);
+			try{
+				waitForElement(Edi_Username);
+				Edi_Username.sendKeys(Username);
+				
+				System.out.println("Data entered sucessfully for the field Username");
+				//LogEvent("pass","Data entered sucessfully for the field Username");
+				
+			}
+			catch(Exception e)
+			{
+				status=false;
+				System.out.println("Unable to find the field Username "+e.getMessage());
+				//LogEvent("fail","Unable to find the field Username ");
+				
+			}
+			if(status)
+			{
+				try
+				{
+					Edi_Password.sendKeys(password);
+
+					System.out.println("Data entered sucessfully for the field password");
+					LogEvent("pass","Data entered sucessfully for the field password");	
+					
+				}
+				catch(Exception e)
+				{
+					status=false;
+					System.out.println("Unable to find the field Password "+e.getMessage());
+					LogEvent("fail","Unable to find the field Password ");
+					
+				}
+				
+				if(status)
+				{
+					Btn_Loginbtn.click();
+					
+				}
 			
-			Edi_Username.sendKeys("lancen");
-			Edi_Password.sendKeys("P@ssw0rd");
-			Btn_Loginbtn.click();
+			}
+			
+			
 		}
 		
+//		public static void launch_Application1()
+//		{
+//            Edi_Username.sendKeys("asiyas");
+//            Edi_Password.sendKeys("P@ssw0rd");
+//            Btn_Loginbtn.click();
+//									
+//					}
+//				
+//				}
+//				
 		public static void launch_Application1()
 		{
-			Edi_Username.sendKeys("asiyas");
-			Edi_Password.sendKeys("P@ssw0rd");
-			Btn_Loginbtn.click();
-		}
+			
+	           String Username=getData("Username","Login",2);
+	           String password=getData("Password","Login",2);
+
+            Edi_Username.sendKeys(Username);
+            Edi_Password.sendKeys(password);
+            Btn_Loginbtn.click();
+									
+					}
+				
+				}
+				
+			
+
+			
 		
 
 
 
-
-}

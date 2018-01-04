@@ -25,7 +25,7 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	public static WebElement Edi_AccountHolder;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='AccountNumber']")
-	public static WebElement Edi_AccountNumber ;
+	public static WebElement Edi_AccountNumber;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='BranchCode']")
 	public static WebElement Edi_Branchcode;
@@ -37,39 +37,97 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	public static WebElement Edi_Amount;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='TransactionReference']")
-	public static WebElement Edi_TransRef ; 
+	public static WebElement Edi_TransRef; 
 
 	@FindBy(how=How.XPATH,using="//*[@id='Comment']")
-	public static WebElement Edi_IntRef ; 
+	public static WebElement Edi_IntRef; 
 
 	@FindBy(how=How.XPATH,using="//*[@id='btnSaveOne']")
-	public static WebElement Btn_Save ; 
+	public static WebElement Btn_Save; 
 
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
-	public static WebElement Btn_Yes ; 
+	public static WebElement Btn_Yes; 
 
+	@FindBy(how=How.XPATH,using="//*[@id='btnExceptions1']")
+	public static WebElement Btn_exceptions;
 
+	@FindBy(how=How.XPATH,using="//*[@id='btnSaveOne']")
+	public static WebElement Btn_Save1; 
+
+	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
+	public static WebElement Btn_Yes1;
+	
+	@FindBy(how=How.XPATH,using="//*[text()= 'Log out']")
+	public static WebElement Btn_Logout;
+	
 
 	
 	public static void CollPeriodBalances() throws Exception 
 	{   waitForElement(Dropd_Agreement);
-		Dropd_Agreement.sendKeys("Annuals - ABC - ST FSP");
+	
+    String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCC",2);
+
+		Dropd_Agreement.sendKeys(Agreement_Name);
 		waitForElement(Dropd_BucketID);
-		Dropd_BucketID.sendKeys("2017-11-01 TO 2017-12-15");
-		waitForElement(Dropd_BucketID);
+		
+	    String BucketID=getData("BucketID","CollPeriodBalances_MCC",2);
+
+		Dropd_BucketID.sendKeys(BucketID);
+		waitForElement(btn_CaptureColl);
 		btn_CaptureColl.click();
 		waitForElement(Set_ActionDate);
 		Set_ActionDate.click();
 		Click_ActionDate.click();
-		Edi_AccountHolder.sendKeys("Srini");
-		Edi_AccountNumber.sendKeys("001173782");
-		Edi_Branchcode.sendKeys("001155");
-		Dropd_BankAccType.sendKeys("Current");
-		Edi_Amount.sendKeys("1");
-		Edi_TransRef.sendKeys("Test in UAT");
-		Edi_IntRef.sendKeys("Test in UAT");
+
+	    String AccountHolder=getData("AccountHolder","CollPeriodBalances_MCC",1);
+
+		Edi_AccountHolder.sendKeys(AccountHolder);
+		
+	    String AccountNumber=getData("AccountNumber","CollPeriodBalances_MCC",1);
+
+		Edi_AccountNumber.sendKeys(AccountNumber);
+
+		String Branchcode=getData("Branchcode","CollPeriodBalances_MCC",1);
+
+		Edi_Branchcode.sendKeys(Branchcode);
+
+		String BankAccType=getData("BankAccType","CollPeriodBalances_MCC",1);
+
+		Dropd_BankAccType.sendKeys(BankAccType);
+
+		String Amount=getData("Amount","CollPeriodBalances_MCC",1);
+
+		Edi_Amount.sendKeys(Amount);
+
+		String TransRef=getData("TransRef","CollPeriodBalances_MCC",1);
+
+		Edi_TransRef.sendKeys(TransRef);
+
+		String IntRef=getData("IntRef","CollPeriodBalances_MCC",1);
+
+		Edi_IntRef.sendKeys(IntRef);
+
 		Btn_Save.click();
 		waitForElement(Btn_Yes);
 		Btn_Yes.click();
-	}
+		try
+		{
+			waitForElement(Btn_exceptions);
+			Btn_exceptions.click();
+			
+			if (Btn_exceptions.isDisplayed())
+			{
+			waitForElement(Btn_Save1);
+			Btn_Save1.click();
+			waitForElement(Btn_Yes1);
+			Btn_Yes1.click();
+			}
+		}
+		catch (Exception e)
+		{
+			//waitForElement(Btn_Logout);
+			//Btn_Logout.click();	
+	    }
+		driver.quit();
+}
 }

@@ -18,7 +18,7 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='ActionDate']")
 	public static WebElement Set_ActionDate;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[5]/a")
+	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[4]/td[5]/a")
 	public static WebElement Click_ActionDate;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='AccountHolder']")
@@ -37,67 +37,123 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	public static WebElement Edi_Amount;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='TransactionReference']")
-	public static WebElement Edi_TransRef ; 
+	public static WebElement Edi_TransRef; 
 
 	@FindBy(how=How.XPATH,using="//*[@id='InternalReference']")
-	public static WebElement Edi_IntRefPmtCap ; 
+	public static WebElement Edi_IntRefPmtCap; 
 	
 	@FindBy(how=How.XPATH,using="	//*[@id='TransactionTypeID']")
-	public static WebElement Dropd_Transtype ; 
+	public static WebElement Dropd_Transtype; 
 
 	@FindBy(how=How.XPATH,using="//*[@id='TransactionSubTypeID']")
-	public static WebElement Dropd_PmtSubtype ; 
+	public static WebElement Dropd_PmtSubtype; 
 	
 	@FindBy(how=How.XPATH,using="	//*[@id='inputfile']")
-	public static WebElement Attach_PmtInstr ; 
+	public static WebElement Attach_PmtInstr; 
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnSaveOne']")
-	public static WebElement Btn_Save ; 
+	public static WebElement Btn_Save; 
 
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
-	public static WebElement Btn_Yes ; 
+	public static WebElement Btn_Yes;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnExceptions1']")
+	public static WebElement Btn_exceptions; 
 
 	@FindBy(how=How.XPATH,using="//*[@id='btnSaveOne']")
-	public static WebElement Btn_Save1 ; 
+	public static WebElement Btn_Save1; 
 
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
-	public static WebElement Btn_Yes1 ; 
+	public static WebElement Btn_Yes1; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
+	public static WebElement Btn_Logout;
+	
+	
+	
+	
 
 	
 	
 
 	public static void CollPeriodBalances_MCP() throws Exception 
 	{   waitForElement(Dropd_Agreement);
-		Dropd_Agreement.sendKeys("Annuals - ABC - ST FSP");
+		
+	String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCP",1);
+
+	Dropd_Agreement.sendKeys("Agreement_Name");
 		waitForElement(Dropd_BucketID);
-		Dropd_BucketID.sendKeys("2017-11-01 TO 2017-12-15");
-		waitForElement(Dropd_BucketID);
+		
+		String BucketID=getData("BucketID","CollPeriodBalances_MCP",1);
+
+		Dropd_BucketID.sendKeys(BucketID);
+		waitForElement(btn_CapturePmt);
+		
 		btn_CapturePmt.click();
 		waitForElement(Set_ActionDate);
 		Set_ActionDate.click();
 		Click_ActionDate.click();
-		Edi_AccountHolder.sendKeys("Srini");
-		Edi_AccountNumber.sendKeys("001173782");
-		Edi_Branchcode.sendKeys("001155");
-		Dropd_BankAccType.sendKeys("Current");
-		Edi_Amount.sendKeys("1000");
-		Edi_TransRef.sendKeys("Test in UAT");
-		Edi_IntRefPmtCap.sendKeys("Test in UAT");
-		Dropd_Transtype.sendKeys("Commission");
-		Dropd_PmtSubtype.sendKeys("Commission Only");
-        Attach_PmtInstr.sendKeys("C:\\Users\\user\\Desktop\\Payment Instruction.xlsx");
+		
+		String AccountHolder=getData("AccountHolder","CollPeriodBalances_MCP",1);
+
+		Edi_AccountHolder.sendKeys(AccountHolder);
+
+		String AccountNumber=getData("AccountNumber","CollPeriodBalances_MCP",1);
+
+		Edi_AccountNumber.sendKeys(AccountNumber);
+		
+		String Branchcode=getData("Branchcode","CollPeriodBalances_MCP",1);
+
+		Edi_Branchcode.sendKeys(Branchcode);
+
+		String BankAccType=getData("BankAccType","CollPeriodBalances_MCP",1);
+
+		Dropd_BankAccType.sendKeys(BankAccType);
+		
+		String Amount=getData("Amount","CollPeriodBalances_MCP",1);
+
+		Edi_Amount.sendKeys(Amount);
+		
+		String TransRef=getData("TransRef","CollPeriodBalances_MCP",1);
+
+		Edi_TransRef.sendKeys(TransRef);
+		
+		String IntRefPmtCap=getData("IntRefPmtCap","CollPeriodBalances_MCP",1);
+
+		Edi_IntRefPmtCap.sendKeys(IntRefPmtCap);
+		
+		String Transtype=getData("Transtype","CollPeriodBalances_MCP",1);
+
+		Dropd_Transtype.sendKeys(Transtype);
+		
+		String PmtSubtype=getData("PmtSubtype","CollPeriodBalances_MCP",1);
+
+		Dropd_PmtSubtype.sendKeys(PmtSubtype);
+
+		Attach_PmtInstr.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Desktop\\New folder\\Xcelerate specs\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
 		Btn_Save.click();
 		waitForElement(Btn_Yes);
 		Btn_Yes.click();
-		waitForElement(Btn_Save1);
-		Btn_Save1.click();
-		waitForElement(Btn_Yes1);
-		Btn_Yes1.click();
-	}
-
+		try
+		{
+			waitForElement(Btn_exceptions);
+			Btn_exceptions.click();
+			
+			if (Btn_exceptions.isDisplayed())
+			{
+			waitForElement(Btn_Save1);
+			Btn_Save1.click();
+			waitForElement(Btn_Yes1);
+			Btn_Yes1.click();
+			}
+		}
+		catch (Exception e)
+		{
+			
+     	}
+	driver.quit();	
 }
-
-	
+}	
 	
 	
 

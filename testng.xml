@@ -11,4 +11,8 @@
       <class name="com.TestScripts.Tc_01_ManualcaptureCollection"/>
     </classes>
   </test> <!-- Test -->
+  
+
+  
 </suite> <!-- Suite -->
+

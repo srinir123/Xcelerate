@@ -22,17 +22,34 @@ public class CollectionImport extends GenericMethods{
 
 	public static void CollectionImport() throws Exception 
 	{   waitForElement(Dropd_Agreement);
-		Dropd_Agreement.sendKeys("Annuals - ABC - ST FSP");
+	
+	   String Agreement_Name=getData("Agreement_Name","CollectionImport",1);
+
+	    Dropd_Agreement.sendKeys("Agreement_Name");
+	
 		waitForElement(Dropd_BucketID);
-		Dropd_BucketID.sendKeys("2017-11-01 TO 2017-12-15");
-		waitForElement(Dropd_BucketID);	
+		
+		String BucketID=getData("BucketID","CollectionImport",1);
+
+		Dropd_BucketID.sendKeys(BucketID);
+		
+		waitForElement(btn_CollImport);	
 		btn_CollImport.click();
 		waitForElement(btn_CollImportFile);	
 		btn_CollImportFile.click();
 		Thread.sleep(2000);
-		Runtime.getRuntime().exec("Uploadingattachment.exe");
-		
+		String[]cmd={"UploadingCOLLattachment.exe","C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Desktop\\New folder\\Xcelerate specs\\Sample Transactions\\Large file processing\\2 records file.csv"}; 
+		Process autoitprocess=Runtime.getRuntime().exec(cmd);
+        
+		int i =1;
+		while (!(i==0))
+		{
+        	i=autoitprocess.waitFor();
+		}
+	      autoitprocess.destroy();	
+	    Thread.sleep(2000);
+		driver.quit();
 			}
-
+		
 }
 	
