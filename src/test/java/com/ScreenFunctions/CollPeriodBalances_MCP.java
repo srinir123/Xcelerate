@@ -151,6 +151,7 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 		{
 			
      	}
+		Thread.sleep(3000);
 	driver.quit();	
 }
 }	

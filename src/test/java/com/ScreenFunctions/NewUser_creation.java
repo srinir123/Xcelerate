@@ -67,10 +67,10 @@ public class NewUser_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnSave']")
 	public static WebElement Btnt_Save;
 	
-	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")
+	@FindBy(how=How.XPATH,using="(//*[contains(text(), 'Yes')])[2]")
 	public static WebElement Btnt_Yes;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='siri189']")
+	@FindBy(how=How.XPATH,using="//*[text()='siri196']")
 	public static WebElement Click_NUser;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSetupUser']")
@@ -208,7 +208,7 @@ public class NewUser_creation extends GenericMethods{
 		 
 	    
               
-		driver.quit();
+		//driver.quit();
 	}
 
 

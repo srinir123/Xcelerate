@@ -13,7 +13,7 @@ import com.ReportGeneration.GenerateReports;
 
 public class TestNgListners implements ITestListener,IInvokedMethodListener {
 	
-	public  static String crtClass ;
+	public  static String crtClass;
 	
 
 	@Override

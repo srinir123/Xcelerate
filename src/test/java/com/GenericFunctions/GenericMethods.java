@@ -17,8 +17,8 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class GenericMethods extends GenerateReports {
 	
-public static  String UAT_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
-//public static  String UAT_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";
+//public static  String UAT_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
+public static  String UAT_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";
 
 
 public static Fillo fillo;
@@ -101,10 +101,10 @@ public static Connection connection;
 		}
 		
 		
-	for(int i=0;i<=3500;i++)
+	for(int i=0;i<=4000;i++)
 	{
 		try{
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			
 			Actions acc=new Actions(driver);
 			

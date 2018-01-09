@@ -8,8 +8,11 @@ import com.GenericFunctions.GenericMethods;
 
 public class NewEntity_creation extends GenericMethods{
 
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[3]/a")
+	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[3]/a") //UAT//
 	public static WebElement Click_AddEntity;
+	
+//	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a") //PROD
+//	public static WebElement Click_AddEntity;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
 	public static WebElement Edi_EntityName;
@@ -191,15 +194,15 @@ public class NewEntity_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnNext']")
 	public static WebElement Btn_NextLE;
 	
-//	@FindBy(how=How.XPATH,using="(//*[text()='Yes'])[2]")
-//	public static WebElement Btn_subYes;
+	@FindBy(how=How.XPATH,using="(//*[text()='Yes'])[2]")
+	public static WebElement Btn_subYes;
 	
 	
 	
 	
 	public static void NewEntity_creation() throws Exception   
 	{
-		//waitForElement(Click_AddEntity);
+		waitForElement(Click_AddEntity);
         //click_element(Click_AddEntity);
 		Click_AddEntity.click();
 
@@ -377,8 +380,12 @@ public class NewEntity_creation extends GenericMethods{
         waitForElement(Btnt_YesSLE);
         Btnt_YesSLE.click();
             
-        waitForElement(Btn_NextLE);
-		Btn_NextLE.click();
+        //waitForElement1(Btn_NextLE);
+        Thread.sleep(32000);
+        Btn_NextLE.click();
+        
+        waitForElement(Btn_subYes);
+        Btn_subYes.click();
 
       
 
