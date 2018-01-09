@@ -65,12 +65,12 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	public static void CollPeriodBalances() throws Exception 
 	{   waitForElement(Dropd_Agreement);
 	
-    String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCC",2);
+    String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCC",1);
 
 		Dropd_Agreement.sendKeys(Agreement_Name);
 		waitForElement(Dropd_BucketID);
 		
-	    String BucketID=getData("BucketID","CollPeriodBalances_MCC",2);
+	    String BucketID=getData("BucketID","CollPeriodBalances_MCC",1);
 
 		Dropd_BucketID.sendKeys(BucketID);
 		waitForElement(btn_CaptureColl);
@@ -128,6 +128,6 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 			//waitForElement(Btn_Logout);
 			//Btn_Logout.click();	
 	    }
-		driver.quit();
+		//driver.quit();
 }
 }

@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
+
 <listeners>
 <listener class-name="com.GenericFunctions.TestNgListners"></listener>
 
@@ -12,7 +13,14 @@
     </classes>
   </test> <!-- Test -->
   
-
+  <test name="Test1">
+    <classes>
+      <class name="com.TestScripts.Tc_02_ManualcapturePayment"/>
+    </classes>
+  </test> <!-- Test1 -->
   
 </suite> <!-- Suite -->
+
+
+
 
