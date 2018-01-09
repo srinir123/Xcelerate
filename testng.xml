@@ -9,7 +9,7 @@
 </listeners>
   <test name="Test">
     <classes>
-      <class name="com.TestScripts.Tc_01_ManualcaptureCollection"/>
+      <class name="com.TestScripts.Tc_02_ManualcapturePayment"/>
     </classes>
   </test> <!-- Test -->
   
