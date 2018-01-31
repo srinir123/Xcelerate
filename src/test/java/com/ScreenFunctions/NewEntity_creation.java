@@ -197,19 +197,22 @@ public class NewEntity_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="(//*[text()='Yes'])[2]")
 	public static WebElement Btn_subYes;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
+	public static WebElement Btn_logout;
+	
+	
 	
 	
 	
 	public static void NewEntity_creation() throws Exception   
 	{
 		waitForElement(Click_AddEntity);
-        //click_element(Click_AddEntity);
+//		Thread.sleep(3000);
 		Click_AddEntity.click();
 
 		
         waitForElement(Edi_EntityName);
         
-        //Thread.sleep(14000);
 		
         String EntityName=getData("EntityName","NewEntity_creation",1);
 
@@ -219,7 +222,7 @@ public class NewEntity_creation extends GenericMethods{
         		
 		Dropd_LEntityType.sendKeys(LEntityType);
 		
-        Dropd_EnityTypeID.sendKeys("Insurer");
+        //Dropd_EnityTypeID.sendKeys("Underwriter");
         
         String EnityTypeID=getData("EnityTypeID","NewEntity_creation",1);
 
@@ -230,7 +233,6 @@ public class NewEntity_creation extends GenericMethods{
         Edi_RegRIdType.sendKeys(RegRIdType); 
 		Thread.sleep(3000);
 
-///////        waitForElement(Btnt_Next);
         Btnt_Next.click();
         
         Thread.sleep(3000);
@@ -238,7 +240,6 @@ public class NewEntity_creation extends GenericMethods{
         waitForElement(Click_AddNewEntity);
         Click_AddNewEntity.click();
         Thread.sleep(3000);
-        //waitForElement(Tick_PhysicalAddress);
         Tick_PhysicalAddress.click();
 
         String ProvinceId=getData("ProvinceId","NewEntity_creation",1);
@@ -267,21 +268,17 @@ public class NewEntity_creation extends GenericMethods{
         Edi_IsPostal.click();
         Btnt_Save.click();
         waitForElement(Btnt_Yes);
-        //Thread.sleep(1000);
         Btnt_Yes.click();
 
         Thread.sleep(4000);
 
         waitForElement(Btnt_Next1);
-        //Thread.sleep(6000);
         Btnt_Next1.click();
 
 
         waitForElement(Btnt_AddContact);
-        //Thread.sleep(6000);
         Btnt_AddContact.click();
         waitForElement(Dropd_Title);
-        //Thread.sleep(4000);
 
         String Title=getData("Title","NewEntity_creation",1);
 
@@ -335,16 +332,12 @@ public class NewEntity_creation extends GenericMethods{
         Tick_PrimContact.click();
         Btnt_Save1.click();
         waitForElement(Btnt_Yes1);
-        //Thread.sleep(2000);
         Btnt_Yes1.click();
 
         Thread.sleep(4000);
 
         waitForElement(Btnt_Next2);
-        //Thread.sleep(5000);
         Btnt_Next2.click();
-        //waitForElement(Tick_PhysicalAddress);
-        //Thread.sleep(5000);
         waitForElement(Dropd_UserID1);
         Dropd_UserID1.sendKeys("Lynette Van Der Walt");
         Dropd_UserID2.sendKeys("Barry Levy");
@@ -356,15 +349,14 @@ public class NewEntity_creation extends GenericMethods{
         Dropd_SUserID2.sendKeys("Annelise Harrison");
         Dropd_SUserID3.sendKeys("Sunitha Maistry");
         waitForElement(Btnt_Next3);
-        //Thread.sleep(2000);
         Btnt_Next3.click();
+        
         waitForElement(Select_LC);
-        //Thread.sleep(8000);
         Select_LC.click();
         Btnt_LCselect.click();
         Btnt_Next4.click();
         waitForElement(Btnt_AddnewLE);
-        //Thread.sleep(20000);
+        
         Btnt_AddnewLE.click();
         waitForElement(Dropd_ELtype);
         String ELtype=getData("ELtype","NewEntity_creation",1);
@@ -380,67 +372,19 @@ public class NewEntity_creation extends GenericMethods{
         waitForElement(Btnt_YesSLE);
         Btnt_YesSLE.click();
             
-        //waitForElement1(Btn_NextLE);
-        Thread.sleep(32000);
+        Thread.sleep(28000);
         Btn_NextLE.click();
         
         waitForElement(Btn_subYes);
         Btn_subYes.click();
-
+        Thread.sleep(3000);
+        System.out.println("The new Entity has been created successfully");
+    	LogEvent("Pass","The new Entity has been created successfully");
+        
+        //driver.quit();
+    	waitForElement(Btn_logout);
+    	Btn_logout.click();
       
-
-        
-//         waitForElement(Btn_submitLE);
-//         Btn_submitLE.click();
-//         waitForElement(Btn_subYes);
-//         Btn_subYes.click();
-     
-        
-        //Btn_submitLE.click();
-        //Btn_submitLE.click();
-//        Thread.sleep(3000);
-//        waitForElement(Btnt_AddLc);
-//        Btnt_AddLc.click();
-//        Thread.sleep(3000);
-//
-//        waitForElement(Btnt_AddLcNext);
-//        Btnt_AddLcNext.click();
-//        //Thread.sleep(15000);
-//
-//
-//        waitForElement(Btnt_AddLE);
-//        Btnt_AddLE.click();
-//        //click_element(Btnt_AddLE);
-//        //waitForElement(Drop_EntLnkType);
-//
-//        String EntLnkType=getData("EntLnkType","NewEntity_creation",1);
-//
-//        Drop_EntLnkType.sendKeys(EntLnkType);
-//
-//        //waitForElement(Drop_Ent);
-//
-//        String EntityName1=getData("EntityName1","NewEntity_creation",1);
-//
-//        Drop_Ent.sendKeys(EntityName1);
-//
-//        waitForElement(Btn_saveLE);
-//
-//        Btn_saveLE.click();
-//
-//
-//
-//        driver.quit();
-//
-//
-
-
-
-
-        
-
-	
-
-
 	}
 }
 	 

@@ -9,17 +9,50 @@
 </listeners>
   <test name="Test">
     <classes>
-      <class name="com.TestScripts.Tc_03_CollectionImport"/>
-    </classes>
+    
+         <!--  <class name="com.TestScripts.Tc_05_NewUserCcreation"/> 
+          <class name="com.TestScripts.Tc_14_Authorization_Collections"/> 
+          <class name="com.TestScripts.Tc_04_PaymentImport"/>
+          <class name="com.TestScripts.Tc_01_ManualcaptureCollection"/>
+          <class name="com.TestScripts.Tc_02_ManualcapturePayment"/> 
+          <class name="com.TestScripts.Tc_07_NominatedPayments"/>
+          <class name="com.TestScripts.Tc_08_Journals"/>
+          <class name="com.TestScripts.Tc_03_CollectionImport"/> 
+          <class name="com.TestScripts.Tc_05_NewUserCcreation"/>
+          <class name="com.TestScripts.Tc_06_NewEntityCreation"/>    
+          <class name="com.TestScripts.Tc_09_ManualcaptureCollection_Ext"/>
+          <class name="com.TestScripts.Tc_10_ManualcapturePayment_Ext"/>
+          <class name="com.TestScripts.Tc_11_CollectionImport_Ext"/>  
+          <class name="com.TestScripts.Tc_12_PaymentImport_Ext"/>  
+          <class name="com.TestScripts.Tc_13_Journals_Ext"/> 
+          <class name="com.TestScripts.Tc_14_Authorization_Collections"/> 
+          <class name="com.TestScripts.Tc_15_Recall_Collection"/>
+          <class name="com.TestScripts.Tc_16_Recall_Payments"/>
+          
+          -->
+          
+          <class name="com.TestScripts.Tc_17_Recall_Journals"/>
+                              
+                                        
+                    
+           
+   
+
+
+       </classes>
+    
+    
+    
   </test> <!-- Test -->
   
-  <test name="Test1">
-    <classes>
-      <class name="com.TestScripts.Tc_02_ManualcapturePayment"/>
-    </classes>
-  </test> <!-- Test1 -->
+
   
-</suite> <!-- Suite -->
+</suite> <!-- Suite -->        
+     
+       
+    
+    
+
 
 
 

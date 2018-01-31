@@ -1,4 +1,4 @@
-package com.TestScripts;
+ package com.TestScripts;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -18,9 +18,9 @@ public class Tc_01_ManualcaptureCollection extends GenericMethods{
 		CollPeriodBalances_MCC cpb=PageFactory.initElements(driver, CollPeriodBalances_MCC.class);
 
 		lgn.launch_Application();
-		db.EntitySearch(); 
+		Thread.sleep(4000);
 		cpb.CollPeriodBalances();
-		
+
 
 	}
 

@@ -29,9 +29,7 @@ public class CollectionImport_Ext extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
 	public static WebElement Edi_EntitySearch;
-	
-	
-	
+		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSearch']")
 	public static WebElement Btn_Search;
 	
@@ -42,10 +40,6 @@ public class CollectionImport_Ext extends GenericMethods{
 	public static WebElement Btn_Open;
 	
 
-	
-	
-	
-	
 	
 
 	public static void CollectionImport_Ext() throws Exception 
@@ -79,10 +73,12 @@ public class CollectionImport_Ext extends GenericMethods{
         	i=autoitprocess.waitFor();
 		}
 	      autoitprocess.destroy();	
-		
+	 
 	      Thread.sleep(3000);
+	      System.out.println("Collection file imported successfully");
+		  LogEvent("Pass","Collection file imported successfully");
 		driver.quit();
-			}
+	}
 	
 	
 }

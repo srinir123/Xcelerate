@@ -1,11 +1,33 @@
 package com.ScreenFunctions;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 import com.GenericFunctions.GenericMethods;
 
 public class CollPeriodBalances_MCP extends GenericMethods{
+	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	public static WebElement Click_EntitySearch;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
+	public static WebElement Edi_EntitySearch;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnSearch']")
+	public static WebElement Btn_Search;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='resultsGrid']/tbody/tr[1]/td[1]")
+	public static WebElement Click_SearchResults;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnOpen']")
+	public static WebElement Btn_Open;
+	
+	@FindBy(how=How.XPATH,using="//*[text()= 'Collection Period Balances']")
+	public static WebElement Click_CollPeriodBalances;
+	
+	
+	
+	
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
 	public static WebElement Dropd_Agreement; 
 
@@ -18,9 +40,8 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='ActionDate']")
 	public static WebElement Set_ActionDate;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[4]/td[5]/a")
+	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[4]/a")
 	public static WebElement Click_ActionDate;
-	
 	@FindBy(how=How.XPATH,using="//*[@id='AccountHolder']")
 	public static WebElement Edi_AccountHolder;
 	
@@ -66,8 +87,7 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
 	public static WebElement Btn_Yes1; 
 	
-	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
-	public static WebElement Btn_Logout;
+
 	
 	
 	
@@ -77,11 +97,37 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	
 
 	public static void CollPeriodBalances_MCP() throws Exception 
-	{   waitForElement(Dropd_Agreement);
+	{   waitForElement(Click_EntitySearch);
+	
+	if(Click_EntitySearch.isDisplayed())
+	{
+		System.out.println("Clicking on entity search");
+		
+		Actions acc=new Actions(driver);
+		
+		acc.moveToElement(Click_EntitySearch).click(Click_EntitySearch).build().perform();
+		Click_EntitySearch.click();
+	}
+	
+	waitForElement(Edi_EntitySearch);
+	
+	String Entity_Name=getData("Entity_Name","CollPeriodBalances_MCP",1);
+	Edi_EntitySearch.sendKeys(Entity_Name);
+	waitForElement(Btn_Search);
+	Btn_Search.click();
+	waitForElement(Click_SearchResults);
+	Click_SearchResults.click();
+	Btn_Open.click();
+	waitForElement(Click_CollPeriodBalances);
+	Click_CollPeriodBalances.click();
+
+		
+		
+		waitForElement(Dropd_Agreement);
 		
 	String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCP",1);
 
-	Dropd_Agreement.sendKeys("Agreement_Name");
+	Dropd_Agreement.sendKeys(Agreement_Name);
 		waitForElement(Dropd_BucketID);
 		
 		String BucketID=getData("BucketID","CollPeriodBalances_MCP",1);
@@ -150,13 +196,11 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 		catch (Exception e)
 		{
 			
-     	}
-		Thread.sleep(3000);
-	//driver.quit();	
+	}
+	    Thread.sleep(3000);
+		System.out.println("Data entered sucessfully for all the fields");
+		LogEvent("Pass","Data entered sucessfully for all the fieldd in MCP tc");
+		driver.quit();
 }
-}	
-	
-	
-
-
+}
 	

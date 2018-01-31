@@ -159,6 +159,9 @@ public class CollPeriodBalances_MCP_Ext extends GenericMethods{
 			
      	}
 		Thread.sleep(3000);
+		System.out.println("Data entered sucessfully for all the fields");
+		LogEvent("Pass","Data entered sucessfully for all the fieldd in MCP tc");
+		
 	    driver.quit();	
 }
 }	

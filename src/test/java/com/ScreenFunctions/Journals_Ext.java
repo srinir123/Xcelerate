@@ -131,7 +131,10 @@ public class Journals_Ext extends GenericMethods{
 		{
 			
      	}
-		Thread.sleep(3000);
+	    Thread.sleep(3000);
+		System.out.println("The Journal transaction has been added sucessfully");
+		LogEvent("Pass","The Journal transaction has been added sucessfully");
+		
 	    driver.quit();	
 }
 }	

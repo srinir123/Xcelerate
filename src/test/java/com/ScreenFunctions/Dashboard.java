@@ -1,4 +1,4 @@
- package com.ScreenFunctions;
+package com.ScreenFunctions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -7,6 +7,8 @@ import org.openqa.selenium.support.How;
 import com.GenericFunctions.GenericMethods;
 
 public class Dashboard extends GenericMethods{
+	
+	
 
 	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
 	public static WebElement Click_EntitySearch;
@@ -34,7 +36,7 @@ public class Dashboard extends GenericMethods{
 		public static void EntitySearch() throws Exception
 		{
 			waitForElement(Click_EntitySearch);
-//			Click_EntitySearch.click();
+			
 			if(Click_EntitySearch.isDisplayed())
 			{
 				System.out.println("Clicking on entity search");
@@ -44,9 +46,10 @@ public class Dashboard extends GenericMethods{
 				acc.moveToElement(Click_EntitySearch).click(Click_EntitySearch).build().perform();
 				Click_EntitySearch.click();
 			}
+			
 			waitForElement(Edi_EntitySearch);
 			
-			String Entity_Name=getData("Entity_Name","Dashboard",1);
+			String Entity_Name=getData("Entity_Name","Dashboard",2);
 			Edi_EntitySearch.sendKeys(Entity_Name);
 			waitForElement(Btn_Search);
 			Btn_Search.click();

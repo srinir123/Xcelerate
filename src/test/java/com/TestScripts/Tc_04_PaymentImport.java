@@ -20,7 +20,7 @@ Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 PaymentImport pi=PageFactory.initElements(driver, PaymentImport.class);
 
 lgn.launch_Application();
-db.EntitySearch(); 
+Thread.sleep(2000);
 pi.PaymentImport();
 
 	}

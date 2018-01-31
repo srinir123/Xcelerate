@@ -67,10 +67,10 @@ public class NewUser_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnSave']")
 	public static WebElement Btnt_Save;
 	
-	@FindBy(how=How.XPATH,using="(//*[contains(text(), 'Yes')])[2]")
+	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")
 	public static WebElement Btnt_Yes;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='siri196']")
+	@FindBy(how=How.XPATH,using="//*[text()='siri236']")
 	public static WebElement Click_NUser;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSetupUser']")
@@ -87,6 +87,25 @@ public class NewUser_creation extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnOpen']")
 	public static WebElement Btnt_Open;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='RolesGrid']/tbody/tr[1]/td[1]/input")
+	public static WebElement Click_Sysadmin;
+
+//	@FindBy(how=How.XPATH,using="//*[text()='System Administrator']")
+//	public static WebElement Click_Sysadmin;
+	
+	
+	@FindBy(how=How.XPATH,using="(//*[@id='btnSave'])[2]")
+	public static WebElement Btn_Save;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnClose']")
+	public static WebElement Btn_Close;
+	
+	@FindBy(how=How.XPATH,using="//*[text()='Yes']")
+	public static WebElement Btn_Yes;
+		
+	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
+	public static WebElement Btn_logout;
 	
 
 	
@@ -202,13 +221,32 @@ public class NewUser_creation extends GenericMethods{
 		waitForElement(Btnt_SaveANew);
 		 click_element1(Btnt_SaveANew);
 		 //Btnt_SaveANew.click();
-		 
+	 
 		 waitForElement(Btnt_Open);
 		 Btnt_Open.click();
+		 Thread.sleep(18000);
+		 
+		 //waitForElement(Click_Sysadmin);
+		 click_element(Click_Sysadmin);
+		 
+		 waitForElement(Btn_Save);
+		 Btn_Save.click();
+		 //Thread.sleep(3000);
+
+		 waitForElement1(Btn_Close);
+		 Btn_Close.click();
+		 
+		 waitForElement(Btn_Yes);
+		 Btn_Yes.click();
+		 
+		 System.out.println("The new User has been created sucessfully");
+		 LogEvent("Pass","The new User has been created sucessfully");
 		 
 	    
-              
-		//driver.quit();
+		 //driver.quit(); 
+		waitForElement(Btn_logout);
+		Btn_logout.click();
+		
 	}
 
 

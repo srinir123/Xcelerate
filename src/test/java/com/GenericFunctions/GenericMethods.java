@@ -19,6 +19,9 @@ public class GenericMethods extends GenerateReports {
 	
 //public static  String UAT_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
 public static  String UAT_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";
+//public static  String UAT_url="http://172.20.92.22:81/smi-28152/#";
+
+public static  String Ad_url="http://192.168.0.4/Adiuvatis/ptlogin.asp";
 
 
 public static Fillo fillo;
@@ -52,6 +55,31 @@ public static Connection connection;
 		
 		
 	}
+	
+	
+	
+	public static void LaunchBrowserAd(String browser)
+	{
+		switch(browser.toLowerCase())
+		{
+		case "chrome":
+			
+			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+			driver=new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.get(Ad_url);
+			
+			
+			
+			break;
+			
+			
+		}
+		
+		
+	}
+	
+	
 	
 	
 	
@@ -89,7 +117,7 @@ public static Connection connection;
 	
 	public static void waitForElement(WebElement ele)
 	{
-		wait=new WebDriverWait(driver,240);
+		wait=new WebDriverWait(driver,120);
 		
 		try {
 			waitUntilPageLoaded();
@@ -104,7 +132,7 @@ public static Connection connection;
 	for(int i=0;i<=4000;i++)
 	{
 		try{
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			
 			Actions acc=new Actions(driver);
 			
@@ -335,6 +363,10 @@ finally
 	return data;
 	
 }
+
+
+
+
 
 
 

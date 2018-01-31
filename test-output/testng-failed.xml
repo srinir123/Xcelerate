@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.GenericFunctions.TestNgListners"/>
+  </listeners>
+  <test name="Test(failed)">
     <classes>
-      <class name="com.TestScripts.Tc_00_TestBrowser">
+      <class name="com.TestScripts.Tc_17_Recall_Journals">
         <methods>
-          <include name="Test"/>
+          <include name="evaluateTestcase"/>
         </methods>
-      </class> <!-- com.TestScripts.Tc_00_TestBrowser -->
+      </class> <!-- com.TestScripts.Tc_17_Recall_Journals -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

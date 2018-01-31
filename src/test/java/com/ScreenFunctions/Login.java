@@ -54,16 +54,12 @@ public class Login extends GenericMethods {
 			try{
 				waitForElement(Edi_Username);
 				Edi_Username.sendKeys(Username);
-				
-				System.out.println("Data entered sucessfully for the field Username");
-				//LogEvent("pass","Data entered sucessfully for the field Username");
-				
 			}
 			catch(Exception e)
 			{
 				status=false;
 				System.out.println("Unable to find the field Username "+e.getMessage());
-				//LogEvent("fail","Unable to find the field Username ");
+				LogEvent("fail","Unable to find the field Username ");
 				
 			}
 			if(status)
@@ -72,8 +68,8 @@ public class Login extends GenericMethods {
 				{
 					Edi_Password.sendKeys(password);
 
-					System.out.println("Data entered sucessfully for the field password");
-					LogEvent("pass","Data entered sucessfully for the field password");	
+					System.out.println("Data entered sucessfully for the fields Username and Password");
+					LogEvent("pass","Data entered sucessfully for the fields Username and Password");	
 					
 				}
 				catch(Exception e)
@@ -95,30 +91,39 @@ public class Login extends GenericMethods {
 			
 		}
 		
-//		public static void launch_Application1()
-//		{
-//            Edi_Username.sendKeys("asiyas");
-//            Edi_Password.sendKeys("P@ssw0rd");
-//            Btn_Loginbtn.click();
-//									
-//					}
-//				
-//				}
-//				
+
 		public static void launch_Application1()
 		{
-			
-	           String Username=getData("Username","Login",2);
-	           String password=getData("Password","Login",2);
+				waitForElement(Edi_Username);
+				Edi_Username.sendKeys("idahm");
+				Edi_Password.sendKeys("P@ssw0rd");
+				 Btn_Loginbtn.click();
+		}
+		
+		
+		public static void launch_Application2()
+		{
+				waitForElement(Edi_Username);
+				Edi_Username.sendKeys("hermanv");
+				Edi_Password.sendKeys("P@ssw0rd");
+				 Btn_Loginbtn.click();
+		}
+				
+				
 
-            Edi_Username.sendKeys(Username);
-            Edi_Password.sendKeys(password);
-            Btn_Loginbtn.click();
-									
-					}
-				
-				}
-				
+public static void launch_ApplicationAdiuvatis()
+{
+	
+       String Username=getData("Username","Login",2);
+       String password=getData("Password","Login",2);
+
+    Edi_Username.sendKeys(Username);
+    Edi_Password.sendKeys(password);
+    Btn_Loginbtn.click();
+							
+			}
+		
+		}
 			
 
 			

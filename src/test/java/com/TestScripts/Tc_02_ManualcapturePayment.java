@@ -18,7 +18,8 @@ public class Tc_02_ManualcapturePayment extends GenericMethods{
 		CollPeriodBalances_MCP cpb=PageFactory.initElements(driver, CollPeriodBalances_MCP.class);
 
 		lgn.launch_Application();
-		db.EntitySearch(); 
+		Thread.sleep(3000);
+		//db.EntitySearch(); 
 		cpb.CollPeriodBalances_MCP();
 
 

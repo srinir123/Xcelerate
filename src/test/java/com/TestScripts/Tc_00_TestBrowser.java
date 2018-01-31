@@ -12,8 +12,7 @@ public class Tc_00_TestBrowser extends GenericMethods{
 	
 	public static void Test()
 	{
-sendMail();
-		
+		sendMail();
 	}
 
 }

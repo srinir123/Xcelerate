@@ -143,7 +143,6 @@ public class Journals extends GenericMethods{
 		
 	
 	    
-	    //Attach_Instruction.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Desktop\\New folder\\Xcelerate specs\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
         waitForElement(Btn_Save);
         Btn_Save.click();
         
@@ -169,6 +168,8 @@ public class Journals extends GenericMethods{
 			
      	}
 		Thread.sleep(3000);
+		System.out.println("The Journal transaction has been added sucessfully");
+		LogEvent("Pass","The Journal transaction has been added sucessfully");
 	    driver.quit();	
 }
 }	

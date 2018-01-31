@@ -20,7 +20,8 @@ Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 CollectionImport cpb=PageFactory.initElements(driver, CollectionImport.class);
 
 lgn.launch_Application();
-db.EntitySearch(); 
+Thread.sleep(4000);
+//db.EntitySearch(); 
 cpb.CollectionImport();
 
 	}

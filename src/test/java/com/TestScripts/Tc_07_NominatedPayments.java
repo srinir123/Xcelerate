@@ -19,7 +19,7 @@ public class Tc_07_NominatedPayments extends GenericMethods{
          NominatedPayments np=PageFactory.initElements(driver, NominatedPayments.class);
 
 		lgn.launch_Application();
-		db.EntitySearch(); 
+		//db.EntitySearch(); 
 		np.NominatedPayments();
 
 		
@@ -27,3 +27,5 @@ public class Tc_07_NominatedPayments extends GenericMethods{
 	}
 
 }
+
+
