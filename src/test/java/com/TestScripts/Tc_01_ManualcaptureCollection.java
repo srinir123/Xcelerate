@@ -11,15 +11,20 @@ public class Tc_01_ManualcaptureCollection extends GenericMethods{
 
 	@Test
 	public static void evaluateTestcase() throws Exception {
+		
+
 		GenericMethods.LaunchBrowser("chrome");
          Login lgn=PageFactory.initElements(driver, Login.class);
          Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
 		CollPeriodBalances_MCC cpb=PageFactory.initElements(driver, CollPeriodBalances_MCC.class);
 
+
 		lgn.launch_Application();
 		Thread.sleep(4000);
 		cpb.CollPeriodBalances();
+		
+
 
 
 	}

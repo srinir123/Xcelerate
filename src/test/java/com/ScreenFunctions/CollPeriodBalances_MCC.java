@@ -25,9 +25,11 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Collection Period Balances']")
 	public static WebElement Click_CollPeriodBalances;
 	
-	
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
 	public static WebElement Dropd_Agreement; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id='QuoteSubAccountID']")
+	public static WebElement Dropd_Subacc;
 
 	@FindBy(how=How.XPATH,using="//*[@id='BucketID']")
 	public static WebElement Dropd_BucketID; 
@@ -77,6 +79,9 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
 	public static WebElement Btn_Yes1;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
+	public static WebElement Btn_logout;
+	
 	
 	
 
@@ -96,7 +101,7 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	
 	waitForElement(Edi_EntitySearch);
 	
-	String Entity_Name=getData("Entity_Name","CollPeriodBalances_MCC",2);
+	String Entity_Name=getData("Entity_Name","CollPeriodBalances_MCC",1);
 	Edi_EntitySearch.sendKeys(Entity_Name);
 	waitForElement(Btn_Search);
 	Btn_Search.click();
@@ -110,12 +115,20 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 		
 		waitForElement(Dropd_Agreement);
 	
-    String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCC",2);
+        String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCC",1);
 
 		Dropd_Agreement.sendKeys(Agreement_Name);
+		
+		waitForElement(Dropd_Subacc);
+		
+        String SubAccount_Name=getData("SubAccount_Name","CollPeriodBalances_MCC",1);
+
+        Dropd_Subacc.sendKeys(SubAccount_Name);
+		
+		
 		waitForElement(Dropd_BucketID);
 		
-	    String BucketID=getData("BucketID","CollPeriodBalances_MCC",2);
+	    String BucketID=getData("BucketID","CollPeriodBalances_MCC",1);
 
 		Dropd_BucketID.sendKeys(BucketID);
 		waitForElement(btn_CaptureColl);
@@ -123,32 +136,35 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 		waitForElement(Set_ActionDate);
 		Set_ActionDate.click();
 		Click_ActionDate.click();
-
-	    String AccountHolder=getData("AccountHolder","CollPeriodBalances_MCC",2);
+		
+		
+		
+waitForElement(Edi_AccountHolder);
+	    String AccountHolder=getData("AccountHolder","CollPeriodBalances_MCC",1);
 
 		Edi_AccountHolder.sendKeys(AccountHolder);
 		
-	    String AccountNumber=getData("AccountNumber","CollPeriodBalances_MCC",2);
+	    String AccountNumber=getData("AccountNumber","CollPeriodBalances_MCC",1);
 
 		Edi_AccountNumber.sendKeys(AccountNumber);
 
-		String Branchcode=getData("Branchcode","CollPeriodBalances_MCC",2);
+		String Branchcode=getData("Branchcode","CollPeriodBalances_MCC",1);
 
 		Edi_Branchcode.sendKeys(Branchcode);
 
-		String BankAccType=getData("BankAccType","CollPeriodBalances_MCC",2);
+		String BankAccType=getData("BankAccType","CollPeriodBalances_MCC",1);
 
 		Dropd_BankAccType.sendKeys(BankAccType);
 
-		String Amount=getData("Amount","CollPeriodBalances_MCC",2);
+		String Amount=getData("Amount","CollPeriodBalances_MCC",1);
 
 		Edi_Amount.sendKeys(Amount);
 
-		String TransRef=getData("TransRef","CollPeriodBalances_MCC",2);
+		String TransRef=getData("TransRef","CollPeriodBalances_MCC",1);
 
 		Edi_TransRef.sendKeys(TransRef);
 
-		String IntRef=getData("IntRef","CollPeriodBalances_MCC",2);
+		String IntRef=getData("IntRef","CollPeriodBalances_MCC",1);
 
 		Edi_IntRef.sendKeys(IntRef);
 		Btn_Save.click();
@@ -157,7 +173,8 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 		
 		try
 		{
-			waitForElement(Btn_exceptions);
+			Thread.sleep(3000);
+			//waitForElement(Btn_exceptions);
 			Btn_exceptions.click();
 			
 			if (Btn_exceptions.isDisplayed())
@@ -170,10 +187,18 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 		}
 		catch (Exception e)
 		{
-			
+		
+
+	
 	}
-	    Thread.sleep(3000);
+
+		Thread.sleep(3000);
 		LogEvent("Pass","Data entered sucessfully for all the fieldd in MCC tc");
-		driver.quit();
+		//driver.quit();
+		waitForElement(Btn_logout);
+    	Btn_logout.click();	
+
 }
+
+
 }

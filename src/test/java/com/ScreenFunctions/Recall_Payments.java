@@ -34,10 +34,10 @@ public class Recall_Payments extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnSearch']")
 	public static WebElement btn_Search;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='resultsGrid']/tbody/tr[1]/td[15]/button")
+	@FindBy(how=How.XPATH,using="(//*[text()='Recall'])[1]")
 	public static WebElement Click_Recallbtn;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='btnRecallTransactions']")
+	@FindBy(how=How.XPATH,using="(//*[text()='Recall'])[1]")
 	public static WebElement Btn_Recall;
 	
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
@@ -82,20 +82,22 @@ public class Recall_Payments extends GenericMethods{
 		Set_ToActionDate.click();
 		Click_ToActionDate.click();
 		Edi_TransStatus.sendKeys("Pending");
-		Edi_Transtype.sendKeys("Commission");
+		Edi_Transtype.sendKeys("Premium");
 		waitForElement(btn_Search);
 		btn_Search.click();
-		Thread.sleep(14000);
+		Thread.sleep(16000);
 
 		//waitForElement(Click_Recallbtn);
 		Click_Recallbtn.click();
-		waitForElement(Btn_Recall);
+		//waitForElement(Btn_Recall);
+		Thread.sleep(5000);
+
 		Btn_Recall.click();
 
 	    waitForElement(Btn_Yes);
 		Btn_Yes.click();
+		
 		Thread.sleep(6000);
-
 		LogEvent("Pass","The Transaction has been recalled sucessfully");
 		driver.quit();
 }

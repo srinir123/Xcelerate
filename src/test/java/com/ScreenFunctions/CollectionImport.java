@@ -27,8 +27,6 @@ public class CollectionImport extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
 	public static WebElement Edi_EntitySearch;
 	
-	
-	
 	@FindBy(how=How.XPATH,using="//*[@id='btnSearch']")
 	public static WebElement Btn_Search;
 	
@@ -77,7 +75,7 @@ public class CollectionImport extends GenericMethods{
 	
 	   String Agreement_Name=getData("Agreement_Name","CollectionImport",1);
 
-	    Dropd_Agreement.sendKeys("Agreement_Name");
+	    Dropd_Agreement.sendKeys(Agreement_Name);
 	
 		waitForElement(Dropd_BucketID);
 		

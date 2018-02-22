@@ -25,9 +25,6 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Collection Period Balances']")
 	public static WebElement Click_CollPeriodBalances;
 	
-	
-	
-	
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
 	public static WebElement Dropd_Agreement; 
 
@@ -63,7 +60,7 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='InternalReference']")
 	public static WebElement Edi_IntRefPmtCap; 
 	
-	@FindBy(how=How.XPATH,using="	//*[@id='TransactionTypeID']")
+	@FindBy(how=How.XPATH,using="//*[@id='TransactionTypeID']")
 	public static WebElement Dropd_Transtype; 
 
 	@FindBy(how=How.XPATH,using="//*[@id='TransactionSubTypeID']")
@@ -193,7 +190,7 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 			Btn_Yes1.click();
 			}
 		}
-		catch (Exception e)
+		catch (Exception e1)
 		{
 			
 	}

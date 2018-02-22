@@ -143,7 +143,7 @@ public class CollPeriodBalances_MCP_Ext extends GenericMethods{
 		Btn_Yes.click();
 		try
 		{
-			waitForElement(Btn_exceptions);
+			//waitForElement(Btn_exceptions);
 			Btn_exceptions.click();
 			
 			if (Btn_exceptions.isDisplayed())

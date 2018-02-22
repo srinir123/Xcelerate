@@ -92,6 +92,56 @@ public class Login extends GenericMethods {
 		}
 		
 
+		
+		public static void launch_Application(int i)
+		{boolean status=true;
+           String Username=getData("Username","Login",i);
+           String password=getData("Password","Login",i);
+			
+			try{
+				waitForElement(Edi_Username);
+				Edi_Username.sendKeys(Username);
+			}
+			catch(Exception e)
+			{
+				status=false;
+				System.out.println("Unable to find the field Username "+e.getMessage());
+				LogEvent("fail","Unable to find the field Username ");
+				
+			}
+			if(status)
+			{
+				try
+				{
+					Edi_Password.sendKeys(password);
+
+					System.out.println("Data entered sucessfully for the fields Username and Password");
+					LogEvent("pass","Data entered sucessfully for the fields Username and Password");	
+					
+				}
+				catch(Exception e)
+				{
+					status=false;
+					System.out.println("Unable to find the field Password "+e.getMessage());
+					LogEvent("fail","Unable to find the field Password ");
+					
+				}
+				
+				if(status)
+				{
+					Btn_Loginbtn.click();
+					
+				}
+			
+			}
+			
+			
+		}
+
+		
+		
+		
+		
 		public static void launch_Application1()
 		{
 				waitForElement(Edi_Username);

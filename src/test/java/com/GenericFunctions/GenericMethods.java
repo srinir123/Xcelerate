@@ -1,5 +1,9 @@
 package com.GenericFunctions;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -365,8 +369,113 @@ finally
 }
 
 
+public static String getData(String fieldname,String methodname,int itr,int subitr)
+{
+	
+	String data="";
+	Recordset recordset;
+	try {
+		
+		String query="Select "+fieldname+" from "+ methodname+" where Tc_Name='"+TestNgListners.crtClass+"' and iteration ="+itr+" and Sub_iteration ="+subitr+"";
+		
+		recordset=connection.executeQuery(query);
+
+		while(recordset.next()){
+		System.out.println(recordset.getField(fieldname));
+		
+		data=recordset.getField(fieldname);
+		recordset.close();
+break;
+		}
+		
+	}
+	catch(Exception e)
+	{
+		System.out.println("No Record Found");
+		data="";
+	}
+	
+finally
+{
+		
+}
+	
+	return data;
+	
+}
 
 
+
+
+
+public static int getmaxrownumber(String fieldname,String methodname)
+
+
+{String data="";
+int flag=0;
+Recordset recordset;
+try {
+	
+	String query="Select "+fieldname+" from "+ methodname+" where Tc_Name='"+TestNgListners.crtClass+"'";
+	
+	recordset=connection.executeQuery(query);
+
+	while(recordset.next()){
+	
+		flag++;
+	
+
+	}
+	
+}
+catch(Exception e)
+{
+	System.out.println("No Record Found");
+	data="";
+}
+
+finally
+{
+	
+}
+
+return flag;
+
+}
+
+
+
+public static void GetDateinJava(WebElement ele)
+{
+	 // Create object of SimpleDateFormat class and decide the format
+	 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	 
+	 //get current date time with Date()
+	 Date date = new Date();
+	 
+	 // Now format the date
+	 String ele1= dateFormat.format(date);
+	 
+	 // Print the Date
+	 System.out.println(ele1);
+	
+	
+}
+
+protected void GetDateinJava() {
+	// TODO Auto-generated method stub
+	 // Create object of SimpleDateFormat class and decide the format
+	 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	 
+	 //get current date time with Date()
+	 Date date = new Date();
+	 
+	 // Now format the date
+	 String ele1= dateFormat.format(date);
+	 
+	 // Print the Date
+	 System.out.println(ele1);
+}
 
 
 

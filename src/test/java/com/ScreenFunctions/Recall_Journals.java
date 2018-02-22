@@ -34,10 +34,10 @@ public class Recall_Journals extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnSearch']")
 	public static WebElement btn_Search;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='resultsGrid']/tbody/tr[1]/td[15]/button")
+	@FindBy(how=How.XPATH,using="(//*[text()='Recall'])[1]")
 	public static WebElement Click_Recallbtn;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='btnRecallTransactions']")
+	@FindBy(how=How.XPATH,using="(//*[text()='Recall'])[1]")
 	public static WebElement Btn_Recall;
 	
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
@@ -86,16 +86,18 @@ public class Recall_Journals extends GenericMethods{
 		waitForElement(btn_Search);
 		btn_Search.click();
 
-//		Thread.sleep(14000);
-//		Click_Recallbtn.click();
-//		waitForElement(Btn_Recall);
-//		Btn_Recall.click();
-//
-//	    waitForElement(Btn_Yes);
-//		Btn_Yes.click();
-//		Thread.sleep(6000);
-//
-//		LogEvent("Pass","The Transaction has been recalled sucessfully");
-//		driver.quit();
+		Thread.sleep(16000);
+		Click_Recallbtn.click();
+		//waitForElement(Btn_Recall);
+		Thread.sleep(5000);
+
+		Btn_Recall.click();
+
+	    waitForElement(Btn_Yes);
+		Btn_Yes.click();
+		Thread.sleep(6000);
+
+		LogEvent("Pass","The Transaction has been recalled sucessfully");
+		driver.quit();
 }
 }
