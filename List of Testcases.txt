@@ -53,4 +53,6 @@
           
           <class name="com.TestScripts.Tc_13_Journals_Ext_MUMD"/>  need to take different users for MUMD 
           <class name="com.TestScripts.Tc_13_Journals_Ext_SUMD"/>   Done but there was 0 balances so could not test all the interations  
+          
+             <class name="com.TestScripts.ISOPAIN_Fintegrate_Project"/> 
 

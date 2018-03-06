@@ -89,7 +89,7 @@ public class Recall_Journals extends GenericMethods{
 		Thread.sleep(16000);
 		Click_Recallbtn.click();
 		//waitForElement(Btn_Recall);
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 
 		Btn_Recall.click();
 

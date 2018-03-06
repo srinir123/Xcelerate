@@ -27,7 +27,10 @@ public class Journals extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
 	public static WebElement Dropd_Agreement; 
-
+	
+	@FindBy(how=How.XPATH,using="//*[@id='QuoteSubAccountID']")
+	public static WebElement Dropd_SubAcc; 
+	
 	@FindBy(how=How.XPATH,using="//*[@id='BucketID']")
 	public static WebElement Dropd_BucketID; 
 	
@@ -106,11 +109,20 @@ public class Journals extends GenericMethods{
     String Agreement_Name=getData("Agreement_Name","Journals",1);
 
 		Dropd_Agreement.sendKeys(Agreement_Name);
+		
+		waitForElement(Dropd_SubAcc);
+		
+	    String SubAccount_Name=getData("SubAccount_Name","Journals",1);
+
+	    Dropd_SubAcc.sendKeys(SubAccount_Name);
+		
+		
 		waitForElement(Dropd_BucketID);
 		
 	    String BucketID=getData("BucketID","Journals",1);
 
 		Dropd_BucketID.sendKeys(BucketID);
+		Thread.sleep(2000);
 		waitForElement(btn_Journals);
 		btn_Journals.click();
 		

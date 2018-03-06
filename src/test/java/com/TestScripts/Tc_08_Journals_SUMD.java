@@ -3,12 +3,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
-import com.ScreenFunctions.Dashboard;
-import com.ScreenFunctions.Journals;
-import com.ScreenFunctions.Journals_MUMD;
 import com.ScreenFunctions.Journals_SUMD;
 import com.ScreenFunctions.Login;
-import com.ScreenFunctions.NominatedPayments;
 
 public class Tc_08_Journals_SUMD extends GenericMethods{
 
@@ -20,7 +16,7 @@ public class Tc_08_Journals_SUMD extends GenericMethods{
 		GenericMethods.LaunchBrowser("chrome");
          Login lgn=PageFactory.initElements(driver, Login.class);
          
-         Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+        // Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
          Journals_SUMD jnls=PageFactory.initElements(driver, Journals_SUMD.class );
 

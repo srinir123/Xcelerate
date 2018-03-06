@@ -14,9 +14,14 @@ public class TestNG {
 	{
 		
 //		System.out.println("Hello World");
-//		
-		sendMail();
+		dbConnect();
+		//sendMail();
 		//GetDateinJava();
+		
+	}
+
+	private void dbConnect() {
+		// TODO Auto-generated method stub
 		
 	}
 

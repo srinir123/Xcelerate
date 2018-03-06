@@ -9,12 +9,10 @@
 </listeners>
   <test name="Test">
     <classes>
-              
 
-           
-          <class name="com.TestScripts.Tc_10_ManualcapturePayment_Ext_MUMD"/>   
-          <class name="com.TestScripts.Tc_10_ManualcapturePayment_Ext_SUMD"/>
-     
+
+
+          <class name="com.TestScripts.Tc_02_ManualcapturePayment"/> 
      
             
     

@@ -4,8 +4,6 @@ import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
 import com.ScreenFunctions.BankAccountCreation;
-import com.ScreenFunctions.CollPeriodBalances_MCC;
-import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Login;
 
 public class Tc_21_BankAccountCreation extends GenericMethods{
@@ -16,7 +14,7 @@ public class Tc_21_BankAccountCreation extends GenericMethods{
 		int maxnumber=getmaxrownumber("iteration","Login");
 		GenericMethods.LaunchBrowser("chrome");
          Login lgn=PageFactory.initElements(driver, Login.class);
-         Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+         //Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
          BankAccountCreation bac=PageFactory.initElements(driver, BankAccountCreation.class);
 

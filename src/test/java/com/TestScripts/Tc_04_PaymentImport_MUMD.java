@@ -3,9 +3,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
-import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Login;
-import com.ScreenFunctions.PaymentImport;
 import com.ScreenFunctions.PaymentImport_MUMD;
 
 public class Tc_04_PaymentImport_MUMD extends GenericMethods {
@@ -16,7 +14,7 @@ public class Tc_04_PaymentImport_MUMD extends GenericMethods {
 		GenericMethods.LaunchBrowser("chrome");
 Login lgn=PageFactory.initElements(driver, Login.class);
 
-Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+//Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
 PaymentImport_MUMD pi=PageFactory.initElements(driver, PaymentImport_MUMD.class);
 

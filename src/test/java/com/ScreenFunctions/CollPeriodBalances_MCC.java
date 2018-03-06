@@ -4,6 +4,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
 
 public class CollPeriodBalances_MCC extends GenericMethods{
@@ -40,7 +41,7 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='ActionDate']")
 	public static WebElement Set_ActionDate;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[4]/td[5]/a")
+	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[4]/a") 
 	public static WebElement Click_ActionDate;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='AccountHolder']")
@@ -83,7 +84,7 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	public static WebElement Btn_logout;
 	
 	
-	
+	public static String taskid;
 
 	
 	public static void CollPeriodBalances() throws Exception 
@@ -197,7 +198,9 @@ waitForElement(Edi_AccountHolder);
 		//driver.quit();
 		waitForElement(Btn_logout);
     	Btn_logout.click();	
-
+        taskid= DBConnection.dbConnect();
+        
+        System.out.println(taskid);
 }
 
 

@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
 import com.ScreenFunctions.CollectionImport_MUMD;
-import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Login;
 
 public class Tc_03_CollectionImport_MUMD extends GenericMethods {
@@ -17,7 +16,7 @@ public class Tc_03_CollectionImport_MUMD extends GenericMethods {
 GenericMethods.LaunchBrowser("chrome");
 Login lgn=PageFactory.initElements(driver, Login.class);
 
-Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+//Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
 CollectionImport_MUMD cpb=PageFactory.initElements(driver, CollectionImport_MUMD.class);
 

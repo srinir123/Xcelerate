@@ -4,6 +4,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
 
 public class ISOPAIN extends GenericMethods{
@@ -87,7 +88,7 @@ public class ISOPAIN extends GenericMethods{
 		
 		
 	
-
+			public static String taskid;
 	
 	
 
@@ -154,24 +155,23 @@ public class ISOPAIN extends GenericMethods{
 waitForElement(Btn_Save);
 Btn_Save.click();
 
-
-
 waitForElement(Btn_Yes);
 Btn_Yes.click();
 
-Thread.sleep(4000);
+//Thread.sleep(4000);
 
 //waitForElement(Btn_Close);
-Btn_Close.click();
+//Btn_Close.click();
 
-Thread.sleep(2000);
+//Thread.sleep(2000);
 
 //waitForElement(Btn_Yes1);
 //Btn_Yes1.click();
-click_element(Btn_Yes1);
 
-waitForElement(Btn_X);
-Btn_X.click();
+//click_element(Btn_Yes1);
+
+//waitForElement(Btn_X);
+//Btn_X.click();
 //
 //Thread.sleep(2000);
 //
@@ -217,6 +217,10 @@ Btn_X.click();
 //		driver.quit();
 waitForElement(Btn_logout);
 Btn_logout.click();	
+
+taskid= DBConnection.dbConnect();
+
+System.out.println(taskid);
 	
 			}
 	

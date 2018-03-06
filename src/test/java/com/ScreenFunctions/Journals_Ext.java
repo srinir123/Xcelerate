@@ -1,6 +1,5 @@
 package com.ScreenFunctions;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
@@ -74,7 +73,7 @@ public class Journals_Ext extends GenericMethods{
 		waitForElement(Dropd_BucketID);
 		
 	    String BucketID=getData("BucketID","Journals_Ext",1);
-
+        Thread.sleep(2000);
 		Dropd_BucketID.sendKeys(BucketID);
 		waitForElement(btn_Journals);
 		btn_Journals.click();

@@ -5,8 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,13 +15,13 @@ import com.ReportGeneration.GenerateReports;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
-import com.relevantcodes.extentreports.LogStatus;
 
 public class GenericMethods extends GenerateReports {
 	
 //public static  String UAT_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
 public static  String UAT_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";
 //public static  String UAT_url="http://172.20.92.22:81/smi-28152/#";
+public static  String Dev_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
 
 public static  String Ad_url="http://192.168.0.4/Adiuvatis/ptlogin.asp";
 
@@ -59,6 +57,29 @@ public static Connection connection;
 		
 		
 	}
+	
+	
+	public static void LaunchBrowser1(String browser)
+	{
+		switch(browser.toLowerCase())
+		{
+		case "chrome":
+			
+			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+			driver=new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.get(Dev_url);
+			
+			
+			
+			break;
+			
+			
+		}
+		
+		
+	}
+	
 	
 	
 	
@@ -209,6 +230,51 @@ public static Connection connection;
 	
 	}
 	}
+	
+	public static void waitForElement2(WebElement ele)
+	{
+		wait=new WebDriverWait(driver,120);
+		
+		try {
+			waitUntilPageLoaded();
+			//wait.until(org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated(ele));
+
+			wait.until(org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf(ele));
+		} catch (Exception exception) {
+			System.out.println(exception);
+		}
+		
+		
+	for(int i=0;i<=4000;i++)
+	{
+		try{
+			Thread.sleep(1000);
+			
+			Actions acc=new Actions(driver);
+			
+			acc.moveToElement(ele).build().perform();
+			
+			//ele.click();
+			System.out.println(ele+"found");
+			waitUntilPageLoaded();
+   			break;
+		}
+		catch(Exception e)
+		{
+			System.out.println(ele+"not found");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e1) {
+				
+				e1.printStackTrace();
+
+	}
+	
+		}	
+	
+	}
+	}
+
 
 	
 	

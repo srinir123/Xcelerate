@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="696990" started-at="2018-02-22T09:14:16Z" finished-at="2018-02-22T09:25:53Z">
+  <suite name="Suite" duration-ms="196635" started-at="2018-03-06T07:20:15Z" finished-at="2018-03-06T07:23:31Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="696990" started-at="2018-02-22T09:14:16Z" finished-at="2018-02-22T09:25:53Z">
-      <class name="com.TestScripts.Tc_10_ManualcapturePayment_Ext_SUMD">
-        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_10_ManualcapturePayment_Ext_SUMD@6eebc39e]" name="evaluateTestcase" duration-ms="337213" started-at="2018-02-22T11:20:03Z" finished-at="2018-02-22T11:25:40Z">
+    <test name="Test" duration-ms="196635" started-at="2018-03-06T07:20:15Z" finished-at="2018-03-06T07:23:31Z">
+      <class name="com.TestScripts.Tc_02_ManualcapturePayment">
+        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_02_ManualcapturePayment@69ea3742]" name="evaluateTestcase" duration-ms="189685" started-at="2018-03-06T09:20:15Z" finished-at="2018-03-06T09:23:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- evaluateTestcase -->
-      </class> <!-- com.TestScripts.Tc_10_ManualcapturePayment_Ext_SUMD -->
-      <class name="com.TestScripts.Tc_10_ManualcapturePayment_Ext_MUMD">
-        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_10_ManualcapturePayment_Ext_MUMD@754ba872]" name="evaluateTestcase" duration-ms="330926" started-at="2018-02-22T11:14:17Z" finished-at="2018-02-22T11:19:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- evaluateTestcase -->
-      </class> <!-- com.TestScripts.Tc_10_ManualcapturePayment_Ext_MUMD -->
+      </class> <!-- com.TestScripts.Tc_02_ManualcapturePayment -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

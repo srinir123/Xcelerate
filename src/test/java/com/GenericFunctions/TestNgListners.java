@@ -8,7 +8,6 @@ import org.testng.ITestMethodFinder;
 import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.xml.XmlTest;
-
 import com.ReportGeneration.GenerateReports;
 
 public class TestNgListners implements ITestListener,IInvokedMethodListener {

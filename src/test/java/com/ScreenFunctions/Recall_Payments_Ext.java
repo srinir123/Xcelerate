@@ -91,7 +91,7 @@ public class Recall_Payments_Ext extends GenericMethods{
 		Edi_Transtype.sendKeys("Commission");
 		waitForElement(btn_Search);
 		btn_Search.click();
-		Thread.sleep(16000);
+		Thread.sleep(18000);
 
 		//waitForElement(Click_Recallbtn);
 		Click_Recallbtn.click();

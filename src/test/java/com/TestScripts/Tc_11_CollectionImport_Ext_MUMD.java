@@ -3,10 +3,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
-import com.ScreenFunctions.CollectionImport;
-import com.ScreenFunctions.CollectionImport_Ext;
 import com.ScreenFunctions.CollectionImport_Ext_MUMD;
-import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Login;
 
 public class Tc_11_CollectionImport_Ext_MUMD extends GenericMethods {
@@ -18,7 +15,7 @@ public class Tc_11_CollectionImport_Ext_MUMD extends GenericMethods {
 		GenericMethods.LaunchBrowser("chrome");
 Login lgn=PageFactory.initElements(driver, Login.class);
 
-Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+//Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
 CollectionImport_Ext_MUMD cpb=PageFactory.initElements(driver, CollectionImport_Ext_MUMD.class);
 

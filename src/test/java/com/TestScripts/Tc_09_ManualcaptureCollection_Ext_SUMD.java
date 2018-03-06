@@ -3,11 +3,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
-import com.ScreenFunctions.CollPeriodBalances_MCC;
-import com.ScreenFunctions.CollPeriodBalances_MCC_Ext;
-import com.ScreenFunctions.CollPeriodBalances_MCC_Ext_MUMD;
 import com.ScreenFunctions.CollPeriodBalances_MCC_Ext_SUMD;
-import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Login;
 
 public class Tc_09_ManualcaptureCollection_Ext_SUMD extends GenericMethods{
@@ -19,7 +15,7 @@ public class Tc_09_ManualcaptureCollection_Ext_SUMD extends GenericMethods{
 
 		GenericMethods.LaunchBrowser("chrome");
          Login lgn=PageFactory.initElements(driver, Login.class);
-         Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+         //Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
          CollPeriodBalances_MCC_Ext_SUMD cpbe=PageFactory.initElements(driver, CollPeriodBalances_MCC_Ext_SUMD.class);
 

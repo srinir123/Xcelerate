@@ -3,9 +3,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
-import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Login;
-import com.ScreenFunctions.NominatedPayments;
 import com.ScreenFunctions.NominatedPayments_MUMD;
 
 public class Tc_07_NominatedPayments_MUMD extends GenericMethods{
@@ -17,7 +15,7 @@ public class Tc_07_NominatedPayments_MUMD extends GenericMethods{
 		GenericMethods.LaunchBrowser("chrome");
          Login lgn=PageFactory.initElements(driver, Login.class);
          
-         Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+        // Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
          NominatedPayments_MUMD np=PageFactory.initElements(driver, NominatedPayments_MUMD.class);
          

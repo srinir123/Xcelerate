@@ -3,10 +3,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
-import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Journals;
 import com.ScreenFunctions.Login;
-import com.ScreenFunctions.NominatedPayments;
 
 public class Tc_08_Journals extends GenericMethods{
 
@@ -15,7 +13,7 @@ public class Tc_08_Journals extends GenericMethods{
 		GenericMethods.LaunchBrowser("chrome");
          Login lgn=PageFactory.initElements(driver, Login.class);
          
-         Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+         //Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
          Journals jnls=PageFactory.initElements(driver, Journals.class );
 

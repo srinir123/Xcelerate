@@ -223,6 +223,8 @@ public class CollPeriodBalances_MCP_MUMD extends GenericMethods{
 			//driver.quit();
 			waitForElement(Btn_logout);
 			Btn_logout.click();	
+			
+			
 
 			
 	}

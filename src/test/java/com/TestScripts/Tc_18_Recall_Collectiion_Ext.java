@@ -3,10 +3,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
-import com.ScreenFunctions.CollPeriodBalances_MCC;
-import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Login;
-import com.ScreenFunctions.Recall_Collections;
 import com.ScreenFunctions.Recall_Collections_Ext;
 
 public class Tc_18_Recall_Collectiion_Ext extends GenericMethods{
@@ -15,7 +12,7 @@ public class Tc_18_Recall_Collectiion_Ext extends GenericMethods{
 	public static void evaluateTestcase() throws Exception {
 		GenericMethods.LaunchBrowser("chrome");
          Login lgn=PageFactory.initElements(driver, Login.class);
-         Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+         //Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
          Recall_Collections_Ext rce=PageFactory.initElements(driver, Recall_Collections_Ext.class);
 

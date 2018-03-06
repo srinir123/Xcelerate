@@ -3,13 +3,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
-import com.ScreenFunctions.Dashboard;
-import com.ScreenFunctions.Journals;
-import com.ScreenFunctions.Journals_Ext;
-import com.ScreenFunctions.Journals_Ext_MUMD;
 import com.ScreenFunctions.Journals_Ext_SUMD;
 import com.ScreenFunctions.Login;
-import com.ScreenFunctions.NominatedPayments;
 
 public class Tc_13_Journals_Ext_SUMD extends GenericMethods{
 

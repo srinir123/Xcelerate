@@ -90,7 +90,7 @@ public class Recall_Collections_Ext extends GenericMethods{
 		Edi_Transtype.sendKeys("Collection");
 		waitForElement(btn_Search);
 		btn_Search.click();
-		Thread.sleep(16000);
+		Thread.sleep(18000);
 
 		waitForElement(Click_Recallbtn);
 		Click_Recallbtn.click();

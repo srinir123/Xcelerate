@@ -177,7 +177,7 @@ public class CollPeriodBalances_MCP_SUMD extends GenericMethods{
 		try
 		{
 		
-		String PmtSubtype=getData("PmtSubtype","CollPeriodBalances_MCP_SUMD",i);
+		String PmtSubtype=getData("PmtSubtype","CollPeriodBalances_MCP_SUMD",i,j);
 
 		Dropd_PmtSubtype.sendKeys(PmtSubtype);
 		}
