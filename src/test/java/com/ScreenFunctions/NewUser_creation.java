@@ -4,6 +4,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
 
 public class NewUser_creation extends GenericMethods{
@@ -70,7 +71,7 @@ public class NewUser_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")
 	public static WebElement Btnt_Yes;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='siri1433']")
+	@FindBy(how=How.XPATH,using="//*[text()='siri1000']")
 	public static WebElement Click_NUser;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSetupUser']")
@@ -108,7 +109,7 @@ public class NewUser_creation extends GenericMethods{
 	public static WebElement Btn_logout;
 	
 
-	
+	public static String taskid;
 	
 
 	public static <performDBLCLICK> void NewUser_creation() throws Exception
@@ -207,10 +208,11 @@ public class NewUser_creation extends GenericMethods{
 		
 		waitForElement(Click_MUser);
 		Click_MUser.click();
-		
+		Thread.sleep(3000);
 		waitForElement(Create_NUser);
 		Create_NUser.click();
-		
+		Thread.sleep(2000);
+
 		waitForElement1(Btnt_RolesP);
 		//Btnt_RolesP.click();
 		click_element1(Btnt_RolesP);
@@ -224,7 +226,7 @@ public class NewUser_creation extends GenericMethods{
 	 
 		 waitForElement(Btnt_Open);
 		 Btnt_Open.click();
-		 Thread.sleep(18000);
+		 Thread.sleep(15000);
 		 
 		 //waitForElement(Click_Sysadmin);
 		 click_element(Click_Sysadmin);
@@ -246,6 +248,10 @@ public class NewUser_creation extends GenericMethods{
 		 //driver.quit(); 
 		waitForElement(Btn_logout);
 		Btn_logout.click();
+		
+        taskid= DBConnection.dbConnect();
+        
+        System.out.println(taskid);
 		
 	}
 

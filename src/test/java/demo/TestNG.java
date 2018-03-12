@@ -1,9 +1,5 @@
 package demo;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.testng.annotations.Test;
 
 public class TestNG {
@@ -25,10 +21,7 @@ public class TestNG {
 		
 	}
 
-	private void sendMail() {
-		// TODO Auto-generated method stub
-		
-	}
+
 
 //	private void GetDateinJava() {
 //		// TODO Auto-generated method stub

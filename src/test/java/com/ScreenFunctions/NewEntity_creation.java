@@ -3,6 +3,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
 
 public class NewEntity_creation extends GenericMethods{
@@ -200,7 +201,7 @@ public class NewEntity_creation extends GenericMethods{
 	public static WebElement Btn_logout;
 	
 	
-	
+	public static String taskid;
 	
 	
 	public static void NewEntity_creation() throws Exception   
@@ -371,7 +372,7 @@ public class NewEntity_creation extends GenericMethods{
         waitForElement(Btnt_YesSLE);
         Btnt_YesSLE.click();
             
-        Thread.sleep(28000);
+        Thread.sleep(36000);
         Btn_NextLE.click();
         
         waitForElement(Btn_subYes);
@@ -383,6 +384,10 @@ public class NewEntity_creation extends GenericMethods{
         //driver.quit();
     	waitForElement(Btn_logout);
     	Btn_logout.click();
+		
+        taskid= DBConnection.dbConnect();
+        
+        System.out.println(taskid);
       
 	}
 }

@@ -12,7 +12,6 @@
           <class name="com.TestScripts.Tc_11_CollectionImport_Ext"/>  
           <class name="com.TestScripts.Tc_12_PaymentImport_Ext"/>  
           <class name="com.TestScripts.Tc_13_Journals_Ext"/> 
-          <class name="com.TestScripts.Tc_14_Authorization_Collections"/> 
           <class name="com.TestScripts.Tc_15_Recall_Collection"/>
           <class name="com.TestScripts.Tc_16_Recall_Payments"/> 
           <class name="com.TestScripts.Tc_17_Recall_Journals"/> 

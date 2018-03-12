@@ -9,12 +9,8 @@
 </listeners>
   <test name="Test">
     <classes>
-
-
-
-          <class name="com.TestScripts.Tc_02_ManualcapturePayment"/> 
      
-            
+     <class name="com.TestScripts.Tc_02_ManualcapturePayment"/> 
     
     
     </classes>

@@ -18,11 +18,11 @@ import com.codoid.products.fillo.Recordset;
 
 public class GenericMethods extends GenerateReports {
 	
-//public static  String UAT_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
-public static  String UAT_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";
+public static  String UAT_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
+//public static  String UAT_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";
 //public static  String UAT_url="http://172.20.92.22:81/smi-28152/#";
-public static  String Dev_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
-
+public static  String Dev_url="http://172.20.92.22:81/smi-28858/#";
+//public static  String Dev_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
 public static  String Ad_url="http://192.168.0.4/Adiuvatis/ptlogin.asp";
 
 
@@ -528,7 +528,7 @@ public static void GetDateinJava(WebElement ele)
 	
 }
 
-protected void GetDateinJava() {
+protected static void GetDateinJava() {
 	// TODO Auto-generated method stub
 	 // Create object of SimpleDateFormat class and decide the format
 	 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

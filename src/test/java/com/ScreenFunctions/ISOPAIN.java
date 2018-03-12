@@ -8,11 +8,6 @@ import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
 
 public class ISOPAIN extends GenericMethods{
-//	@FindBy(how=How.XPATH,using="/html/body/app-root/div/div/div/div[1]/app-lab-manager-branch-list[1]/div/div[2]/div/app-lab-manager-branch[11]/div/div/a/i")
-//	public static WebElement Dev_Smilink; 
-	
-
-
 	
 	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[3]/a")
 	public static WebElement Click_Paramm;
@@ -41,68 +36,74 @@ public class ISOPAIN extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
 	public static WebElement Btn_Yes;
 	
-//	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
-//	public static WebElement Btn_logout;
+	@FindBy(how=How.XPATH,using="(//*[@id='btnClose'])[2]")
+	public static WebElement Btn_Close;
 	
+	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
+	public static WebElement Btn_Yes1;
+	
+	@FindBy(how=How.XPATH,using="/html/body/div[4]/div[1]/a/span")
+	public static WebElement Btn_X;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	public static WebElement Click_EntitySearch;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
+	public static WebElement Edi_EntitySearch;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnSearch']")
+	public static WebElement Btn_Search;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='resultsGrid']/tbody/tr[1]/td[1]")
+	public static WebElement Click_SearchResults;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnOpen']")
+	public static WebElement Btn_Open;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='collapse1']/div/ul/li[3]/ul/li[4]/a")
+	public static WebElement Btn_TranBnkAcc;
+	
+	@FindBy(how=How.XPATH,using="(//*[@id='btnAdd'])[1]")
+	public static WebElement Click_Addnew;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='AccountHolder']")
+	public static WebElement Edi_AccountHolder;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='AccountDescription']")
+	public static WebElement Edi_AccountDesp;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='BranchNumber']")
+	public static WebElement Edi_Branchcode;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='AccountNumber']")
+	public static WebElement Edi_AccountNumber;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='BankAccountTypeID']")
+	public static WebElement Dropd_BankAccType;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='AutoAllocateDepositQuoteSubAccountID']")
+	public static WebElement Edi_SubAcc;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='StatusID']")
+	public static WebElement Edi_Status; 
 
-			
-			@FindBy(how=How.XPATH,using="(//*[@id='btnClose'])[2]")
-			public static WebElement Btn_Close;
-			
-			@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
-			public static WebElement Btn_Yes1;
-			
-			@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
-			public static WebElement Btn_logout;
-			
-			@FindBy(how=How.XPATH,using="/html/body/div[4]/div[1]/a/span")
-			public static WebElement Btn_X;
-//			
-//			@FindBy(how=How.XPATH,using="//*[@id='btnAdd']")
-//			public static WebElement Btn_add;
-//			
-//			@FindBy(how=How.XPATH,using="//*[@id='ShortDescription']")
-//			public static WebElement Edi_ShortDesp;
-//			
-//			@FindBy(how=How.XPATH,using="//*[@id='LongDescription']")
-//			public static WebElement Edi_LongDesp;
-//			
-//			@FindBy(how=How.XPATH,using="//*[@id='IPAddress']")
-//			public static WebElement Edi_IPadd;
-//			
-//			@FindBy(how=How.XPATH,using="//*[@id='btnSaveOne']")
-//			public static WebElement Btn_Save1;
-//			
-//			@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
-//			public static WebElement Btn_Yes2;
-//			
-//			@FindBy(how=How.XPATH,using="//*[@id='btnClose']")
-//			public static WebElement Btn_Close1;
-//			
-//			@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
-//			public static WebElement Btn_Yes3;
-			
-		
+	@FindBy(how=How.XPATH,using="//*[@id='B2BUserID']")
+	public static WebElement Edi_B2BUser; 
+
+	@FindBy(how=How.XPATH,using="(//*[@id='btnSaveOne'])[1]")
+	public static WebElement Btn_Save1; 
 	
+	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
+	public static WebElement Btn_Yes2;
 		
-		
-		
+	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
+	public static WebElement Btn_logout;
 	
 			public static String taskid;
 	
 	
-
-	
-	
-
 	public static void ISOPAIN() throws Exception {
-//		waitForElement(Dev_Smilink);
-//		Dev_Smilink.click();
-//		Thread.sleep(2000);
-//		waitForElement(Edi_Username);
-//		Edi_Username.sendKeys("lancen");
-//		Edi_Password.sendKeys("P@ssw0rd");
-//		 Btn_Loginbtn.click();
+
 	
 
 	
@@ -158,69 +159,110 @@ Btn_Save.click();
 waitForElement(Btn_Yes);
 Btn_Yes.click();
 
-//Thread.sleep(4000);
+Thread.sleep(6000);
 
-//waitForElement(Btn_Close);
-//Btn_Close.click();
+waitForElement(Btn_Close);
+Btn_Close.click();
 
-//Thread.sleep(2000);
+Thread.sleep(2000);
 
-//waitForElement(Btn_Yes1);
-//Btn_Yes1.click();
+waitForElement(Btn_Yes1);
+Btn_Yes1.click();
 
-//click_element(Btn_Yes1);
+waitForElement(Btn_X);
+Btn_X.click();
 
-//waitForElement(Btn_X);
-//Btn_X.click();
-//
-//Thread.sleep(2000);
-//
-//waitForElement(Btn_ServiceChan);
-//Btn_ServiceChan.click();
-//
-//waitForElement(Btn_add);
-//Btn_add.click();
-//
-//waitForElement(Edi_ShortDesp);
-//
-//String ShortDesp_Name=getData("ShortDesp_Name","ISOPAIN",1);
-//
-//Edi_ShortDesp.sendKeys(ShortDesp_Name);
-//
-//
-//waitForElement(Edi_LongDesp);
-//
-//String LongDesp_Name=getData("LongDesp_Name","ISOPAIN",1);
-//
-//Edi_LongDesp.sendKeys(LongDesp_Name);
-//
-//
-//waitForElement(Edi_IPadd);
-//
-//String IPADD_Name=getData("IPADD_Name","ISOPAIN",1);
-//
-//Edi_IPadd.sendKeys(IPADD_Name);
-//
-//waitForElement(Btn_Save1);
-//Btn_Save1.click();
-//
-//waitForElement(Btn_Yes2);
-//Btn_Yes2.click();
-//
-//waitForElement(Btn_Close1);
-//Btn_Close1.click();
-//
-//waitForElement(Btn_Yes3);
-//Btn_Yes3.click();
-//
-//	
-//		driver.quit();
+waitForElement(Click_EntitySearch);
+
+if(Click_EntitySearch.isDisplayed())
+{
+	System.out.println("Clicking on entity search");
+	
+	Actions acc=new Actions(driver);
+	
+	acc.moveToElement(Click_EntitySearch).click(Click_EntitySearch).build().perform();
+	Click_EntitySearch.click();
+}
+
+waitForElement(Edi_EntitySearch);
+
+Edi_EntitySearch.sendKeys("Insure group");
+waitForElement(Btn_Search);
+Btn_Search.click();
+waitForElement(Click_SearchResults);
+Click_SearchResults.click();
+Btn_Open.click();
+
+waitForElement(Btn_TranBnkAcc);
+Btn_TranBnkAcc.click();
+
+waitForElement(Click_Addnew);
+Click_Addnew.click();
+
+waitForElement(Edi_AccountHolder);
+
+String AccountHolder=getData("AccountHolder","ISOPAIN",1);
+
+Edi_AccountHolder.sendKeys(AccountHolder);
+
+waitForElement(Edi_AccountDesp);
+
+String AccountDesp=getData("AccountDesp","ISOPAIN",1);
+
+Edi_AccountDesp.sendKeys(AccountDesp);
+
+waitForElement(Edi_Branchcode);
+
+String Branchcode=getData("Branchcode","ISOPAIN",1);
+
+Edi_Branchcode.sendKeys(Branchcode);
+
+waitForElement(Edi_AccountNumber);
+
+String AccountNumber=getData("AccountNumber","ISOPAIN",1);
+
+Edi_AccountNumber.sendKeys(AccountNumber);
+
+waitForElement(Dropd_BankAccType);
+
+String BankAccType=getData("BankAccType","ISOPAIN",1);
+
+Dropd_BankAccType.sendKeys(BankAccType);
+
+waitForElement(Edi_SubAcc);
+
+String SubAcc=getData("SubAcc","ISOPAIN",1);
+
+Edi_SubAcc.sendKeys(SubAcc);
+
+waitForElement(Edi_Status);
+
+String Status=getData("Status","ISOPAIN",1);
+
+Edi_Status.sendKeys(Status);
+
+waitForElement(Edi_B2BUser);
+
+String B2BUser=getData("B2BUser","ISOPAIN",1);
+
+Edi_B2BUser.sendKeys(B2BUser);
+
+waitForElement(Btn_Save1);
+Btn_Save1.click();
+
+waitForElement(Btn_Yes2);
+Btn_Yes2.click();
+
+
 waitForElement(Btn_logout);
 Btn_logout.click();	
 
 taskid= DBConnection.dbConnect();
 
 System.out.println(taskid);
+
+//Thread.sleep(3000);
+//driver.quit();
 	
 			}
 	

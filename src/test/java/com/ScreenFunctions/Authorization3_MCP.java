@@ -41,5 +41,8 @@ public class Authorization3_MCP extends GenericMethods{
     	//Btn_logout.click();	
 		Thread.sleep(2000);
         driver.quit();
+        
+      
+
 	}
 	}
