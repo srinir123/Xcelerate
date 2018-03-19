@@ -115,7 +115,7 @@ public class Journals_Ext extends GenericMethods{
         
 	    try
 		{
-			waitForElement(Btn_Exceptions);
+			//waitForElement(Btn_Exceptions);
 			Btn_Exceptions.click();
 			
 			if (Btn_Exceptions.isDisplayed())

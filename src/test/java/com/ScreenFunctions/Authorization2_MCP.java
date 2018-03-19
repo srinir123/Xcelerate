@@ -41,11 +41,19 @@ public class Authorization2_MCP extends GenericMethods{
 		waitForElement(Btn_logout);
     	Btn_logout.click();	
         //driver.quit();
-		Thread.sleep(39000);
-    	
+		//Thread.sleep(39000);
+    	waitForElement(taskid);
         taskid= DBConnection.dbConnect();
         
         System.out.println(taskid);
+	}
+
+
+
+
+	private static void waitForElement(String taskid2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

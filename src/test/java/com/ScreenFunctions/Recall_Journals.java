@@ -74,8 +74,7 @@ public class Recall_Journals extends GenericMethods{
 		Click_oldperiod.click();
 		Click_oldperiod.click();
 		Click_oldperiod.click();
-		Click_oldperiod.click();
-		Click_oldperiod.click();
+
 
 		Click_ActionDate.click();
 		waitForElement(Set_ToActionDate);

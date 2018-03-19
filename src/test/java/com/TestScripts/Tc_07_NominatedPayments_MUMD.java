@@ -25,11 +25,13 @@ public class Tc_07_NominatedPayments_MUMD extends GenericMethods{
 		lgn.launch_Application(i);
 		//db.EntitySearch(); 
 		np.NominatedPayments_MUMD(i);
+		
 
 		
 
 	}
 driver.quit();
+
 }
 
 

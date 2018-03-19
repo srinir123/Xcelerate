@@ -39,6 +39,8 @@ public class Tc_02_ManualcapturePayment extends GenericMethods{
 		lgn.launch_Application7();
 		Thread.sleep(2000);
 		a3_mcp.Authorization3_MCP();
+		Thread.sleep(3000);
+
 		}
 	}
 

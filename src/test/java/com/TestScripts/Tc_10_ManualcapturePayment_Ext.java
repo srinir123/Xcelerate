@@ -18,7 +18,7 @@ public class Tc_10_ManualcapturePayment_Ext extends GenericMethods{
 
 		lgn.launch_Application();
 		cpbe.CollPeriodBalances_MCP_Ext();
-		
+		Thread.sleep(3000);
 
 	}
 

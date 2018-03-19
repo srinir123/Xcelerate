@@ -7,7 +7,7 @@ import com.ScreenFunctions.Authorization_ISOPAIN;
 import com.ScreenFunctions.ISOPAIN;
 import com.ScreenFunctions.Login;
 
-public class ISOPAIN_Fintegrate_Project extends GenericMethods{
+public class Tc_22_ISOPAIN_Fintegrate_Project extends GenericMethods{
 
 	@Test
 	public static void evaluateTestcase() throws Exception {
@@ -25,7 +25,8 @@ public class ISOPAIN_Fintegrate_Project extends GenericMethods{
 		lgn.launch_Application1();
 		Thread.sleep(3000);
 		aiso.Authorization_ISOPAIN();
-		
+		Thread.sleep(3000);
+
 
 
 	}

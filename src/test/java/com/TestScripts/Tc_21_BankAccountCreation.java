@@ -11,20 +11,16 @@ public class Tc_21_BankAccountCreation extends GenericMethods{
 	@Test
 	public static void evaluateTestcase() throws Exception {
 		
-		int maxnumber=getmaxrownumber("iteration","Login");
 		GenericMethods.LaunchBrowser("chrome");
-         Login lgn=PageFactory.initElements(driver, Login.class);
-         //Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+        Login lgn=PageFactory.initElements(driver, Login.class);
 
          BankAccountCreation bac=PageFactory.initElements(driver, BankAccountCreation.class);
 
-	for(int i=1;i<=maxnumber;i++) 	
-	{	
-		lgn.launch_Application(i);
+
+		lgn.launch_Application();
 		Thread.sleep(4000);
-		bac.BankAccountCreation(i);
-		
-	}
+		bac.BankAccountCreation();
+		Thread.sleep(3000);
 
 
 	}

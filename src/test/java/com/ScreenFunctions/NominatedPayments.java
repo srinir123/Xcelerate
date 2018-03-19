@@ -120,7 +120,7 @@ public class NominatedPayments extends GenericMethods{
 	    
 	    Click_Btnadd.click();
 	    
-	    Attach_Instruction.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Desktop\\New folder\\Xcelerate specs\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
+	    Attach_Instruction.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
         waitForElement(Click_Btnsubmit);
 	    Click_Btnsubmit.click();
 	    try

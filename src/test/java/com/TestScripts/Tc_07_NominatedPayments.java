@@ -20,7 +20,7 @@ public class Tc_07_NominatedPayments extends GenericMethods{
 		lgn.launch_Application();
 		//db.EntitySearch(); 
 		np.NominatedPayments();
-
+		Thread.sleep(3000);
 		
 
 	}

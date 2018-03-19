@@ -180,7 +180,7 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 
 		Dropd_PmtSubtype.sendKeys(PmtSubtype);
 
-		Attach_PmtInstr.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Desktop\\New folder\\Xcelerate specs\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
+		Attach_PmtInstr.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
 		Btn_Save.click();
 		waitForElement(Btn_Yes);
 		Btn_Yes.click();
@@ -207,9 +207,18 @@ public class CollPeriodBalances_MCP extends GenericMethods{
        // driver.quit();
 		waitForElement(Btn_logout);
     	Btn_logout.click();	
+    	waitForElement(taskid);
         taskid= DBConnection.dbConnect();
         
         System.out.println(taskid);
 }
+
+
+
+
+	private static void waitForElement(String taskid2) {
+		// TODO Auto-generated method stub
+		
+	}
 }
 	

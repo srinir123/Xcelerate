@@ -18,7 +18,7 @@ public class Tc_09_ManualcaptureCollection_Ext extends GenericMethods{
 
 		lgn.launch_Application();
 		cpbe.CollPeriodBalances_Ext();
-		
+		Thread.sleep(3000);
 
 	}
 

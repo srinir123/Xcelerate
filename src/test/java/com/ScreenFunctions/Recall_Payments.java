@@ -74,8 +74,7 @@ public class Recall_Payments extends GenericMethods{
 		Click_oldperiod.click();
 		Click_oldperiod.click();
 		Click_oldperiod.click();
-		Click_oldperiod.click();
-		Click_oldperiod.click();
+
 
 		Click_ActionDate.click();
 		waitForElement(Set_ToActionDate);

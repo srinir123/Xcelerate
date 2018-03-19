@@ -20,7 +20,7 @@ public class Tc_08_Journals extends GenericMethods{
 		lgn.launch_Application();
 		//db.EntitySearch(); 
         jnls.Journals();		
-
+        Thread.sleep(3000);
 	}
 
 }

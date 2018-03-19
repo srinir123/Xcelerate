@@ -79,8 +79,7 @@ public class Recall_Collections_Ext extends GenericMethods{
 		Click_oldperiod.click();
 		Click_oldperiod.click();
 		Click_oldperiod.click();
-		Click_oldperiod.click();
-		Click_oldperiod.click();
+
 
 		Click_ActionDate.click();
 		waitForElement(Set_ToActionDate);

@@ -17,11 +17,13 @@ import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
 
 public class GenericMethods extends GenerateReports {
-	
+//UAT	
 public static  String UAT_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
+//PROD
 //public static  String UAT_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";
+//DEV
 //public static  String UAT_url="http://172.20.92.22:81/smi-28152/#";
-public static  String Dev_url="http://172.20.92.22:81/smi-28858/#";
+public static  String Dev_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
 //public static  String Dev_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
 public static  String Ad_url="http://192.168.0.4/Adiuvatis/ptlogin.asp";
 

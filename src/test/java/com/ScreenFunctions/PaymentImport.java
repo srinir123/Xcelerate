@@ -81,7 +81,7 @@ public class PaymentImport extends GenericMethods{
 		waitForElement(btn_PmtImportFile);
 		btn_PmtImportFile.click();
 		Thread.sleep(2000);
-		String[]cmd={"UploadingPMTattachment.exe","D:\\Sample Transactions\\sunday\\Payments\\1 Payment file.csv"}; 
+		String[]cmd={"UploadingPMTattachment.exe","C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1 Payment file.csv"}; 
 		Process autoitprocess=Runtime.getRuntime().exec(cmd);
         
 		int i =1;

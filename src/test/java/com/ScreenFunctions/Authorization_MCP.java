@@ -41,9 +41,17 @@ public class Authorization_MCP extends GenericMethods{
 		waitForElement(Btn_logout);
     	Btn_logout.click();	
         //driver.quit();
-		Thread.sleep(2000);
-        taskid= DBConnection.dbConnect();
+		//Thread.sleep(2000);
+        waitForElement(taskid);
+    	taskid= DBConnection.dbConnect();
         
         System.out.println(taskid);
+	}
+
+
+
+	private static void waitForElement(String taskid2) {
+		// TODO Auto-generated method stub
+		
 	}
 	}

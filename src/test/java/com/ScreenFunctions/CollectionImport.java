@@ -86,7 +86,7 @@ public class CollectionImport extends GenericMethods{
 		waitForElement(btn_CollImportFile);	
 		btn_CollImportFile.click();
 		Thread.sleep(2000);
-		String[]cmd={"UploadingCollattachment.exe","D:\\Sample Transactions\\Large file processing\\2 records file_new.csv"}; 
+		String[]cmd={"UploadingCollattachment.exe","C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\Large file processing\\2 records file_new.csv"}; 
 		Process autoitprocess=Runtime.getRuntime().exec(cmd);
         
 		int i =1;
