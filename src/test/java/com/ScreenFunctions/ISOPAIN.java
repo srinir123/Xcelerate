@@ -9,7 +9,7 @@ import com.GenericFunctions.GenericMethods;
 
 public class ISOPAIN extends GenericMethods{
 	
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[3]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Parameter Maintenance']")
 	public static WebElement Click_Paramm;
 
 	@FindBy(how=How.XPATH,using="(//*[@id='btnModify'])[6]")

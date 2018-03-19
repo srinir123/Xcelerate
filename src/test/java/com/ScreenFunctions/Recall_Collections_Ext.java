@@ -77,8 +77,8 @@ public class Recall_Collections_Ext extends GenericMethods{
 		waitForElement1(Set_fromActionDate);
 		Set_fromActionDate.click();
 		Click_oldperiod.click();
-		Click_oldperiod.click();
-		Click_oldperiod.click();
+	
+		
 
 
 		Click_ActionDate.click();

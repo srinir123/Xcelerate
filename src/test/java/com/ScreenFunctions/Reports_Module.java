@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import com.GenericFunctions.GenericMethods;
 
 public class Reports_Module extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[7]/a")
+	@FindBy(how=How.XPATH,using="//*[text()='Reports']")
 	public static WebElement Click_reports;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='collapser']")

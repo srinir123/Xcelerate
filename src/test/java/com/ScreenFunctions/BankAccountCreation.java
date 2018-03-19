@@ -10,7 +10,7 @@ public class BankAccountCreation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[3]/a")
 	public static WebElement Click_Paramaintenance;
 	
-	@FindBy(how=How.XPATH,using="(//*[@id='btnModify'])[46]")
+	@FindBy(how=How.XPATH,using="(//*[@id='btnModify'])[47]")
 	public static WebElement Btn_PacsUser;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnAdd']")
@@ -121,7 +121,7 @@ public class BankAccountCreation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
 	public static WebElement Btn_Yes2;
 	
-	@FindBy(how=How.XPATH,using="//*[text()= 'L130']")
+	@FindBy(how=How.XPATH,using="//*[text()= 'L133']")
 	public static WebElement Edi_Usercode;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='ServiceID']")

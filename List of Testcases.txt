@@ -1,9 +1,11 @@
        
           <class name="com.TestScripts.Tc_01_ManualcaptureCollection"/>
+          
           <class name="com.TestScripts.Tc_02_ManualcapturePayment"/> 
           <class name="com.TestScripts.Tc_03_CollectionImport"/> 
           <class name="com.TestScripts.Tc_04_PaymentImport"/>
           <class name="com.TestScripts.Tc_05_NewUserCcreation"/>
+          
           <class name="com.TestScripts.Tc_06_NewEntityCreation"/> 
           <class name="com.TestScripts.Tc_07_NominatedPayments"/>
           <class name="com.TestScripts.Tc_08_Journals"/>
@@ -12,14 +14,20 @@
           <class name="com.TestScripts.Tc_11_CollectionImport_Ext"/>  
           <class name="com.TestScripts.Tc_12_PaymentImport_Ext"/>  
           <class name="com.TestScripts.Tc_13_Journals_Ext"/> 
+          <class name="com.TestScripts.Tc_14_Reports_Module"/> 
           <class name="com.TestScripts.Tc_15_Recall_Collection"/>
+          
           <class name="com.TestScripts.Tc_16_Recall_Payments"/> 
           <class name="com.TestScripts.Tc_17_Recall_Journals"/> 
+          
           <class name="com.TestScripts.Tc_18_Recall_Collectiion_Ext"/>
           <class name="com.TestScripts.Tc_19_Recall_Payments_Ext"/>
           <class name="com.TestScripts.Tc_20_Recall_Journals_Ext"/>
           <class name="com.TestScripts.Tc_21_BankAccountCreation"/>         
- 
+          <class name="com.TestScripts.Tc_22_ISOPAIN_Fintegrate_Project"/> 
+          <class name="com.TestScripts.Tc_23_FeeTest"/> 
+          
+          
           <class name="com.TestScripts.Tc_01_ManualcaptureCollection_MUMD"/>  
           <class name="com.TestScripts.Tc_01_ManualcaptureCollection_SUMD"/>
                      

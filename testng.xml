@@ -9,26 +9,18 @@
 </listeners>
   <test name="Test">
     <classes>
-
-  
-      
-  
-          <class name="com.TestScripts.Tc_08_Journals"/>
-    
-      
+                           <class name="com.TestScripts.Tc_23_FeeTest"/> 
+            
+          <class name="com.TestScripts.Tc_22_ISOPAIN_Fintegrate_Project"/> 
+          
+         
 
 
-    
+        
     
     </classes>
-    
-    
-    
-  </test> <!-- Test -->
-  
-
-  
-</suite> <!-- Suite -->        
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->        
      
        
     

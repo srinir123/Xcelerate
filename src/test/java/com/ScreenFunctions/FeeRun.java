@@ -126,10 +126,11 @@ public class FeeRun extends GenericMethods{
 waitForElement(Btn_RunFeeCalc);
 Btn_RunFeeCalc.click();
 
-Thread.sleep(10800000);
+Thread.sleep(8000);
 
 waitForElement(Btn_logout);
 Btn_logout.click();
+driver.quit();
 	
 	
 
