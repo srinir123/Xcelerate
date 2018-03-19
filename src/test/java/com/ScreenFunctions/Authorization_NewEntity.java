@@ -37,7 +37,7 @@ public class Authorization_NewEntity extends GenericMethods{
 	{   
 		Thread.sleep(3000);
 		System.out.println(NewEntity_creation.taskid);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		
 		driver.findElement(By.xpath("//td[text()='"+NewEntity_creation.taskid+"']")).click();
 

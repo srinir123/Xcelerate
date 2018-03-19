@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="41240" started-at="2018-03-19T08:37:12Z" finished-at="2018-03-19T08:37:53Z">
+  <suite name="Suite" duration-ms="78901" started-at="2018-03-19T10:05:42Z" finished-at="2018-03-19T10:07:01Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="41240" started-at="2018-03-19T08:37:12Z" finished-at="2018-03-19T08:37:53Z">
-      <class name="com.TestScripts.Tc_14_Reports_Module">
-        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_14_Reports_Module@69ea3742]" name="evaluateTestcase" duration-ms="35005" started-at="2018-03-19T10:37:13Z" finished-at="2018-03-19T10:37:48Z">
+    <test name="Test" duration-ms="78901" started-at="2018-03-19T10:05:42Z" finished-at="2018-03-19T10:07:01Z">
+      <class name="com.TestScripts.Tc_08_Journals">
+        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_08_Journals@69ea3742]" name="evaluateTestcase" duration-ms="70401" started-at="2018-03-19T12:05:43Z" finished-at="2018-03-19T12:06:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- evaluateTestcase -->
-      </class> <!-- com.TestScripts.Tc_14_Reports_Module -->
+      </class> <!-- com.TestScripts.Tc_08_Journals -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -80,13 +80,13 @@ public class CollectionImport extends GenericMethods{
 		String BucketID=getData("BucketID","CollectionImport",1);
 
 		Dropd_BucketID.sendKeys(BucketID);
-		
+		Thread.sleep(2000);
 		waitForElement(btn_CollImport);	
 		btn_CollImport.click();
 		waitForElement(btn_CollImportFile);	
 		btn_CollImportFile.click();
 		Thread.sleep(2000);
-		String[]cmd={"UploadingCollattachment.exe","C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\Large file processing\\2 records file_new.csv"}; 
+		String[]cmd={"Collectionattachment.exe","C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\Large file processing\\2 records file_new.csv"}; 
 		Process autoitprocess=Runtime.getRuntime().exec(cmd);
         
 		int i =1;

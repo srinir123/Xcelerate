@@ -122,7 +122,8 @@ public class Journals extends GenericMethods{
 	    String BucketID=getData("BucketID","Journals",1);
 
 		Dropd_BucketID.sendKeys(BucketID);
-		Thread.sleep(2000);
+		
+		Thread.sleep(3000);
 		waitForElement(btn_Journals);
 		btn_Journals.click();
 		
