@@ -22,6 +22,8 @@ lgn.launch_Application();
 Thread.sleep(4000);
 //db.EntitySearch(); 
 cpb.CollectionImport();
+Thread.sleep(3000);
+
 
 	}
 	

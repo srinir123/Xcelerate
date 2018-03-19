@@ -19,6 +19,8 @@ public class Tc_17_Recall_Journals extends GenericMethods{
 		lgn.launch_Application();
 		Thread.sleep(4000);
 		rj.Recall_Journals();
+		Thread.sleep(3000);
+
 
 
 	}

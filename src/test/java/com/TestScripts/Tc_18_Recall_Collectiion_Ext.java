@@ -19,6 +19,8 @@ public class Tc_18_Recall_Collectiion_Ext extends GenericMethods{
 		lgn.launch_Application();
 		Thread.sleep(4000);
 		rce.Recall_Collections_Ext();
+		Thread.sleep(3000);
+
 
 
 	}

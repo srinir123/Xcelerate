@@ -20,6 +20,8 @@ public class Tc_13_Journals_Ext extends GenericMethods{
 		lgn.launch_Application();
 		//db.EntitySearch(); 
         jnls.Journals_Ext();		
+        Thread.sleep(3000);
+
 
 	}
 

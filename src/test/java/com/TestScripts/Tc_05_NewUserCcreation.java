@@ -6,7 +6,6 @@ import com.GenericFunctions.GenericMethods;
 import com.ScreenFunctions.Authorization_NewUser;
 import com.ScreenFunctions.Login;
 import com.ScreenFunctions.NewUser_creation;
-import com.ScreenFunctions.UserAuthorization;
 
 public class Tc_05_NewUserCcreation extends GenericMethods
 {
@@ -30,6 +29,9 @@ nuc.NewUser_creation();
 lgn1.launch_Application2();
 //UA.UserAuthorization();
 Anu.Authorization_NewUser();
+Thread.sleep(3000);
+
+
 	}
 	
 

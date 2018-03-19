@@ -19,6 +19,8 @@ public class Tc_15_Recall_Collection extends GenericMethods{
 		lgn.launch_Application();
 		Thread.sleep(4000);
 		rc.Recall_Collections();
+		Thread.sleep(3000);
+
 
 
 	}

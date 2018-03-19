@@ -26,6 +26,7 @@ public class Tc_06_NewEntityCreation extends GenericMethods{
 	nec.NewEntity_creation();
 	lgn1.launch_Application1();
 	Ane.Authorization_NewEntity();	
+	Thread.sleep(3000);
 
 		}
 		

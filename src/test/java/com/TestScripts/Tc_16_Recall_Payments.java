@@ -19,6 +19,8 @@ public class Tc_16_Recall_Payments extends GenericMethods{
 		lgn.launch_Application();
 		Thread.sleep(4000);
 		rp.Recall_Payments();
+		Thread.sleep(3000);
+
 
 
 	}

@@ -17,6 +17,8 @@ public class Tc_14_Reports_Module extends GenericMethods{
 			lgn.launch_Application();
 			Thread.sleep(5000);
 			rm.Reports_Module();
+			Thread.sleep(3000);
+
 
 }	
 

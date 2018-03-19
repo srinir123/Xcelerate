@@ -21,6 +21,8 @@ PaymentImport_Ext pi=PageFactory.initElements(driver, PaymentImport_Ext.class);
 lgn.launch_Application();
 Thread.sleep(2000);
 pi.PaymentImport_Ext();
+Thread.sleep(3000);
+
 
 	}
 	
