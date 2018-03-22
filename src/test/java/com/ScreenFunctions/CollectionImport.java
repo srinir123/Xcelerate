@@ -104,7 +104,7 @@ public class CollectionImport extends GenericMethods{
 	      System.out.println("Collection file imported successfully");
 		  LogEvent("Pass","Collection file imported successfully");
 
-		driver.quit();
+		//driver.quit();
 			}
 	
 	

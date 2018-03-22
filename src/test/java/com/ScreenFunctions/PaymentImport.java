@@ -94,7 +94,7 @@ public class PaymentImport extends GenericMethods{
 	      Thread.sleep(3000);
 	      System.out.println("Payment file imported successfully");
 		  LogEvent("Pass","Payment file imported successfully");
-	      driver.quit();
+	      //driver.quit();
 			}
 
 }

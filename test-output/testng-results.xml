@@ -1,41 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="360625" started-at="2018-03-22T07:15:42Z" finished-at="2018-03-22T07:21:43Z">
+  <suite name="Suite" duration-ms="89347" started-at="2018-03-22T12:14:03Z" finished-at="2018-03-22T12:15:32Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="360625" started-at="2018-03-22T07:15:42Z" finished-at="2018-03-22T07:21:43Z">
-      <class name="com.TestScripts.Tc_12_PaymentImport_Ext">
-        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_12_PaymentImport_Ext@49993335]" name="evaluateTestcase" duration-ms="63589" started-at="2018-03-22T09:20:33Z" finished-at="2018-03-22T09:21:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- evaluateTestcase -->
-      </class> <!-- com.TestScripts.Tc_12_PaymentImport_Ext -->
+    <test name="Test" duration-ms="89347" started-at="2018-03-22T12:14:03Z" finished-at="2018-03-22T12:15:32Z">
       <class name="com.TestScripts.Tc_04_PaymentImport">
-        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_04_PaymentImport@2d928643]" name="evaluateTestcase" duration-ms="61221" started-at="2018-03-22T09:18:13Z" finished-at="2018-03-22T09:19:14Z">
+        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_04_PaymentImport@69ea3742]" name="evaluateTestcase" duration-ms="77369" started-at="2018-03-22T14:14:03Z" finished-at="2018-03-22T14:15:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- evaluateTestcase -->
       </class> <!-- com.TestScripts.Tc_04_PaymentImport -->
-      <class name="com.TestScripts.Tc_09_ManualcaptureCollection_Ext">
-        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_09_ManualcaptureCollection_Ext@4bec1f0c]" name="evaluateTestcase" duration-ms="75822" started-at="2018-03-22T09:15:43Z" finished-at="2018-03-22T09:16:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- evaluateTestcase -->
-      </class> <!-- com.TestScripts.Tc_09_ManualcaptureCollection_Ext -->
-      <class name="com.TestScripts.Tc_03_CollectionImport">
-        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_03_CollectionImport@6adede5]" name="evaluateTestcase" duration-ms="59182" started-at="2018-03-22T09:17:06Z" finished-at="2018-03-22T09:18:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- evaluateTestcase -->
-      </class> <!-- com.TestScripts.Tc_03_CollectionImport -->
-      <class name="com.TestScripts.Tc_11_CollectionImport_Ext">
-        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_11_CollectionImport_Ext@5025a98f]" name="evaluateTestcase" duration-ms="65240" started-at="2018-03-22T09:19:21Z" finished-at="2018-03-22T09:20:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- evaluateTestcase -->
-      </class> <!-- com.TestScripts.Tc_11_CollectionImport_Ext -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
