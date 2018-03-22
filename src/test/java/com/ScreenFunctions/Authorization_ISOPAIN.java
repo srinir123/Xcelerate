@@ -29,7 +29,7 @@ public class Authorization_ISOPAIN extends GenericMethods{
 	
 
 	public static void Authorization_ISOPAIN() throws Exception 
-	{  
+	{   
 		Thread.sleep(3000);
 		System.out.println(ISOPAIN.taskid);
 		Thread.sleep(3000);
@@ -41,9 +41,7 @@ public class Authorization_ISOPAIN extends GenericMethods{
 		LogEvent("Pass","The new B2B User has been Authorized and Accepted by the system");
 		waitForElement(Click_Yes);
 		Click_Yes.click();
-//		
-//		waitForElement(Btn_X);
-//		Btn_X.click();
+		
 		waitForElement(Btn_logout);
 		Btn_logout.click();	
 	

@@ -19,9 +19,10 @@ FeeRun fr=PageFactory.initElements(driver, FeeRun.class);
 
 lgn.launch_Application();
 fr.FeeRun();
-Thread.sleep(3000);
+Thread.sleep(5000);
 
 	}
 	
 
 }
+

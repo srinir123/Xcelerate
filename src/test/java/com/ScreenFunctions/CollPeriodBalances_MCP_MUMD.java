@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import com.GenericFunctions.GenericMethods;
 
 public class CollPeriodBalances_MCP_MUMD extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Entity Search']")
 	public static WebElement Click_EntitySearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
@@ -194,7 +194,7 @@ public class CollPeriodBalances_MCP_MUMD extends GenericMethods{
 			
 	}
 		
-		Attach_PmtInstr.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Desktop\\New folder\\Xcelerate specs\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
+		Attach_PmtInstr.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
 		Btn_Save.click();
 		waitForElement(Btn_Yes);
 		Btn_Yes.click();
@@ -223,8 +223,6 @@ public class CollPeriodBalances_MCP_MUMD extends GenericMethods{
 			//driver.quit();
 			waitForElement(Btn_logout);
 			Btn_logout.click();	
-			
-			
 
 			
 	}

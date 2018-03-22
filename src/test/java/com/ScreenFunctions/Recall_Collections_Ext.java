@@ -55,6 +55,8 @@ public class Recall_Collections_Ext extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
 	public static WebElement Btn_Yes1;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='notyClost']")
+	public static WebElement Btn_close;
 	
 	
 
@@ -77,10 +79,8 @@ public class Recall_Collections_Ext extends GenericMethods{
 		waitForElement1(Set_fromActionDate);
 		Set_fromActionDate.click();
 		Click_oldperiod.click();
-	
+		Click_oldperiod.click();
 		
-
-
 		Click_ActionDate.click();
 		waitForElement(Set_ToActionDate);
 		Set_ToActionDate.click();
@@ -89,17 +89,42 @@ public class Recall_Collections_Ext extends GenericMethods{
 		Edi_Transtype.sendKeys("Collection");
 		waitForElement(btn_Search);
 		btn_Search.click();
-		Thread.sleep(18000);
+		Thread.sleep(22000);
 
-		waitForElement(Click_Recallbtn);
-		Click_Recallbtn.click();
-		waitForElement(Btn_Recall);
-		//Thread.sleep(5000);
+		try
+		{
+			Btn_close.click();
 
-		Btn_Recall.click();
+			}
+		
+		catch (Exception e)
+		{
 
-	    waitForElement(Btn_Yes);
-		Btn_Yes.click();
+		}
+        Thread.sleep(2000);
+		try
+		{
+			waitForElement(Click_Recallbtn);
+			Click_Recallbtn.click();
+			waitForElement(Btn_Recall);
+			//Thread.sleep(10000);
+			waitForElement(Click_Recallbtn);
+
+			Btn_Recall.click();
+
+		    waitForElement(Btn_Yes);
+			Btn_Yes.click();
+
+
+			}
+		
+		catch (Exception e)
+		{
+
+		}
+		
+
+		
 		
 		Thread.sleep(6000);
 		LogEvent("Pass","The Transaction has been recalled sucessfully");

@@ -40,8 +40,6 @@ public class PaymentImport_Ext extends GenericMethods{
 	String BucketID=getData("BucketID","PaymentImport_Ext",1);
 
 	Dropd_BucketID.sendKeys(BucketID);
-	Thread.sleep(2000);
-
 		waitForElement(btn_PmtImport);
 		btn_PmtImport.click();
 		waitForElement(btn_PmtImportFile);
@@ -56,10 +54,10 @@ public class PaymentImport_Ext extends GenericMethods{
         	i=autoitprocess.waitFor();
 		}
 	      autoitprocess.destroy();	
+		
 	      Thread.sleep(3000);
 	      System.out.println("Payment file imported successfully");
-		  LogEvent("pass","Payment file imported successfully");
-	      
+		  LogEvent("Pass","Payment file imported successfully");
 	      driver.quit();
 			}
 

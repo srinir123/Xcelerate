@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import com.GenericFunctions.GenericMethods;
 
 public class Journals_MUMD extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Entity Search']")
 	public static WebElement Click_EntitySearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")

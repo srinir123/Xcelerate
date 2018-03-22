@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import com.GenericFunctions.GenericMethods;
 
 public class Recall_Collections extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[8]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Transaction Search']")
 	public static WebElement Click_TransactionSearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='FromActionDate']")
@@ -52,7 +52,10 @@ public class Recall_Collections extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
 	public static WebElement Btn_Yes1;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='notyClost']")
+	public static WebElement Btn_close;
 	
+
 	
 
 	
@@ -73,9 +76,7 @@ public class Recall_Collections extends GenericMethods{
 		Set_fromActionDate.click();
 		Click_oldperiod.click();
 		Click_oldperiod.click();
-		Click_oldperiod.click();
-
-
+				
 		Click_ActionDate.click();
 		waitForElement(Set_ToActionDate);
 		Set_ToActionDate.click();
@@ -84,17 +85,40 @@ public class Recall_Collections extends GenericMethods{
 		Edi_Transtype.sendKeys("Collection");
 		waitForElement(btn_Search);
 		btn_Search.click();
-		Thread.sleep(18000);
+		Thread.sleep(22000);
+		
+		try
+		{
+			Btn_close.click();
 
-		//waitForElement(Click_Recallbtn);
-		Click_Recallbtn.click();
-		//waitForElement(Btn_Recall);
-		Thread.sleep(8000);
+			}
+		
+		catch (Exception e)
+		{
 
-		Btn_Recall.click();
+		}
+        Thread.sleep(2000);
+		try
+		{
+			waitForElement(Click_Recallbtn);
+			Click_Recallbtn.click();
+			waitForElement(Btn_Recall);
+			//Thread.sleep(10000);
 
-	    waitForElement(Btn_Yes);
-		Btn_Yes.click();
+			Btn_Recall.click();
+
+		    waitForElement(Btn_Yes);
+			Btn_Yes.click();
+
+
+			}
+		
+		catch (Exception e)
+		{
+
+		}
+		
+
 		
 		Thread.sleep(6000);
 		LogEvent("Pass","The Transaction has been recalled sucessfully");

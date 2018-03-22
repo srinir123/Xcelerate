@@ -21,12 +21,14 @@ public class CollectionImport_Ext extends GenericMethods{
 	@FindBy(how=How.XPATH,using="	//*[@id='searchGrid']/tbody/tr[2]/td[6]/button")
 	public static WebElement btn_CollImportFile;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Entity Search']")
 	public static WebElement Click_EntitySearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
 	public static WebElement Edi_EntitySearch;
-		
+	
+	
+	
 	@FindBy(how=How.XPATH,using="//*[@id='btnSearch']")
 	public static WebElement Btn_Search;
 	
@@ -37,6 +39,10 @@ public class CollectionImport_Ext extends GenericMethods{
 	public static WebElement Btn_Open;
 	
 
+	
+	
+	
+	
 	
 
 	public static void CollectionImport_Ext() throws Exception 
@@ -70,12 +76,13 @@ public class CollectionImport_Ext extends GenericMethods{
         	i=autoitprocess.waitFor();
 		}
 	      autoitprocess.destroy();	
-	 
+		
 	      Thread.sleep(3000);
 	      System.out.println("Collection file imported successfully");
 		  LogEvent("Pass","Collection file imported successfully");
+
 		driver.quit();
-	}
+			}
 	
 	
 }

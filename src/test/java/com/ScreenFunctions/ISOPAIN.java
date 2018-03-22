@@ -95,7 +95,7 @@ public class ISOPAIN extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
 	public static WebElement Btn_Yes2;
-		
+	
 	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
 	public static WebElement Btn_logout;
 	
@@ -256,22 +256,15 @@ Btn_Yes2.click();
 
 waitForElement(Btn_logout);
 Btn_logout.click();	
-//waitForElement(taskid);
 
 taskid= DBConnection.dbConnect();
 
 System.out.println(taskid);
 
-Thread.sleep(3000);
+//Thread.sleep(3000);
 //driver.quit();
 	
 			}
-
-
-//	private static void waitForElement(String taskid2) {
-//		// TODO Auto-generated method stub
-//		
-//	}
 	
 	
 }

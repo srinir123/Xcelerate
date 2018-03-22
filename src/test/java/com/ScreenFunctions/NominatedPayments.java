@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import com.GenericFunctions.GenericMethods;
 
 public class NominatedPayments extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Entity Search']")
 	public static WebElement Click_EntitySearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
@@ -139,10 +139,9 @@ public class NominatedPayments extends GenericMethods{
 		{
 			
      	}
-	    Thread.sleep(3000);
+		Thread.sleep(3000);
 		System.out.println("The Nominated Payment has been added sucessfully");
 		LogEvent("Pass","The Nominated Payment has been added sucessfully");
-		
 	    driver.quit();	
 }
 }	

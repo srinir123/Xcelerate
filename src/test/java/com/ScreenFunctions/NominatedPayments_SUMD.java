@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import com.GenericFunctions.GenericMethods;
 
 public class NominatedPayments_SUMD extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Entity Search']")
 	public static WebElement Click_EntitySearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
@@ -120,7 +120,7 @@ public class NominatedPayments_SUMD extends GenericMethods{
 	    
 	    Click_Btnadd.click();
 	    
-	    Attach_Instruction.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Desktop\\New folder\\Xcelerate specs\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
+	    Attach_Instruction.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
         waitForElement(Click_Btnsubmit);
 	    Click_Btnsubmit.click();
 	    try

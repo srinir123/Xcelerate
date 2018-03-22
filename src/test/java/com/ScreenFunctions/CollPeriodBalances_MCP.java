@@ -8,7 +8,7 @@ import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
 
 public class CollPeriodBalances_MCP extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Entity Search']")
 	public static WebElement Click_EntitySearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
@@ -62,7 +62,7 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='InternalReference']")
 	public static WebElement Edi_IntRefPmtCap; 
 	
-	@FindBy(how=How.XPATH,using="//*[@id='TransactionTypeID']")
+	@FindBy(how=How.XPATH,using="	//*[@id='TransactionTypeID']")
 	public static WebElement Dropd_Transtype; 
 
 	@FindBy(how=How.XPATH,using="//*[@id='TransactionSubTypeID']")
@@ -89,18 +89,17 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
 	public static WebElement Btn_logout;
 	
+	
 
 	
 	
-	
 	public static String taskid;
+	
 
 	
 	
 
 	public static void CollPeriodBalances_MCP() throws Exception 
-	
-	
 	{   waitForElement(Click_EntitySearch);
 	
 	if(Click_EntitySearch.isDisplayed())
@@ -137,6 +136,8 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 		String BucketID=getData("BucketID","CollPeriodBalances_MCP",1);
 
 		Dropd_BucketID.sendKeys(BucketID);
+		Thread.sleep(2000);
+		
 		waitForElement(btn_CapturePmt);
 		
 		btn_CapturePmt.click();
@@ -197,21 +198,27 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 			Btn_Yes1.click();
 			}
 		}
-		catch (Exception e1)
+		catch (Exception e)
 		{
 			
 	}
-	    Thread.sleep(3000);
-		System.out.println("Data entered sucessfully for all the fields");
-		LogEvent("Pass","Data entered sucessfully for all the fieldd in MCP tc");
-       // driver.quit();
-		waitForElement(Btn_logout);
-    	Btn_logout.click();	
-    	waitForElement(taskid);
-        taskid= DBConnection.dbConnect();
-        
-        System.out.println(taskid);
+	     Thread.sleep(5000);
+	     System.out.println("Data entered sucessfully for all the fields");
+			LogEvent("Pass","Data entered sucessfully for all the fieldd in MCP tc");
+
+	//	driver.quit();
+			waitForElement(Btn_logout);
+	    	
+			Btn_logout.click();	
+			Thread.sleep(2000);
+
+			waitForElement(taskid);
+			taskid= DBConnection.dbConnect();
+			//Thread.sleep(2000);
+
+			System.out.println(taskid);
 }
+
 
 
 
@@ -220,5 +227,6 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 		// TODO Auto-generated method stub
 		
 	}
+	
 }
 	

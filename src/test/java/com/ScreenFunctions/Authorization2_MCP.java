@@ -13,7 +13,7 @@ public class Authorization2_MCP extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnProcess']")
 	public static WebElement Click_btnProcess;
 	
-	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
+	@FindBy(how=How.XPATH,using="//button[contains(text(),'Yes')]")
 	public static WebElement Click_Yes;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
@@ -41,10 +41,11 @@ public class Authorization2_MCP extends GenericMethods{
 		waitForElement(Btn_logout);
     	Btn_logout.click();	
         //driver.quit();
-		//Thread.sleep(39000);
+		Thread.sleep(2000);
     	waitForElement(taskid);
         taskid= DBConnection.dbConnect();
-        
+		//Thread.sleep(2000);
+
         System.out.println(taskid);
 	}
 

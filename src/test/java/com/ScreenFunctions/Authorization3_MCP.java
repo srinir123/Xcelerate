@@ -12,7 +12,7 @@ public class Authorization3_MCP extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnProcess']")
 	public static WebElement Click_btnProcess;
 	
-	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
+	@FindBy(how=How.XPATH,using="//button[contains(text(),'Yes')]")
 	public static WebElement Click_Yes;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
@@ -29,7 +29,7 @@ public class Authorization3_MCP extends GenericMethods{
 	{   
 		Thread.sleep(3000);
 		System.out.println(Authorization2_MCP.taskid);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		driver.findElement(By.xpath("//td[text()='"+Authorization2_MCP.taskid+"']")).click();
 

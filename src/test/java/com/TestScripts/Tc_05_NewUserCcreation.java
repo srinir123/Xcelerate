@@ -21,16 +21,16 @@ NewUser_creation nuc=PageFactory.initElements(driver, NewUser_creation.class);
 
 Login lgn1= PageFactory.initElements(driver, Login.class);
 
-//UserAuthorization UA= PageFactory.initElements(driver, UserAuthorization.class);
 Authorization_NewUser Anu= PageFactory.initElements(driver, Authorization_NewUser.class);
+
+
+
 lgn.launch_Application();
-Thread.sleep(3000);
+Thread.sleep(2000);
 nuc.NewUser_creation(); 
 lgn1.launch_Application2();
-//UA.UserAuthorization();
 Anu.Authorization_NewUser();
-Thread.sleep(3000);
-
+Thread.sleep(5000);
 
 	}
 	

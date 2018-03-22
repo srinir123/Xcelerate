@@ -8,11 +8,8 @@ import com.GenericFunctions.GenericMethods;
 
 public class NewEntity_creation extends GenericMethods{
 
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[3]/a") //UAT//
+	@FindBy(how=How.XPATH,using="//*[text()='Add Entity']")
 	public static WebElement Click_AddEntity;
-	
-//	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a") //PROD
-//	public static WebElement Click_AddEntity;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
 	public static WebElement Edi_EntityName;
@@ -202,6 +199,7 @@ public class NewEntity_creation extends GenericMethods{
 	
 	
 	public static String taskid;
+
 	
 	
 	public static void NewEntity_creation() throws Exception   
@@ -372,7 +370,7 @@ public class NewEntity_creation extends GenericMethods{
         waitForElement(Btnt_YesSLE);
         Btnt_YesSLE.click();
             
-        Thread.sleep(36000);
+        Thread.sleep(34000);
         Btn_NextLE.click();
         
         waitForElement(Btn_subYes);
@@ -380,15 +378,14 @@ public class NewEntity_creation extends GenericMethods{
         Thread.sleep(3000);
         System.out.println("The new Entity has been created successfully");
     	LogEvent("Pass","The new Entity has been created successfully");
-        
-        //driver.quit();
+    	//driver.quit();
     	waitForElement(Btn_logout);
     	Btn_logout.click();
 		
         taskid= DBConnection.dbConnect();
         
         System.out.println(taskid);
-      
+
 	}
 }
 	 

@@ -145,7 +145,7 @@ public class CollPeriodBalances_MCP_Ext_SUMD extends GenericMethods{
 			
 	}
 		
-		Attach_PmtInstr.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Desktop\\New folder\\Xcelerate specs\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
+		Attach_PmtInstr.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
 		Btn_Save.click();
 		waitForElement(Btn_Yes);
 		Btn_Yes.click();

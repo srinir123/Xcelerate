@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
 import com.ScreenFunctions.CollPeriodBalances_MCC_MUMD;
+import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Login;
 
 public class Tc_01_ManualcaptureCollection_MUMD extends GenericMethods{
@@ -14,7 +15,7 @@ public class Tc_01_ManualcaptureCollection_MUMD extends GenericMethods{
 		int maxnumber=getmaxrownumber("iteration","Login");
 		GenericMethods.LaunchBrowser("chrome");
          Login lgn=PageFactory.initElements(driver, Login.class);
-        // Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+         Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
          CollPeriodBalances_MCC_MUMD cpb=PageFactory.initElements(driver, CollPeriodBalances_MCC_MUMD.class);
 

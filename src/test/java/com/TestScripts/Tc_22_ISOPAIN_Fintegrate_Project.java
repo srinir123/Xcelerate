@@ -21,12 +21,11 @@ public class Tc_22_ISOPAIN_Fintegrate_Project extends GenericMethods{
 	
 		lgn.launch_Application();
 		iso.ISOPAIN();
-		
 		lgn.launch_Application1();
 		Thread.sleep(3000);
 		aiso.Authorization_ISOPAIN();
-		Thread.sleep(3000);
-
+		Thread.sleep(5000);
+		
 
 
 	}

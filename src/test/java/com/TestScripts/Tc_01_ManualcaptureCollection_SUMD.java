@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
 import com.ScreenFunctions.CollPeriodBalances_MCC_SUMD;
+import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Login;
 
 public class Tc_01_ManualcaptureCollection_SUMD extends GenericMethods{
@@ -17,7 +18,7 @@ public class Tc_01_ManualcaptureCollection_SUMD extends GenericMethods{
 		
 		GenericMethods.LaunchBrowser("chrome");
          Login lgn=PageFactory.initElements(driver, Login.class);
-         //Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+         Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
          CollPeriodBalances_MCC_SUMD cpb=PageFactory.initElements(driver, CollPeriodBalances_MCC_SUMD.class);
 

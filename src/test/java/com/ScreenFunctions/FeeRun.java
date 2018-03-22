@@ -1,13 +1,12 @@
 package com.ScreenFunctions;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 import com.GenericFunctions.GenericMethods;
 
 public class FeeRun extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[10]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Accounting Management Console']")
 	public static WebElement Click_AccManagConsole;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='tabsHeaders']/li[3]/a")
@@ -25,8 +24,8 @@ public class FeeRun extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/div[1]/a[1]/span")
 	public static WebElement Click_Bmonth;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='loaderDiv']")
-	public static WebElement Stop_Loading; 
+	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
+	public static WebElement Dropd_Agreement; 
 
 	@FindBy(how=How.XPATH,using="//*[@id='BucketID']")
 	public static WebElement Dropd_BucketID; 
@@ -97,7 +96,7 @@ public class FeeRun extends GenericMethods{
 	{
 	waitForElement(Click_AccManagConsole);
 	Click_AccManagConsole.click();
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 	waitForElement(Click_MonthlyFeeRun);
 	click_element(Click_MonthlyFeeRun); 
 
@@ -110,7 +109,7 @@ public class FeeRun extends GenericMethods{
 	
 	waitForElement(Click_Done);
 	Click_Done.click();
-	Thread.sleep(5000);
+	Thread.sleep(6000);
 //	waitForElement(Btn_FeeMonth);
 //	Btn_FeeMonth.clear();	
 //	
@@ -125,12 +124,6 @@ public class FeeRun extends GenericMethods{
 
 waitForElement(Btn_RunFeeCalc);
 Btn_RunFeeCalc.click();
-
-Thread.sleep(8000);
-
-waitForElement(Btn_logout);
-Btn_logout.click();
-driver.quit();
 	
 	
 

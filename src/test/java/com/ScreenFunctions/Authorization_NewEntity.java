@@ -12,7 +12,7 @@ public class Authorization_NewEntity extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnAuthAccept']")
 	public static WebElement Click_btnVerify;
 	
-	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
+	@FindBy(how=How.XPATH,using="//button[contains(text(),'Yes')]")
 	public static WebElement Click_Yes;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnAD']")
@@ -37,7 +37,7 @@ public class Authorization_NewEntity extends GenericMethods{
 	{   
 		Thread.sleep(3000);
 		System.out.println(NewEntity_creation.taskid);
-		Thread.sleep(8000);
+		Thread.sleep(6000);
 		
 		driver.findElement(By.xpath("//td[text()='"+NewEntity_creation.taskid+"']")).click();
 

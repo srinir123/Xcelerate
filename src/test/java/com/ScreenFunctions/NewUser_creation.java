@@ -8,7 +8,7 @@ import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
 
 public class NewUser_creation extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Entity Search']")
 	public static WebElement Click_EntitySearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
@@ -71,7 +71,7 @@ public class NewUser_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")
 	public static WebElement Btnt_Yes;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='siri791']")
+	@FindBy(how=How.XPATH,using="//*[text()='siri300']")
 	public static WebElement Click_NUser;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSetupUser']")
@@ -110,6 +110,7 @@ public class NewUser_creation extends GenericMethods{
 	
 
 	public static String taskid;
+	
 	
 
 	public static <performDBLCLICK> void NewUser_creation() throws Exception
@@ -208,11 +209,10 @@ public class NewUser_creation extends GenericMethods{
 		
 		waitForElement(Click_MUser);
 		Click_MUser.click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		waitForElement(Create_NUser);
 		Create_NUser.click();
 		Thread.sleep(2000);
-
 		waitForElement1(Btnt_RolesP);
 		//Btnt_RolesP.click();
 		click_element1(Btnt_RolesP);
@@ -226,7 +226,7 @@ public class NewUser_creation extends GenericMethods{
 	 
 		 waitForElement(Btnt_Open);
 		 Btnt_Open.click();
-		 Thread.sleep(15000);
+		 Thread.sleep(18000);
 		 
 		 //waitForElement(Click_Sysadmin);
 		 click_element(Click_Sysadmin);
@@ -244,7 +244,6 @@ public class NewUser_creation extends GenericMethods{
 		 System.out.println("The new User has been created sucessfully");
 		 LogEvent("Pass","The new User has been created sucessfully");
 		 
-	    
 		 //driver.quit(); 
 		waitForElement(Btn_logout);
 		Btn_logout.click();
@@ -252,7 +251,6 @@ public class NewUser_creation extends GenericMethods{
         taskid= DBConnection.dbConnect();
         
         System.out.println(taskid);
-		
 	}
 
 

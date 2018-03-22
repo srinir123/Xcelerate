@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import com.GenericFunctions.GenericMethods;
 
 public class PaymentImport extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Entity Search']")
 	public static WebElement Click_EntitySearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
@@ -80,8 +80,8 @@ public class PaymentImport extends GenericMethods{
 		btn_PmtImport.click();
 		waitForElement(btn_PmtImportFile);
 		btn_PmtImportFile.click();
-		Thread.sleep(2000);
-		String[]cmd={"UploadingPMTattachment.exe","C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1 Payment file.csv"}; 
+		Thread.sleep(3000);
+		String[]cmd={"UploadingPMTattachment.exe","C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1 Payment file.csv"};
 		Process autoitprocess=Runtime.getRuntime().exec(cmd);
         
 		int i =1;
@@ -90,7 +90,7 @@ public class PaymentImport extends GenericMethods{
         	i=autoitprocess.waitFor();
 		}
 	      autoitprocess.destroy();	
-
+		
 	      Thread.sleep(3000);
 	      System.out.println("Payment file imported successfully");
 		  LogEvent("Pass","Payment file imported successfully");

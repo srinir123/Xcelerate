@@ -1,4 +1,4 @@
- package com.TestScripts;
+package com.TestScripts;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -20,9 +20,11 @@ public class Tc_21_BankAccountCreation extends GenericMethods{
 		lgn.launch_Application();
 		Thread.sleep(4000);
 		bac.BankAccountCreation();
-		Thread.sleep(3000);
-
+		Thread.sleep(5000);
+		
 
 	}
 
 }
+
+

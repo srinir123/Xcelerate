@@ -21,7 +21,7 @@ public class CollectionImport_Ext_MUMD extends GenericMethods{
 	@FindBy(how=How.XPATH,using="	//*[@id='searchGrid']/tbody/tr[2]/td[6]/button")
 	public static WebElement btn_CollImportFile;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Entity Search']")
 	public static WebElement Click_EntitySearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
@@ -64,7 +64,7 @@ public class CollectionImport_Ext_MUMD extends GenericMethods{
 		waitForElement(btn_CollImportFile);	
 		btn_CollImportFile.click();
 		Thread.sleep(2000);
-		String[]cmd={"UploadingCollattachment.exe","D:\\Sample Transactions\\Large file processing\\2 records file_new.csv"}; 
+		String[]cmd={"Collectionattachment.exe","C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\Large file processing\\2 records file_new.csv"};
 		Process autoitprocess=Runtime.getRuntime().exec(cmd);
         
 		int i1 =1;

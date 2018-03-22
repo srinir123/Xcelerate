@@ -55,7 +55,9 @@ public class Recall_Journals_Ext extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
 	public static WebElement Btn_Yes1;
 	
-	
+	@FindBy(how=How.XPATH,using="//*[@id='notyClost']")
+	public static WebElement Btn_close;
+		
 	
 
 	
@@ -76,9 +78,6 @@ public class Recall_Journals_Ext extends GenericMethods{
 		waitForElement1(Set_fromActionDate);
 		Set_fromActionDate.click();
 		Click_oldperiod.click();
-		Click_oldperiod.click();
-		Click_oldperiod.click();
-
 		
 		Click_ActionDate.click();
 		waitForElement(Set_ToActionDate);
@@ -89,18 +88,43 @@ public class Recall_Journals_Ext extends GenericMethods{
 		waitForElement(btn_Search);
 		btn_Search.click();
 
-		Thread.sleep(16000);
-		Click_Recallbtn.click();
-		waitForElement(Btn_Recall);
-		//Thread.sleep(10000);
+		try
+		{
+			Thread.sleep(22000);
 
-		Btn_Recall.click();
+			Btn_close.click();
 
-	    waitForElement(Btn_Yes);
-		Btn_Yes.click();
+			}
+		
+		catch (Exception e)
+		{
+Thread.sleep(2000);
+		}
+		try
+		{
+			waitForElement(Click_Recallbtn);
+			Click_Recallbtn.click();
+			waitForElement(Btn_Recall);
+			//Thread.sleep(10000);
+
+			Btn_Recall.click();
+
+		    waitForElement(Btn_Yes);
+			Btn_Yes.click();
+
+			}
+		
+		catch (Exception e)
+		{
+
+		}
+		
+
+		
 		Thread.sleep(6000);
 
 		LogEvent("Pass","The Transaction has been recalled sucessfully");
 		driver.quit();
 }
 }
+

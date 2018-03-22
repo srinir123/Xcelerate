@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import com.GenericFunctions.GenericMethods;
 
 public class Journals extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Entity Search']")
 	public static WebElement Click_EntitySearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
@@ -27,10 +27,7 @@ public class Journals extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
 	public static WebElement Dropd_Agreement; 
-	
-	@FindBy(how=How.XPATH,using="//*[@id='QuoteSubAccountID']")
-	public static WebElement Dropd_SubAcc; 
-	
+
 	@FindBy(how=How.XPATH,using="//*[@id='BucketID']")
 	public static WebElement Dropd_BucketID; 
 	
@@ -109,21 +106,12 @@ public class Journals extends GenericMethods{
     String Agreement_Name=getData("Agreement_Name","Journals",1);
 
 		Dropd_Agreement.sendKeys(Agreement_Name);
-		
-		waitForElement(Dropd_SubAcc);
-		
-	    String SubAccount_Name=getData("SubAccount_Name","Journals",1);
-
-	    Dropd_SubAcc.sendKeys(SubAccount_Name);
-		
-		
 		waitForElement(Dropd_BucketID);
 		
 	    String BucketID=getData("BucketID","Journals",1);
 
 		Dropd_BucketID.sendKeys(BucketID);
-		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		waitForElement(btn_Journals);
 		btn_Journals.click();
 		
@@ -154,6 +142,7 @@ public class Journals extends GenericMethods{
 		
 	
 	    
+	    //Attach_Instruction.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Desktop\\New folder\\Xcelerate specs\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
         waitForElement(Btn_Save);
         Btn_Save.click();
         
@@ -181,6 +170,7 @@ public class Journals extends GenericMethods{
 		Thread.sleep(3000);
 		System.out.println("The Journal transaction has been added sucessfully");
 		LogEvent("Pass","The Journal transaction has been added sucessfully");
+
 	    driver.quit();	
 }
 }	

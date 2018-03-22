@@ -22,7 +22,7 @@ public class CollPeriodBalances_MCP_Ext extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='ActionDate']")
 	public static WebElement Set_ActionDate;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[4]/td[5]/a")
+	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[4]/a")
 	public static WebElement Click_ActionDate;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='AccountHolder']")
@@ -143,7 +143,7 @@ public class CollPeriodBalances_MCP_Ext extends GenericMethods{
 		Btn_Yes.click();
 		try
 		{
-			//waitForElement(Btn_exceptions);
+			waitForElement(Btn_exceptions);
 			Btn_exceptions.click();
 			
 			if (Btn_exceptions.isDisplayed())
@@ -161,7 +161,7 @@ public class CollPeriodBalances_MCP_Ext extends GenericMethods{
 		Thread.sleep(3000);
 		System.out.println("Data entered sucessfully for all the fields");
 		LogEvent("Pass","Data entered sucessfully for all the fieldd in MCP tc");
-		
+
 	    driver.quit();	
 }
 }	

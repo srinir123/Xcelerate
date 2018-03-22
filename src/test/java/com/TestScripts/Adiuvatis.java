@@ -3,7 +3,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
-import com.ScreenFunctions.Ad;
 
 public class Adiuvatis extends GenericMethods{
 
@@ -12,8 +11,12 @@ public class Adiuvatis extends GenericMethods{
 		{
 			GenericMethods.LaunchBrowserAd("chrome");
 			 
-			Ad adlgn= PageFactory.initElements(driver, Ad.class);
-
-		adlgn.AdLogin();	
+			Adiuvatis adlgn= PageFactory.initElements(driver, Adiuvatis.class);
+adlgn.adiuvatis();
 }
+
+		private void adiuvatis() {
+			// TODO Auto-generated method stub
+			
+		}
 }

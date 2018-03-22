@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
 import com.ScreenFunctions.CollPeriodBalances_MCP_SUMD;
+import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Login;
 
 public class Tc_02_ManualcapturePayment_SUMD extends GenericMethods{
@@ -15,14 +16,14 @@ public class Tc_02_ManualcapturePayment_SUMD extends GenericMethods{
 
 		GenericMethods.LaunchBrowser("chrome");
          Login lgn=PageFactory.initElements(driver, Login.class);
-         //Dashboard db=PageFactory.initElements(driver, Dashboard.class);
+         Dashboard db=PageFactory.initElements(driver, Dashboard.class);
 
          CollPeriodBalances_MCP_SUMD cpb=PageFactory.initElements(driver, CollPeriodBalances_MCP_SUMD.class);
 
 		for(int i=1;i<=itr;i++) 	
 		{
 		lgn.launch_Application(i);
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		//db.EntitySearch();
 		
 		for(int j=1;j<=subitr;j++) 	

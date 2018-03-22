@@ -11,8 +11,8 @@ public class Authorization_MCC extends GenericMethods{
 
 	@FindBy(how=How.XPATH,using="//*[@id='btnProcess']")
 	public static WebElement Click_btnProcess;
-	
-	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
+
+	@FindBy(how=How.XPATH,using="//button[contains(text(),'Yes')]")
 	public static WebElement Click_Yes;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
@@ -35,6 +35,7 @@ public class Authorization_MCC extends GenericMethods{
 
 		waitForElement(Click_btnProcess);
 		Click_btnProcess.click();
+		
 		waitForElement(Click_Yes);
 		Click_Yes.click();
 		waitForElement(Btn_logout);

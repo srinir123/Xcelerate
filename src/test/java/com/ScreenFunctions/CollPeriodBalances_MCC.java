@@ -8,7 +8,7 @@ import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
 
 public class CollPeriodBalances_MCC extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[2]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Entity Search']")
 	public static WebElement Click_EntitySearch;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='EntityName']")
@@ -41,7 +41,7 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='ActionDate']")
 	public static WebElement Set_ActionDate;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[4]/a") 
+	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[4]/a")
 	public static WebElement Click_ActionDate;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='AccountHolder']")
@@ -116,18 +116,17 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 		
 		waitForElement(Dropd_Agreement);
 	
-        String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCC",1);
+    String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCC",1);
 
 		Dropd_Agreement.sendKeys(Agreement_Name);
+		waitForElement(Dropd_BucketID);
 		
-		waitForElement(Dropd_Subacc);
+        waitForElement(Dropd_Subacc);
 		
         String SubAccount_Name=getData("SubAccount_Name","CollPeriodBalances_MCC",1);
 
         Dropd_Subacc.sendKeys(SubAccount_Name);
 		
-		
-		waitForElement(Dropd_BucketID);
 		
 	    String BucketID=getData("BucketID","CollPeriodBalances_MCC",1);
 
@@ -137,10 +136,7 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 		waitForElement(Set_ActionDate);
 		Set_ActionDate.click();
 		Click_ActionDate.click();
-		
-		
-		
-waitForElement(Edi_AccountHolder);
+
 	    String AccountHolder=getData("AccountHolder","CollPeriodBalances_MCC",1);
 
 		Edi_AccountHolder.sendKeys(AccountHolder);
@@ -168,6 +164,7 @@ waitForElement(Edi_AccountHolder);
 		String IntRef=getData("IntRef","CollPeriodBalances_MCC",1);
 
 		Edi_IntRef.sendKeys(IntRef);
+		
 		Btn_Save.click();
 		waitForElement(Btn_Yes);
 		Btn_Yes.click();
@@ -180,6 +177,7 @@ waitForElement(Edi_AccountHolder);
 			
 			if (Btn_exceptions.isDisplayed())
 			{
+				Thread.sleep(2000);
 			waitForElement(Btn_Save1);
 			Btn_Save1.click();
 			waitForElement(Btn_Yes1);
@@ -188,20 +186,23 @@ waitForElement(Edi_AccountHolder);
 		}
 		catch (Exception e)
 		{
-		
-
-	
+			
 	}
 
+		
+				
+			
 		Thread.sleep(3000);
 		LogEvent("Pass","Data entered sucessfully for all the fieldd in MCC tc");
 		//driver.quit();
 		waitForElement(Btn_logout);
-    	Btn_logout.click();	
-        taskid= DBConnection.dbConnect();
-        
-        System.out.println(taskid);
-}
+    	Btn_logout.click();
+		Thread.sleep(5000);
 
-
+    	taskid= DBConnection.dbConnect();
+		
+		System.out.println(taskid);
+      
 }
+}
+ 

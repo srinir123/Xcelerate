@@ -7,10 +7,10 @@ import org.openqa.selenium.support.How;
 import com.GenericFunctions.GenericMethods;
 
 public class BankAccountCreation extends GenericMethods{
-	@FindBy(how=How.XPATH,using="//*[@id='mainnav']/li[3]/a")
+	@FindBy(how=How.XPATH,using="//*[text()= 'Parameter Maintenance']")
 	public static WebElement Click_Paramaintenance;
 	
-	@FindBy(how=How.XPATH,using="(//*[@id='btnModify'])[47]")
+	@FindBy(how=How.XPATH,using="(//*[@id='btnModify'])[46]")
 	public static WebElement Btn_PacsUser;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnAdd']")
@@ -38,7 +38,7 @@ public class BankAccountCreation extends GenericMethods{
 	public static WebElement Btn_Yes;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnClose']") 
-	public static WebElement Btn_Close;
+	public static WebElement Btn_Close1;
 	
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']") 
 	public static WebElement Btn_Yes1;
@@ -121,30 +121,16 @@ public class BankAccountCreation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
 	public static WebElement Btn_Yes2;
 	
-	@FindBy(how=How.XPATH,using="//*[text()= 'L133']")
+	@FindBy(how=How.XPATH,using="//*[text()= 'L319']")
 	public static WebElement Edi_Usercode;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='ServiceID']")
-	public static WebElement Dropd_ServiceId;
-	
-	@FindBy(how=How.XPATH,using="//*[@id='ServiceTypeID']")
-	public static WebElement Dropd_ServiceTypeId;
-	
-	@FindBy(how=How.XPATH,using="//*[@id='btnFilter']")
-	public static WebElement btn_Filter;
-	
-	@FindBy(how=How.XPATH,using="//*[@id='btnSaveOne']")
-	public static WebElement btn_Save;
-
 	@FindBy(how=How.XPATH,using="//*[@id='btnClose']")
-	public static WebElement btn_Close;
+	public static WebElement Btn_Close;
 	
-	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
-	public static WebElement btn_Yes;
+//	@FindBy(how=How.XPATH,using="//*[text()='Yes']")
+//	public static WebElement Btn_Yes;
 	
 	
-	
-	   
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
 	public static WebElement Btn_logout;
@@ -206,7 +192,7 @@ public class BankAccountCreation extends GenericMethods{
 		waitForElement(Btn_Yes);
 		Btn_Yes.click();
 		
-		Thread.sleep(5000);
+		Thread.sleep(9000);
 		waitForElement(Btn_Close);
 		Btn_Close.click();
 		waitForElement(Btn_Yes1);
@@ -347,65 +333,17 @@ public class BankAccountCreation extends GenericMethods{
 		Thread.sleep(15000);
 		waitForElement(Btn_PacsUser);
 		Btn_PacsUser.click();
-		
-//		waitForElement(Edi_Usercode);
-//
-//		String UserCode=getData("UserCode","BankAccountCreation",1);
-//
-//		Edi_Usercode.sendKeys(UserCode);
-		
+	
 		waitForElement(Edi_Usercode);
-		Edi_Usercode.click();
+		Edi_Usercode.click();	
+		
+		waitForElement(Btn_Close1);
+		Btn_Close1.click();
+		
+		waitForElement(Btn_Yes);
+		Btn_Yes.click();
 		
 		
-		waitForElement(Dropd_ServiceId);
-
-		String ServiceId=getData("ServiceId","BankAccountCreation",1);
-
-		Dropd_ServiceId.sendKeys(ServiceId);
-		
-		waitForElement(Dropd_ServiceTypeId);
-
-		String ServiceTypeId=getData("ServiceTypeId","BankAccountCreation",1);
-
-		Dropd_ServiceTypeId.sendKeys(ServiceTypeId);
-		
-		waitForElement(btn_Filter);
-		btn_Filter.click();		
-		waitForElement(btn_Save);
-		btn_Save.click();
-		waitForElement(btn_Yes);
-		btn_Yes.click();
-		
-		
-		waitForElement(Dropd_ServiceId);
-
-		String ServiceId1=getData("ServiceId1","BankAccountCreation",1);
-
-		Dropd_ServiceId.sendKeys(ServiceId1);
-		
-		waitForElement(Dropd_ServiceTypeId);
-
-		String ServiceTypeId1=getData("ServiceTypeId1","BankAccountCreation",1);
-
-		Dropd_ServiceTypeId.sendKeys(ServiceTypeId1);
-		Thread.sleep(1000);
-		waitForElement(btn_Filter);
-		btn_Filter.click();	
-		Thread.sleep(1000);
-
-		waitForElement(btn_Save);
-		btn_Save.click();
-		waitForElement(btn_Yes);
-		btn_Yes.click();
-		
-		waitForElement(btn_Close);
-		btn_Close.click();
-		//Thread.sleep(3000);
-		waitForElement(btn_Yes);
-		btn_Yes.click();
-		
-			
 		Thread.sleep(3000);
 		LogEvent("Pass","Data entered sucessfully for all the fields in PacsUser and Bank Account Creation");
 		waitForElement(Btn_logout);
@@ -416,3 +354,4 @@ public class BankAccountCreation extends GenericMethods{
 
 
 }
+

@@ -1,3 +1,4 @@
+
 package com.ScreenFunctions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,8 +10,7 @@ public class CollPeriodBalances_MCC_Ext extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[text()= 'Collection Period Balances']")
 	public static WebElement Click_CollPeriodBalances;
-	
-	
+		
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
 	public static WebElement Dropd_Agreement; 
 
@@ -23,7 +23,7 @@ public class CollPeriodBalances_MCC_Ext extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='ActionDate']")
 	public static WebElement Set_ActionDate;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[4]/td[5]/a")
+	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[4]/a")
 	public static WebElement Click_ActionDate;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='AccountHolder']")
@@ -68,13 +68,13 @@ public class CollPeriodBalances_MCC_Ext extends GenericMethods{
 	
 	public static void CollPeriodBalances_Ext() throws Exception 
 	{  	waitForElement(Click_CollPeriodBalances);
-	    Click_CollPeriodBalances.click();
+	   Click_CollPeriodBalances.click();
 	
 		
 		
 		waitForElement(Dropd_Agreement);
 	
-    String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCC_Ext",2);
+       String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCC_Ext",2);
 
 		Dropd_Agreement.sendKeys(Agreement_Name);
 		waitForElement(Dropd_BucketID);
@@ -115,7 +115,7 @@ public class CollPeriodBalances_MCC_Ext extends GenericMethods{
 		String IntRef=getData("IntRef","CollPeriodBalances_MCC_Ext",2);
 
 		Edi_IntRef.sendKeys(IntRef);
-				Btn_Save.click();
+		Btn_Save.click();
 		waitForElement(Btn_Yes);
 		Btn_Yes.click();
 		
@@ -136,10 +136,8 @@ public class CollPeriodBalances_MCC_Ext extends GenericMethods{
 		{
 			
 	}
-		Thread.sleep(3000);
-		System.out.println("Data entered sucessfully for all the fields");
+     Thread.sleep(3000);
 		LogEvent("Pass","Data entered sucessfully for all the fieldd in MCC tc");
-     
 		driver.quit();
 }
 }

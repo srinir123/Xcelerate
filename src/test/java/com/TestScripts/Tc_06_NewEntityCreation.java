@@ -1,7 +1,6 @@
 package com.TestScripts;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.GenericFunctions.GenericMethods;
 import com.ScreenFunctions.Authorization_NewEntity;
 import com.ScreenFunctions.Login;
@@ -22,11 +21,11 @@ public class Tc_06_NewEntityCreation extends GenericMethods{
 	Authorization_NewEntity Ane=PageFactory.initElements(driver, Authorization_NewEntity.class);
 	
 	lgn.launch_Application();
-    Thread.sleep(14000);
+    Thread.sleep(22000);
 	nec.NewEntity_creation();
 	lgn1.launch_Application1();
-	Ane.Authorization_NewEntity();	
-	Thread.sleep(3000);
+	Ane.Authorization_NewEntity();		
+	Thread.sleep(5000);
 
 		}
 		

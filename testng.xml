@@ -9,9 +9,16 @@
 </listeners>
   <test name="Test">
     <classes>
-                           <class name="com.TestScripts.Tc_23_FeeTest"/> 
-            
-          <class name="com.TestScripts.Tc_22_ISOPAIN_Fintegrate_Project"/> 
+     <class name="com.TestScripts.Tc_03_CollectionImport_MUMD"/> 
+          <class name="com.TestScripts.Tc_03_CollectionImport_SUMD"/> 
+                <class name="com.TestScripts.Tc_04_PaymentImport_MUMD"/>   
+          <class name="com.TestScripts.Tc_04_PaymentImport_SUMD"/>
+                <class name="com.TestScripts.Tc_07_NominatedPayments_MUMD"/>   
+          <class name="com.TestScripts.Tc_07_NominatedPayments_SUMD"/>
+          <class name="com.TestScripts.Tc_11_CollectionImport_Ext_MUMD"/>   
+          <class name="com.TestScripts.Tc_11_CollectionImport_Ext_SUMD"/> 
+              <class name="com.TestScripts.Tc_12_PaymentImport_Ext_MUMD"/>    
+          <class name="com.TestScripts.Tc_12_PaymentImport_Ext_SUMD"/>
           
          
 
