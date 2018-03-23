@@ -33,5 +33,6 @@ cpb.CollectionImport_Ext_SUMD(i,j);
 	}
 	}
 driver.quit();
+Thread.sleep(5000);
 	}
 }

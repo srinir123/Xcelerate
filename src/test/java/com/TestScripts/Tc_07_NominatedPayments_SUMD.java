@@ -36,5 +36,6 @@ public class Tc_07_NominatedPayments_SUMD extends GenericMethods{
 
 }
 driver.quit();
+Thread.sleep(5000);
 	}
 }

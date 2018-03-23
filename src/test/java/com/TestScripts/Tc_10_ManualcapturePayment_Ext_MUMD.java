@@ -27,6 +27,7 @@ public class Tc_10_ManualcapturePayment_Ext_MUMD extends GenericMethods{
 
 	}
      	driver.quit();
+     	Thread.sleep(5000);
 	}
 }
 

@@ -27,6 +27,7 @@ public class Tc_09_ManualcaptureCollection_Ext_MUMD extends GenericMethods{
 
 	}
 driver.quit();
+Thread.sleep(5000);
 }
 }
 

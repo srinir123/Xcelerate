@@ -28,6 +28,7 @@ public class Tc_13_Journals_Ext_MUMD extends GenericMethods{
 
 	}
       	driver.quit();
+      	Thread.sleep(5000);
 	}
 }
 

@@ -36,5 +36,6 @@ public class Tc_01_ManualcaptureCollection_SUMD extends GenericMethods{
 
 	}
 driver.quit();
+Thread.sleep(5000);
 }
 }

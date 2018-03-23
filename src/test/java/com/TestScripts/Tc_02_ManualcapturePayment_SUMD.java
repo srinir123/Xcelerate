@@ -35,5 +35,6 @@ public class Tc_02_ManualcapturePayment_SUMD extends GenericMethods{
 
 }
 		driver.quit();
+		Thread.sleep(5000);
 }
 }

@@ -29,5 +29,6 @@ pi.PaymentImport_Ext_MUMD(i);
 	}
 	
 	driver.quit();
+	Thread.sleep(5000);
 }
 }

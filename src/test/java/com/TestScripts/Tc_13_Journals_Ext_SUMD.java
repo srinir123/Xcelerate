@@ -31,6 +31,7 @@ public class Tc_13_Journals_Ext_SUMD extends GenericMethods{
 	}
 	}
       	driver.quit();
+      	Thread.sleep(5000);
 }
 }
 

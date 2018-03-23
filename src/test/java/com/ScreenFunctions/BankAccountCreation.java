@@ -111,10 +111,6 @@ public class BankAccountCreation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='dailyCr']")
 	public static WebElement Radio_dailyCr;
 	
-	
-	
-	
-
 	@FindBy(how=How.XPATH,using="(//*[@id='btnSaveOne'])[1]")
 	public static WebElement Btn_Save1; 
 	
@@ -127,8 +123,12 @@ public class BankAccountCreation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnClose']")
 	public static WebElement Btn_Close;
 	
-//	@FindBy(how=How.XPATH,using="//*[text()='Yes']")
-//	public static WebElement Btn_Yes;
+	@FindBy(how=How.XPATH,using="//*[@id='resultsGrid']/thead/tr/th[1]/div")
+	public static WebElement Click_PacsuserHeader;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='resultsGrid']/tbody/tr[1]/td[1]")
+	public static WebElement Click_PacsuserCode;
+	
 	
 	
 	
@@ -334,8 +334,14 @@ public class BankAccountCreation extends GenericMethods{
 		waitForElement(Btn_PacsUser);
 		Btn_PacsUser.click();
 	
-		waitForElement(Edi_Usercode);
-		Edi_Usercode.click();	
+//		waitForElement(Edi_Usercode);
+//		Edi_Usercode.click();	
+		waitForElement(Click_PacsuserHeader);
+		Click_PacsuserHeader.click();
+//		Thread.sleep(1000);
+//		Click_PacsuserHeader.click();
+		
+		Click_PacsuserCode.click();
 		
 		waitForElement(Btn_Close1);
 		Btn_Close1.click();

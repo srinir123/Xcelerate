@@ -31,6 +31,7 @@ public class Tc_07_NominatedPayments_MUMD extends GenericMethods{
 
 	}
 driver.quit();
+Thread.sleep(5000);
 }
 
 

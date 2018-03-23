@@ -31,6 +31,8 @@ cpb.CollectionImport_MUMD(i);
 
 	}
 driver.quit();
+Thread.sleep(5000);
+
 	}
 	
 }
