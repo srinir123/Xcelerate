@@ -12,7 +12,7 @@
 
 
    
-          <class name="com.TestScripts.Tc_12_PaymentImport_Ext_SUMD"/>  
+          <class name="com.TestScripts.Tc_21_BankAccountCreation"/>         
         
     
     </classes>

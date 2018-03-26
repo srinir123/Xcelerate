@@ -129,6 +129,24 @@ public class BankAccountCreation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='resultsGrid']/tbody/tr[1]/td[1]")
 	public static WebElement Click_PacsuserCode;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='ServiceID']")
+	public static WebElement Dropd_ServiceId;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='ServiceTypeID']")
+	public static WebElement Dropd_ServiceTypeId;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnFilter']")
+	public static WebElement btn_Filter;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnSaveOne']")
+	public static WebElement btn_Save;
+
+	@FindBy(how=How.XPATH,using="//*[@id='btnClose']")
+	public static WebElement btn_Close;
+	
+	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
+	public static WebElement btn_Yes;
+	
 	
 	
 	
@@ -342,6 +360,53 @@ public class BankAccountCreation extends GenericMethods{
 //		Click_PacsuserHeader.click();
 		
 		Click_PacsuserCode.click();
+		
+		
+		waitForElement(Dropd_ServiceId);
+
+		String ServiceId=getData("ServiceId","BankAccountCreation",1);
+
+		Dropd_ServiceId.sendKeys(ServiceId);
+		
+		waitForElement(Dropd_ServiceTypeId);
+
+		String ServiceTypeId=getData("ServiceTypeId","BankAccountCreation",1);
+
+		Dropd_ServiceTypeId.sendKeys(ServiceTypeId);
+		
+		waitForElement(btn_Filter);
+		btn_Filter.click();		
+		waitForElement(btn_Save);
+		btn_Save.click();
+		waitForElement(btn_Yes);
+		btn_Yes.click();
+		
+		
+		waitForElement(Dropd_ServiceId);
+
+		String ServiceId1=getData("ServiceId1","BankAccountCreation",1);
+
+		Dropd_ServiceId.sendKeys(ServiceId1);
+		
+		waitForElement(Dropd_ServiceTypeId);
+
+		String ServiceTypeId1=getData("ServiceTypeId1","BankAccountCreation",1);
+
+		Dropd_ServiceTypeId.sendKeys(ServiceTypeId1);
+		Thread.sleep(2000);
+		waitForElement(btn_Filter);
+		btn_Filter.click();	
+		Thread.sleep(2000);
+
+		waitForElement(btn_Save);
+		btn_Save.click();
+		waitForElement(btn_Yes);
+		btn_Yes.click();
+		
+		
+		
+		
+		
 		
 		waitForElement(Btn_Close1);
 		Btn_Close1.click();
