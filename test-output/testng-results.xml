@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="195724" started-at="2018-03-26T07:17:21Z" finished-at="2018-03-26T07:20:37Z">
+  <suite name="Suite" duration-ms="191531" started-at="2018-03-26T08:13:06Z" finished-at="2018-03-26T08:16:18Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="195724" started-at="2018-03-26T07:17:21Z" finished-at="2018-03-26T07:20:37Z">
+    <test name="Test" duration-ms="191531" started-at="2018-03-26T08:13:06Z" finished-at="2018-03-26T08:16:18Z">
       <class name="com.TestScripts.Tc_21_BankAccountCreation">
-        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_21_BankAccountCreation@69ea3742]" name="evaluateTestcase" duration-ms="186970" started-at="2018-03-26T09:17:22Z" finished-at="2018-03-26T09:20:28Z">
+        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_21_BankAccountCreation@69ea3742]" name="evaluateTestcase" duration-ms="183566" started-at="2018-03-26T10:13:07Z" finished-at="2018-03-26T10:16:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- evaluateTestcase -->

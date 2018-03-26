@@ -393,10 +393,10 @@ public class BankAccountCreation extends GenericMethods{
 		String ServiceTypeId1=getData("ServiceTypeId1","BankAccountCreation",1);
 
 		Dropd_ServiceTypeId.sendKeys(ServiceTypeId1);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		waitForElement(btn_Filter);
 		btn_Filter.click();	
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 
 		waitForElement(btn_Save);
 		btn_Save.click();
@@ -404,13 +404,13 @@ public class BankAccountCreation extends GenericMethods{
 		btn_Yes.click();
 		
 		
-		
+		//Thread.sleep(2000);
 		
 		
 		
 		waitForElement(Btn_Close1);
 		Btn_Close1.click();
-		
+		//Thread.sleep(2000);
 		waitForElement(Btn_Yes);
 		Btn_Yes.click();
 		
