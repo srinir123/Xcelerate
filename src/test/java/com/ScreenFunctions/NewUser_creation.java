@@ -71,8 +71,11 @@ public class NewUser_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")
 	public static WebElement Btnt_Yes;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='siri301']")
-	public static WebElement Click_NUser;
+	@FindBy(how=How.XPATH,using="//*[text()='Nu22']")
+	public static WebElement Click_NUser1;
+	
+	@FindBy(how=How.XPATH,using="//*[text()='Nu23']")
+	public static WebElement Click_NUser2;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSetupUser']")
 	public static WebElement Click_MUser;
@@ -89,13 +92,12 @@ public class NewUser_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnOpen']")
 	public static WebElement Btnt_Open;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='RolesGrid']/tbody/tr[1]/td[1]/input")
-	public static WebElement Click_Sysadmin;
+	@FindBy(how=How.XPATH,using="//*[@id='RolesGrid']/tbody/tr[7]/td[1]/input")
+	public static WebElement SalesUser;
 
-//	@FindBy(how=How.XPATH,using="//*[text()='System Administrator']")
-//	public static WebElement Click_Sysadmin;
-	
-	
+	@FindBy(how=How.XPATH,using="//*[@id='RolesGrid']/tbody/tr[12]/td[1]/input")
+	public static WebElement TakeonUser;
+		
 	@FindBy(how=How.XPATH,using="(//*[@id='btnSave'])[2]")
 	public static WebElement Btn_Save;
 	
@@ -113,7 +115,7 @@ public class NewUser_creation extends GenericMethods{
 	
 	
 
-	public static <performDBLCLICK> void NewUser_creation() throws Exception
+	public static <performDBLCLICK> void NewUser_creation(int i) throws Exception
 	{   
 		waitForElement1(Click_EntitySearch);
 		if(Click_EntitySearch.isDisplayed())
@@ -153,63 +155,92 @@ public class NewUser_creation extends GenericMethods{
 
 		waitForElement(Dropd_Title);
 	
-        String Title=getData("Title","NewUser_creation",1);
+        String Title=getData("Title","NewUser_creation",i);
 
         Dropd_Title.sendKeys(Title);
         LogEvent("pass","Data entered sucessfully for the field Title");
         
-        String FirstName=getData("FirstName","NewUser_creation",1);
+        String FirstName=getData("FirstName","NewUser_creation",i);
 
 		Edi_FirstName.sendKeys(FirstName);
 
-        String Surname=getData("Surname","NewUser_creation",1);
+        String Surname=getData("Surname","NewUser_creation",i);
 
 		Edi_Surname.sendKeys(Surname);
 
-        String Designation=getData("Designation","NewUser_creation",1);
+        String Designation=getData("Designation","NewUser_creation",i);
 
 		Edi_Designation.sendKeys(Designation);
 
-        String IDNumber=getData("IDNumber","NewUser_creation",1);
+        String IDNumber=getData("IDNumber","NewUser_creation",i);
 
 		Edi_IDNumber.sendKeys(IDNumber);
 
-        String Telephone=getData("Telephone","NewUser_creation",1);
+        String Telephone=getData("Telephone","NewUser_creation",i);
 
 		Edi_Telephone.sendKeys(Telephone);
 
-        String MobilePhone=getData("MobilePhone","NewUser_creation",1);
+        String MobilePhone=getData("MobilePhone","NewUser_creation",i);
 
 		Edi_MobilePhone.sendKeys(MobilePhone);
 
-        String Fax=getData("Fax","NewUser_creation",1);
+        String Fax=getData("Fax","NewUser_creation",i);
 
 		Edi_Fax.sendKeys(Fax);
 
-        String EMailAddress=getData("EMailAddress","NewUser_creation",1);
+        String EMailAddress=getData("EMailAddress","NewUser_creation",i);
 
 		Edi_EMailAddress.sendKeys(EMailAddress);
 
-        String Messanger=getData("Messanger","NewUser_creation",1);
+        String Messanger=getData("Messanger","NewUser_creation",i);
 
 		Dropd_Messanger.sendKeys(Messanger);
 		
-        String PositionID=getData("PositionID","NewUser_creation",1);
+        String PositionID=getData("PositionID","NewUser_creation",i);
 
 	    Dropd_PositionID.sendKeys(PositionID);
 
-        String EntityAddressID=getData("EntityAddressID","NewUser_creation",1);
+        String EntityAddressID=getData("EntityAddressID","NewUser_creation",i);
 
 	    Dropd_EntityAddressID.sendKeys(EntityAddressID);
 	    Btnt_Save.click();
 	    waitForElement(Btnt_Yes);
 	    Btnt_Yes.click();
-	    waitForElement1(Click_NUser);
-		performDBLCLICK(Click_NUser);
+//	    waitForElement1(Click_NUser);
+//		performDBLCLICK(Click_NUser);
+		
+		  if (i==1)
+		  {   
+			  waitForElement1(Click_NUser1);
+			  performDBLCLICK(Click_NUser1);
+
+		  }
+		  else if (i==2)
+		  {
+			  waitForElement1(Click_NUser2);
+			  performDBLCLICK(Click_NUser2);
+		  }
+		  
+//		  Thread.sleep(60000);
+//		    if(i==1)
+//		    {
+//		    
+//		    //waitForElement(new);
+//	        Actions act1 = new Actions(driver);
+//		    act1.doubleClick(driver.findElement(By.xpath("//.*[text()='"+FirstName+"']"))).build().perform();
+//		    
+//		    }
+//		    else if (i==2)
+//		    {
+//		    	Actions act2 = new Actions(driver);
+//			    act2.doubleClick(driver.findElement(By.xpath("//.*[text()='"+FirstName+"']"))).build().perform();
+//		    }
+			
+			  
 		
 		waitForElement(Click_MUser);
 		Click_MUser.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		waitForElement(Create_NUser);
 		Create_NUser.click();
 		Thread.sleep(2000);
@@ -229,17 +260,41 @@ public class NewUser_creation extends GenericMethods{
 		 Thread.sleep(18000);
 		 
 		 //waitForElement(Click_Sysadmin);
-		 click_element(Click_Sysadmin);
 		 
-		 waitForElement(Btn_Save);
-		 Btn_Save.click();
+		  if (i==1)
+		  {
+				 click_element(SalesUser);
+				 waitForElement(Btn_Save);
+				 Btn_Save.click();
+				 waitForElement1(Btn_Close);
+				 Btn_Close.click();
+				 
+				 //waitForElement(Btn_Yes);
+				 click_element1(Btn_Yes);
+		  }
+		  else if (i==2)
+		  {
+			     click_element(TakeonUser);
+				 waitForElement(Btn_Save);
+				 Btn_Save.click();
+				 waitForElement1(Btn_Close);
+				 Btn_Close.click();
+				 
+//				 waitForElement(Btn_Yes);
+//				 Btn_Yes.click();
+				 click_element1(Btn_Yes);
+		  }
+			  
+		 
+//		 waitForElement(Btn_Save);
+//		 Btn_Save.click();
 		 //Thread.sleep(3000);
-
-		 waitForElement1(Btn_Close);
-		 Btn_Close.click();
-		 
-		 waitForElement(Btn_Yes);
-		 Btn_Yes.click();
+//
+//		 waitForElement1(Btn_Close);
+//		 Btn_Close.click();
+//		 
+//		 waitForElement(Btn_Yes);
+//		 Btn_Yes.click();
 		 
 		 System.out.println("The new User has been created sucessfully");
 		 LogEvent("Pass","The new User has been created sucessfully");

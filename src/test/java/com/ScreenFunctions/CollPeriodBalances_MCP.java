@@ -68,7 +68,7 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='TransactionSubTypeID']")
 	public static WebElement Dropd_PmtSubtype; 
 	
-	@FindBy(how=How.XPATH,using="	//*[@id='inputfile']")
+	@FindBy(how=How.XPATH,using="//*[@id='inputfile']")
 	public static WebElement Attach_PmtInstr; 
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnSaveOne']")

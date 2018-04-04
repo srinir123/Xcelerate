@@ -12,7 +12,7 @@
 
 
    
-          <class name="com.TestScripts.Tc_21_BankAccountCreation"/>         
+          <class name="com.TestScripts.Tc_05_NewUserCcreation"/>
         
     
     </classes>

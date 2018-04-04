@@ -40,6 +40,7 @@ public class Authorization_NewUser extends GenericMethods{
 		Thread.sleep(6000);
 		
 		driver.findElement(By.xpath("//td[text()='"+NewUser_creation.taskid+"']")).click();
+		
 
 		waitForElement(Click_btnAccept);
 		Click_btnAccept.click();
@@ -58,6 +59,6 @@ public class Authorization_NewUser extends GenericMethods{
 		waitForElement(Btn_logout);
 		Btn_logout.click();
 		
-        driver.quit();
+        //driver.quit();
 	}
 	}
