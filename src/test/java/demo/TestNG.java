@@ -2,26 +2,18 @@ package demo;
 
 import org.testng.annotations.Test;
 
+import com.GenericFunctions.NewDBConnection_OTP;
+import com.ScreenFunctions.Authorization_NewUser;
+
 public class TestNG {
 	
 	@Test
 	public void launch()
 
 	{
-		
-//		System.out.println("Hello World");
-		dbConnect();
-		//sendMail();
-		//GetDateinJava();
-		
-	}
 
-	private void dbConnect() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
+		String OTP = NewDBConnection_OTP.dbConnect2();
+		System.out.println(OTP);
 
 //	private void GetDateinJava() {
 //		// TODO Auto-generated method stub
@@ -39,4 +31,10 @@ public class TestNG {
 //	}
 
 
+}
+
+	private void dbConnect2() {
+		// TODO Auto-generated method stub
+		
+	}
 }

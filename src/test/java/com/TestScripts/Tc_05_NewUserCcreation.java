@@ -31,7 +31,7 @@ lgn.launch_Application(i);
 Thread.sleep(2000);
 nuc.NewUser_creation(i); 
 lgn1.launch_Application2();
-Anu.Authorization_NewUser();
+Anu.Authorization_NewUser(i);
 
 
 	}
