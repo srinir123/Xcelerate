@@ -38,7 +38,7 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='ActionDate']")
 	public static WebElement Set_ActionDate;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[4]/a")
+	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[2]/a")
 	public static WebElement Click_ActionDate;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='AccountHolder']")
@@ -70,6 +70,9 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[@id='inputfile']")
 	public static WebElement Attach_PmtInstr; 
+	
+	@FindBy(how=How.XPATH,using="(//*[@id='inputfile'])[2]")
+	public static WebElement Attach_PmtInstr1; 
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnSaveOne']")
 	public static WebElement Btn_Save; 
@@ -180,8 +183,21 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 		String PmtSubtype=getData("PmtSubtype","CollPeriodBalances_MCP",1);
 
 		Dropd_PmtSubtype.sendKeys(PmtSubtype);
+		
+		try
+		{
+		
+		Attach_PmtInstr1.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
+
+		}
+		catch (Exception e)
+		{
+			
+	}
 
 		Attach_PmtInstr.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
+		//C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx
+		waitForElement(Btn_Save);
 		Btn_Save.click();
 		waitForElement(Btn_Yes);
 		Btn_Yes.click();

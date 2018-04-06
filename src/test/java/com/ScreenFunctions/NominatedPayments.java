@@ -52,6 +52,9 @@ public class NominatedPayments extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='inputfile']")
 	public static WebElement Attach_Instruction;
 	
+	@FindBy(how=How.XPATH,using="(//*[@id='inputfile'])[2]")
+	public static WebElement Attach_PmtInstr1; 
+	
 	@FindBy(how=How.XPATH,using="//*[@id='btnSubmit']")
 	public static WebElement Click_Btnsubmit;
 		
@@ -119,6 +122,17 @@ public class NominatedPayments extends GenericMethods{
 	    Edi_Amtount.sendKeys(Amount);
 	    
 	    Click_Btnadd.click();
+	    
+		try
+		{
+		
+		Attach_PmtInstr1.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
+
+		}
+		catch (Exception e)
+		{
+			
+	}
 	    
 	    Attach_Instruction.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
         waitForElement(Click_Btnsubmit);

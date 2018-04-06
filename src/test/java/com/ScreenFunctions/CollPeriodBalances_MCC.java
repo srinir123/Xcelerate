@@ -41,7 +41,7 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='ActionDate']")
 	public static WebElement Set_ActionDate;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[4]/a")
+	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[2]/a")
 	public static WebElement Click_ActionDate;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='AccountHolder']")
@@ -164,7 +164,7 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 		String IntRef=getData("IntRef","CollPeriodBalances_MCC",1);
 
 		Edi_IntRef.sendKeys(IntRef);
-		
+		waitForElement(Btn_Save);
 		Btn_Save.click();
 		waitForElement(Btn_Yes);
 		Btn_Yes.click();

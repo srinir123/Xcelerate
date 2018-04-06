@@ -42,11 +42,9 @@ public class Review_Importfiles extends GenericMethods{
 		acc.moveToElement(Click_Impfiles).click(Click_Impfiles).build().perform();
 		Click_Impfiles.click();
 	}
-	//Thread.sleep(3000);
-	waitForElement(Click_ID);
-	Click_ID.click();
-	Click_ID.click();
-	//Thread.sleep(3000);
+	waitForElement1(Click_ID);
+	performDBLCLICK(Click_ID);
+		//Thread.sleep(3000);
 	
 	waitForElement(btn_ReviewItem);
 	btn_ReviewItem.click();
