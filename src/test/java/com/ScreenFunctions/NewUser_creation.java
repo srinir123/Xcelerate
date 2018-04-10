@@ -71,10 +71,10 @@ public class NewUser_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")
 	public static WebElement Btnt_Yes;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='Nu51']")
+	@FindBy(how=How.XPATH,using="//*[text()='Nu53']")
 	public static WebElement Click_NUser1;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='Nu52']")
+	@FindBy(how=How.XPATH,using="//*[text()='Nu54']")
 	public static WebElement Click_NUser2;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSetupUser']")

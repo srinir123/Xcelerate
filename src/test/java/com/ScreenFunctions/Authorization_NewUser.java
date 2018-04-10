@@ -70,8 +70,28 @@ public class Authorization_NewUser extends GenericMethods{
 		Thread.sleep(3000);
 		System.out.println(NewUser_creation.taskid);
 		Thread.sleep(6000);
+	
+		try
+		{
 		
-		driver.findElement(By.xpath("//td[text()='"+NewUser_creation.taskid+"']")).click();
+			driver.findElement(By.xpath("//td[text()='"+story1.taskid+"']")).click();
+		}
+		catch (Exception e)
+		{
+			
+	}
+		Thread.sleep(3000);
+
+		
+		try
+		{
+		
+			driver.findElement(By.xpath("//td[text()='"+NewUser_creation.taskid+"']")).click();
+		}
+		catch (Exception e)
+		{
+			
+	}
 		
 
 		waitForElement(Click_btnAccept);
@@ -96,15 +116,50 @@ public class Authorization_NewUser extends GenericMethods{
 		
         //String Username=getData("FirstName","NewUser_creation",i);
 		
-        String Username=getData("FirstName","NewUser_creation",i).concat(getData("Surname","NewUser_creation",i).substring(0, 1));
-        String password=getData("Password","NewUser_creation",i);
-        Edi_Username.clear();
-     Edi_Username.sendKeys(Username);
-     Edi_Password.clear();
-     Edi_Password.sendKeys(password);
-     Btn_Loginbtn.click();
+		try
+		{
+		
+			String Username=getData("FirstName","NewUser_creation",i).concat(getData("Surname","NewUser_creation",i).substring(0, 1));	
+			  String password=getData("Password","NewUser_creation",i);	
+		      Edi_Username.clear();
+		     Edi_Username.sendKeys(Username);
+		     Edi_Password.clear();
+		     Edi_Password.sendKeys(password);
+		     Btn_Loginbtn.click();
+		}
+		catch (Exception e)
+		{
+			
+	}
+		Thread.sleep(3000);
+		
+		try
+		{
+		
+			String Username=getData("FirstName","story1",i).concat(getData("Surname","story1",i).substring(0, 1));	
+			  String password=getData("Password","story1",i);	
+		      Edi_Username.clear();
+		     Edi_Username.sendKeys(Username);
+		     Edi_Password.clear();
+		     Edi_Password.sendKeys(password);
+		     Btn_Loginbtn.click();
+		}
+		catch (Exception e)
+		{
+			
+	}
+		
+       // String Username=getData("FirstName","NewUser_creation",i).concat(getData("Surname","NewUser_creation",i).substring(0, 1));
+//        String password=getData("Password","NewUser_creation",i);
+//        Edi_Username.clear();
+//     Edi_Username.sendKeys(Username);
+//     Edi_Password.clear();
+//     Edi_Password.sendKeys(password);
+//     Btn_Loginbtn.click();
      Thread.sleep(2000);
 		OTP=NewDBConnection_OTP.dbConnect2(i);
+		
+		Thread.sleep(2000);
 		
 		System.out.println("Passwords have been reset");
 		System.out.println("OTP");
@@ -119,8 +174,8 @@ public class Authorization_NewUser extends GenericMethods{
 		Btn_Reset.click();
 		waitForElement(Btn_Accept);
 		Btn_Accept.click();
-		waitForElement(Btn_logout);
-		Btn_logout.click();
+//		waitForElement(Btn_logout);
+//		Btn_logout.click();
 
         //driver.quit();
 	}
