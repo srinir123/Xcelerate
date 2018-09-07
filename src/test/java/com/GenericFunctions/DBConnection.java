@@ -25,14 +25,14 @@ public class DBConnection extends GenericMethods {
 	      
 	      String environment=getData("Environment","Login",1); 
 	      String client=getData("Client","Login",1); 
-	      String queryString = "exec [Peter].dbo.[Get_NextTask] '"+environment.trim()+"','"+client.trim()+"'";
-	      
+
+	      String queryString = "exec [Peter].dbo.[GetNextTask] '"+environment.trim()+"','"+client.trim()+"'";
 	     // String queryString = "select * from bank";
 	      ResultSet rs = statement.executeQuery(queryString);
 	      while (rs.next()) {
 	         //System.out.println(rs.getString(1));
-	         System.out.println(rs.getString(2));
-             data=rs.getString(2);  
+	         System.out.println(rs.getString(1));
+             data=rs.getString(1);  
 	      }
 	   } catch (Exception e) {
 	      e.printStackTrace();

@@ -87,6 +87,10 @@ public class BankAccountCreation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='StatusID']")
 	public static WebElement Edi_Status; 
 
+	@FindBy(how=How.XPATH,using="//*[@id='B2BUserID']")
+	public static WebElement Edi_B2BuserID; 
+	
+
 	@FindBy(how=How.XPATH,using="//*[@id='AgreementOwnBankAccountListIndicator']") 
 	public static WebElement Tick_AgreeOwnBnkAccIndic;  
 
@@ -288,6 +292,13 @@ public class BankAccountCreation extends GenericMethods{
 		String Status=getData("Status","BankAccountCreation",1);
 
 		Edi_Status.sendKeys(Status);
+		
+		waitForElement(Edi_B2BuserID);
+
+		String B2BUser=getData("B2BUser","BankAccountCreation",1);
+
+		Edi_B2BuserID.sendKeys(B2BUser);
+		
 		
 		waitForElement(Tick_AgreeOwnBnkAccIndic);
 		Tick_AgreeOwnBnkAccIndic.click();  

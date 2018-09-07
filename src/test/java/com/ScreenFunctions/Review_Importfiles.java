@@ -46,6 +46,32 @@ public class Review_Importfiles extends GenericMethods{
 	performDBLCLICK(Click_ID);
 		//Thread.sleep(3000);
 	
+	
+	
+	try
+	{
+		Click_Impfiles.click();
+		
+
+	}
+	catch (Exception e)
+	{
+		
+}
+	
+	Thread.sleep(3000);
+	
+	try
+	{
+		Click_Impfiles.click();
+		
+
+	}
+	catch (Exception e)
+	{
+		
+}
+	
 	waitForElement(btn_ReviewItem);
 	btn_ReviewItem.click();
 

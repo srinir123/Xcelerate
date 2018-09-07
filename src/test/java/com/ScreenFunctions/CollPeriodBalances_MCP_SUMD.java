@@ -69,7 +69,7 @@ public class CollPeriodBalances_MCP_SUMD extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='TransactionSubTypeID']")
 	public static WebElement Dropd_PmtSubtype; 
 	
-	@FindBy(how=How.XPATH,using="//*[@id='inputfile']")
+	@FindBy(how=How.XPATH,using="(//*[@id='inputfile'])[2]")
 	public static WebElement Attach_PmtInstr; 
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnSaveOne']")
@@ -86,6 +86,9 @@ public class CollPeriodBalances_MCP_SUMD extends GenericMethods{
 
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
 	public static WebElement Btn_Yes1; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id='QuoteInterestCalculationGroupID']")
+	public static WebElement Dropd_interestgroup; 
 	
 	
 	
@@ -123,6 +126,13 @@ public class CollPeriodBalances_MCP_SUMD extends GenericMethods{
 	String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCP_SUMD",i,j);
 
 	Dropd_Agreement.sendKeys(Agreement_Name);
+	
+    waitForElement(Dropd_interestgroup);
+	
+    String InterestGroup=getData("InterestGroup","CollPeriodBalances_MCP_SUMD",i,j);
+
+    Dropd_interestgroup.sendKeys(InterestGroup);
+	
 	
 	waitForElement(Dropd_Subacc);
 	
@@ -185,7 +195,7 @@ public class CollPeriodBalances_MCP_SUMD extends GenericMethods{
 		{
 			
 	}
-		
+		Thread.sleep(3000);
 		Attach_PmtInstr.sendKeys("C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\sunday\\Payments\\1k file for attachment purpose.xlsx");
 		System.out.println("Data entered sucessfully for all the fields");
 		LogEvent("Pass","Data entered sucessfully for all the fieldd in MCP tc");
@@ -196,7 +206,8 @@ public class CollPeriodBalances_MCP_SUMD extends GenericMethods{
 			
 			try
 			{
-				waitForElement(Btn_exceptions);
+				Thread.sleep(5000);
+				//waitForElement(Btn_exceptions);
 				Btn_exceptions.click();
 				
 				if (Btn_exceptions.isDisplayed())

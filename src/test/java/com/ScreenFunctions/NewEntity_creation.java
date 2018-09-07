@@ -229,7 +229,7 @@ public class NewEntity_creation extends GenericMethods{
         String RegRIdType=getData("RegRIdType","NewEntity_creation",1);
 
         Edi_RegRIdType.sendKeys(RegRIdType); 
-		Thread.sleep(3000);
+		Thread.sleep(8000);
 
         Btnt_Next.click();
         
@@ -337,15 +337,15 @@ public class NewEntity_creation extends GenericMethods{
         waitForElement(Btnt_Next2);
         Btnt_Next2.click();
         waitForElement(Dropd_UserID1);
-        Dropd_UserID1.sendKeys("Lynette Van Der Walt");
-        Dropd_UserID2.sendKeys("Barry Levy");
-        Dropd_UserID3.sendKeys("Angelique Bruggemans");
-        Dropd_UserID4.sendKeys("Belinda Dubber");
-        Dropd_UserID5.sendKeys("Dorathea Brits");
-        Dropd_UserID6.sendKeys("Mpho Bogatsu");
-        Dropd_SUserID1.sendKeys("Asiya Swaleh");
-        Dropd_SUserID2.sendKeys("Annelise Harrison");
-        Dropd_SUserID3.sendKeys("Sunitha Maistry");
+//        Dropd_UserID1.sendKeys("Lynette Van Der Walt");
+//        Dropd_UserID2.sendKeys("Barry Levy");
+//        Dropd_UserID3.sendKeys("Angelique Bruggemans");
+//        Dropd_UserID4.sendKeys("Belinda Dubber");
+//        Dropd_UserID5.sendKeys("Dorathea Brits");
+//        Dropd_UserID6.sendKeys("Mpho Bogatsu");
+//        Dropd_SUserID1.sendKeys("Asiya Swaleh");
+//        Dropd_SUserID2.sendKeys("Annelise Harrison");
+//        Dropd_SUserID3.sendKeys("Sunitha Maistry");
         waitForElement(Btnt_Next3);
         Btnt_Next3.click();
         

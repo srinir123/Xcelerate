@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
 
 public class Authorization_MCC extends GenericMethods{
@@ -17,6 +18,8 @@ public class Authorization_MCC extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
 	public static WebElement Btn_logout;
+
+	public static String taskid;
 	
 	
 	
@@ -29,7 +32,7 @@ public class Authorization_MCC extends GenericMethods{
 	{   
 		Thread.sleep(3000);
 		System.out.println(CollPeriodBalances_MCC.taskid);
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		driver.findElement(By.xpath("//td[text()='"+CollPeriodBalances_MCC.taskid+"']")).click();
 
@@ -40,6 +43,24 @@ public class Authorization_MCC extends GenericMethods{
 		Click_Yes.click();
 		waitForElement(Btn_logout);
     	Btn_logout.click();	
-        driver.quit();
+        //driver.quit();
+		Thread.sleep(3000);
+    	waitForElement(taskid);
+        taskid= DBConnection.dbConnect();
+		//Thread.sleep(2000);
+
+        System.out.println(taskid);
+	}
+
+
+
+
+
+
+
+
+	private static void waitForElement(String taskid2) {
+		// TODO Auto-generated method stub
+		
 	}
 	}

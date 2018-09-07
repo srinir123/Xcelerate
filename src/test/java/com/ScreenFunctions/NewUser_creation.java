@@ -71,11 +71,11 @@ public class NewUser_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")
 	public static WebElement Btnt_Yes;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='Nu53']")
-	public static WebElement Click_NUser1;
+	@FindBy(how=How.XPATH,using="//*[text()='Nu5322']")
+	public static WebElement Click_NUser;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='Nu54']")
-	public static WebElement Click_NUser2;
+//	@FindBy(how=How.XPATH,using="//*[text()='Nu54']")
+//	public static WebElement Click_NUser2;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSetupUser']")
 	public static WebElement Click_MUser;
@@ -113,9 +113,11 @@ public class NewUser_creation extends GenericMethods{
 
 	public static String taskid;
 	
+	public static String taskid1;
+	
 	
 
-	public static <performDBLCLICK> void NewUser_creation(int i) throws Exception
+	public static <performDBLCLICK> void NewUser_creation() throws Exception
 	{   
 		waitForElement1(Click_EntitySearch);
 		if(Click_EntitySearch.isDisplayed())
@@ -155,72 +157,72 @@ public class NewUser_creation extends GenericMethods{
 
 		waitForElement(Dropd_Title);
 	
-        String Title=getData("Title","NewUser_creation",i);
+        String Title=getData("Title","NewUser_creation",1);
 
         Dropd_Title.sendKeys(Title);
         LogEvent("pass","Data entered sucessfully for the field Title");
         
-        String FirstName=getData("FirstName","NewUser_creation",i);
+        String FirstName=getData("FirstName","NewUser_creation",1);
 
 		Edi_FirstName.sendKeys(FirstName);
 
-        String Surname=getData("Surname","NewUser_creation",i);
+        String Surname=getData("Surname","NewUser_creation",1);
 
 		Edi_Surname.sendKeys(Surname);
 
-        String Designation=getData("Designation","NewUser_creation",i);
+        String Designation=getData("Designation","NewUser_creation",1);
 
 		Edi_Designation.sendKeys(Designation);
 
-        String IDNumber=getData("IDNumber","NewUser_creation",i);
+        String IDNumber=getData("IDNumber","NewUser_creation",1);
 
 		Edi_IDNumber.sendKeys(IDNumber);
 
-        String Telephone=getData("Telephone","NewUser_creation",i);
+        String Telephone=getData("Telephone","NewUser_creation",1);
 
 		Edi_Telephone.sendKeys(Telephone);
 
-        String MobilePhone=getData("MobilePhone","NewUser_creation",i);
+        String MobilePhone=getData("MobilePhone","NewUser_creation",1);
 
 		Edi_MobilePhone.sendKeys(MobilePhone);
 
-        String Fax=getData("Fax","NewUser_creation",i);
+        String Fax=getData("Fax","NewUser_creation",1);
 
 		Edi_Fax.sendKeys(Fax);
 
-        String EMailAddress=getData("EMailAddress","NewUser_creation",i);
+        String EMailAddress=getData("EMailAddress","NewUser_creation",1);
 
 		Edi_EMailAddress.sendKeys(EMailAddress);
 
-        String Messanger=getData("Messanger","NewUser_creation",i);
+        String Messanger=getData("Messanger","NewUser_creation",1);
 
 		Dropd_Messanger.sendKeys(Messanger);
 		
-        String PositionID=getData("PositionID","NewUser_creation",i);
+        String PositionID=getData("PositionID","NewUser_creation",1);
 
 	    Dropd_PositionID.sendKeys(PositionID);
 
-        String EntityAddressID=getData("EntityAddressID","NewUser_creation",i);
+        String EntityAddressID=getData("EntityAddressID","NewUser_creation",1);
 
 	    Dropd_EntityAddressID.sendKeys(EntityAddressID);
 	    Btnt_Save.click();
 	    waitForElement(Btnt_Yes);
 	    Btnt_Yes.click();
-//	    waitForElement1(Click_NUser);
-//		performDBLCLICK(Click_NUser);
-		
-		  if (i==1)
-		  {   
-			  waitForElement1(Click_NUser1);
-			  performDBLCLICK(Click_NUser1);
-
-		  }
-		  else if (i==2)
-		  {
-			  waitForElement1(Click_NUser2);
-			  performDBLCLICK(Click_NUser2);
-		  }
-		  
+	    waitForElement1(Click_NUser);
+		performDBLCLICK(Click_NUser);
+//		
+//		  if (i==1)
+//		  {   
+//			  waitForElement1(Click_NUser1);
+//			  performDBLCLICK(Click_NUser1);
+//
+//		  }
+//		  else if (i==2)
+//		  {
+//			  waitForElement1(Click_NUser2);
+//			  performDBLCLICK(Click_NUser2);
+//		  }
+//		  
 //		  Thread.sleep(60000);
 //		    if(i==1)
 //		    {
@@ -259,31 +261,40 @@ public class NewUser_creation extends GenericMethods{
 		 Btnt_Open.click();
 		 Thread.sleep(18000);
 		 
+		 click_element(SalesUser);
+		 waitForElement(Btn_Save);
+		 Btn_Save.click();
+		 waitForElement1(Btn_Close);
+		 Btn_Close.click();
+		 
+		 //waitForElement(Btn_Yes);
+		 click_element1(Btn_Yes);
+		 
 		 //waitForElement(Click_Sysadmin);
 		 
-		  if (i==1)
-		  {
-				 click_element(SalesUser);
-				 waitForElement(Btn_Save);
-				 Btn_Save.click();
-				 waitForElement1(Btn_Close);
-				 Btn_Close.click();
-				 
-				 //waitForElement(Btn_Yes);
-				 click_element1(Btn_Yes);
-		  }
-		  else if (i==2)
-		  {
-			     click_element(TakeonUser);
-				 waitForElement(Btn_Save);
-				 Btn_Save.click();
-				 waitForElement1(Btn_Close);
-				 Btn_Close.click();
+//		  if (i==1)
+//		  {
+//				 click_element(SalesUser);
+//				 waitForElement(Btn_Save);
+//				 Btn_Save.click();
+//				 waitForElement1(Btn_Close);
+//				 Btn_Close.click();
+//				 
+//				 //waitForElement(Btn_Yes);
+//				 click_element1(Btn_Yes);
+//		  }
+//		  else if (i==2)
+//		  {
+//			     click_element(TakeonUser);
+//				 waitForElement(Btn_Save);
+//				 Btn_Save.click();
+//				 waitForElement1(Btn_Close);
+//				 Btn_Close.click();
 				 
 //				 waitForElement(Btn_Yes);
 //				 Btn_Yes.click();
-				 click_element1(Btn_Yes);
-		  }
+//				 click_element1(Btn_Yes);
+//		  }
 			  
 		 
 //		 waitForElement(Btn_Save);
@@ -304,6 +315,10 @@ public class NewUser_creation extends GenericMethods{
 		Btn_logout.click();
 		
         taskid= DBConnection.dbConnect();
+        
+        Thread.sleep(2000);
+        
+        taskid1= DBConnection.dbConnect();
         
         System.out.println(taskid);
 	}

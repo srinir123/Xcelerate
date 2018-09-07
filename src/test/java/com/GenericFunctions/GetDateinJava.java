@@ -9,7 +9,7 @@ public class GetDateinJava {
  public static void main(String[] args) {
  
  // Create object of SimpleDateFormat class and decide the format
- DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy ");
+ DateFormat dateFormat = new SimpleDateFormat("yyyyy/MM/dd");
  
  //get current date time with Date()
  Date date = new Date();

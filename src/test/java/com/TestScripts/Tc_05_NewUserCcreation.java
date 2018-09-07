@@ -25,16 +25,14 @@ Login lgn1= PageFactory.initElements(driver, Login.class);
 
 Authorization_NewUser Anu= PageFactory.initElements(driver, Authorization_NewUser.class);
 
-for(int i=1;i<=itr;i++) 	
-{
-lgn.launch_Application(i);
+lgn.launch_Application();
 Thread.sleep(2000);
-nuc.NewUser_creation(i); 
+nuc.NewUser_creation(); 
 lgn1.launch_Application2();
-Anu.Authorization_NewUser(i);
+Anu.Authorization_NewUser();
 
 
-	}
+
 	
 driver.quit();
 Thread.sleep(5000);

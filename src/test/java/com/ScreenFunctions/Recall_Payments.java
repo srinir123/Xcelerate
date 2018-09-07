@@ -55,6 +55,9 @@ public class Recall_Payments extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='notyClost']")
 	public static WebElement Btn_close;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='manualTransactionGrid']/tbody/tr[1]/td[9]/button[1]/i")
+	public static WebElement Click_Note;
+	
 	
 
 	

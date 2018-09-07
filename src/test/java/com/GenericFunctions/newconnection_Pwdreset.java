@@ -23,17 +23,18 @@ public class newconnection_Pwdreset extends GenericMethods {
 	      System.out.println("connected");
 	      Statement statement = conn.createStatement();
 	      
-	      //String environment=getData("Environment","Login",1); 
+	      String environment=getData("Environment","Login",1); 
 	 
-	      String queryString = "exec [Peter].dbo.[Update_Password] [Xcelerate]";
-	      
+	      //String queryString = "exec [Peter].dbo.[Update_Password] [Xcelerate]";
+	      String queryString = "exec [Peter].dbo.[Update_Password] '"+environment.trim()+"'";
 	     // String queryString = "select * from bank";
-	      ResultSet rs = statement.executeQuery(queryString);
-	      while (rs.next()) {
-	         //System.out.println(rs.getString(1));
-	         System.out.println(rs.getString(2));
-             data=rs.getString(2);  
-	      }
+	      //ResultSet rs = 
+	      statement.executeUpdate(queryString);
+//	      while (rs.next()) {
+//	         //System.out.println(rs.getString(1));
+//	         System.out.println(rs.getString(2));
+//             data=rs.getString(2);  
+//	      }
 	   } catch (Exception e) {
 	      e.printStackTrace();
 	   }

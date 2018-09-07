@@ -29,6 +29,9 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
 	public static WebElement Dropd_Agreement; 
 	
+	@FindBy(how=How.XPATH,using="//*[@id='QuoteInterestCalculationGroupID']")
+	public static WebElement Dropd_interestgroup; 
+	
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteSubAccountID']")
 	public static WebElement Dropd_Subacc;
 
@@ -41,7 +44,7 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='ActionDate']")
 	public static WebElement Set_ActionDate;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[2]/a")
+	@FindBy(how=How.XPATH,using="//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[3]/a")
 	public static WebElement Click_ActionDate;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='AccountHolder']")
@@ -119,7 +122,13 @@ public class CollPeriodBalances_MCC extends GenericMethods{
     String Agreement_Name=getData("Agreement_Name","CollPeriodBalances_MCC",1);
 
 		Dropd_Agreement.sendKeys(Agreement_Name);
-		waitForElement(Dropd_BucketID);
+		//waitForElement(Dropd_BucketID);
+		
+        waitForElement(Dropd_interestgroup);
+		
+	    String InterestGroup=getData("InterestGroup","CollPeriodBalances_MCC",1);
+
+	    Dropd_interestgroup.sendKeys(InterestGroup);
 		
         waitForElement(Dropd_Subacc);
 		
@@ -128,9 +137,13 @@ public class CollPeriodBalances_MCC extends GenericMethods{
         Dropd_Subacc.sendKeys(SubAccount_Name);
 		
 		
+        waitForElement(Dropd_BucketID);
+        
 	    String BucketID=getData("BucketID","CollPeriodBalances_MCC",1);
 
 		Dropd_BucketID.sendKeys(BucketID);
+		
+		Thread.sleep(6000);
 		waitForElement(btn_CaptureColl);
 		btn_CaptureColl.click();
 		waitForElement(Set_ActionDate);
@@ -164,6 +177,7 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 		String IntRef=getData("IntRef","CollPeriodBalances_MCC",1);
 
 		Edi_IntRef.sendKeys(IntRef);
+		Thread.sleep(2000);
 		waitForElement(Btn_Save);
 		Btn_Save.click();
 		waitForElement(Btn_Yes);
@@ -171,13 +185,13 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 		
 		try
 		{
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			//waitForElement(Btn_exceptions);
 			Btn_exceptions.click();
 			
 			if (Btn_exceptions.isDisplayed())
 			{
-				Thread.sleep(2000);
+				Thread.sleep(6000);
 			waitForElement(Btn_Save1);
 			Btn_Save1.click();
 			waitForElement(Btn_Yes1);
@@ -192,7 +206,7 @@ public class CollPeriodBalances_MCC extends GenericMethods{
 		
 				
 			
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		LogEvent("Pass","Data entered sucessfully for all the fieldd in MCC tc");
 		//driver.quit();
 		waitForElement(Btn_logout);

@@ -24,9 +24,25 @@ public class ISOPAIN extends GenericMethods{
 	@FindBy(how=How.XPATH,using="(//*[@id='Password'])[2]")
 	public static WebElement Edi_Password;
 	
-	@FindBy(how=How.XPATH,using="(//*[@id='ServiceChannelID'])[2]")
-	public static WebElement Edi_SerChan;
+	@FindBy(how=How.XPATH,using="(//*[@id='ServiceID'])[2]")
+	public static WebElement Drop_Service;
 	
+	@FindBy(how=How.XPATH,using="(//*[@id='ServiceTypeID'])[2]")
+	public static WebElement Drop_Servicetype;
+	
+	@FindBy(how=How.XPATH,using="(//*[@id='btnFilter'])[2]")
+	public static WebElement Btn_Filter;
+	
+	@FindBy(how=How.XPATH,using="(//*[@id='IsLinked'])[5]")
+	public static WebElement Click_Tickbox1;
+	
+	@FindBy(how=How.XPATH,using="(//*[@id='IsLinked'])[6]")
+	public static WebElement Click_Tickbox2;
+	
+	@FindBy(how=How.XPATH,using="(//*[@id='IsLinked'])[7]")
+	public static WebElement Click_Tickbox3;
+
+		
 	@FindBy(how=How.XPATH,using="(//*[@id='Description'])[2]")
 	public static WebElement Edi_UserDesp;
 	
@@ -139,11 +155,11 @@ public class ISOPAIN extends GenericMethods{
     Edi_Password.sendKeys(Edi_Password_Name);
     
     
-	waitForElement(Edi_SerChan);
-	
-    String ServiceChannel_Name=getData("ServiceChannel_Name","ISOPAIN",1);
-
-    Edi_SerChan.sendKeys(ServiceChannel_Name);
+//	waitForElement(Edi_SerChan);
+//	
+//    String ServiceChannel_Name=getData("ServiceChannel_Name","ISOPAIN",1);
+//
+//    Edi_SerChan.sendKeys(ServiceChannel_Name);
     
 	waitForElement(Edi_UserDesp);
 	
@@ -151,6 +167,33 @@ public class ISOPAIN extends GenericMethods{
 
     Edi_UserDesp.sendKeys(User_Descriptiom);
     
+    
+	waitForElement(Drop_Service);
+	
+    String Service=getData("Service","ISOPAIN",1);
+
+    Drop_Service.sendKeys(Service);
+    
+	waitForElement(Drop_Servicetype);
+	
+    String Servicetype=getData("Servicetype","ISOPAIN",1);
+
+    Drop_Servicetype.sendKeys(Servicetype);
+    
+    Thread.sleep(2000);
+    
+    waitForElement(Btn_Filter);
+    Btn_Filter.click();
+    Thread.sleep(1000);
+    //waitForElement(Click_Tickbox1);
+    Click_Tickbox1.click();
+    
+    //waitForElement(Click_Tickbox2);
+    Click_Tickbox2.click();
+
+    //waitForElement(Click_Tickbox3);
+    Click_Tickbox3.click();
+ 
     Thread.sleep(2000);
     
 waitForElement(Btn_Save);

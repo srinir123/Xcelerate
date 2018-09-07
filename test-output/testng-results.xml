@@ -1,54 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="300659" started-at="2018-04-06T11:31:37Z" finished-at="2018-04-06T11:36:38Z">
+  <suite name="Suite" duration-ms="110374" started-at="2018-09-07T07:14:35Z" finished-at="2018-09-07T07:16:26Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="300659" started-at="2018-04-06T11:31:37Z" finished-at="2018-04-06T11:36:38Z">
-      <class name="com.TestScripts.STORY1">
-        <test-method status="FAIL" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.STORY1@69ea3742]" name="evaluateTestcase" duration-ms="280728" started-at="2018-04-06T13:31:38Z" finished-at="2018-04-06T13:36:19Z">
-          <exception class="java.lang.StringIndexOutOfBoundsException">
-            <message>
-              <![CDATA[String index out of range: 1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.StringIndexOutOfBoundsException: String index out of range: 1
-	at java.lang.String.substring(Unknown Source)
-	at com.ScreenFunctions.Authorization_NewUser.Authorization_NewUser(Authorization_NewUser.java:119)
-	at com.TestScripts.STORY1.evaluateTestcase(STORY1.java:41)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:776)
-	at org.testng.TestRunner.run(TestRunner.java:634)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
-	at org.testng.TestNG.runSuites(TestNG.java:1161)
-	at org.testng.TestNG.run(TestNG.java:1129)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.StringIndexOutOfBoundsException -->
+    <test name="Test" duration-ms="110374" started-at="2018-09-07T07:14:35Z" finished-at="2018-09-07T07:16:26Z">
+      <class name="com.TestScripts.Tc_03_CollectionImport">
+        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_03_CollectionImport@69ea3742]" name="evaluateTestcase" duration-ms="109394" started-at="2018-09-07T09:14:36Z" finished-at="2018-09-07T09:16:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- evaluateTestcase -->
-      </class> <!-- com.TestScripts.STORY1 -->
+      </class> <!-- com.TestScripts.Tc_03_CollectionImport -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

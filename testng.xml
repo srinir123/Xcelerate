@@ -4,17 +4,17 @@
 
 
 <listeners>
-<listener class-name="com.GenericFunctions.TestNgListners"></listener>
+<listener class-name="com.GenericFunctions.TestNgListners"></listener> 
 
 </listeners>
   <test name="Test">
     <classes>
-
-
-   
-          <class name="com.TestScripts.STORY1"/>
-        
     
+
+
+          <class name="com.TestScripts.Tc_03_CollectionImport"/> 
+
+
     </classes>
     </test> <!-- Test -->
   </suite> <!-- Suite -->        

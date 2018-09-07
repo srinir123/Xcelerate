@@ -1,4 +1,9 @@
 package com.ScreenFunctions;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -68,13 +73,13 @@ public class story1 extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnSave']")
 	public static WebElement Btnt_Save;
 	
-	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")
+	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")  
 	public static WebElement Btnt_Yes;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='Nu63']")
+	@FindBy(how=How.XPATH,using="//*[text()='10']")
 	public static WebElement Click_NUser1;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='Nu58']")
+	@FindBy(how=How.XPATH,using="//*[text()='11']")
 	public static WebElement Click_NUser2;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSetupUser']")
@@ -110,14 +115,25 @@ public class story1 extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
 	public static WebElement Btn_logout;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='loaderDiv']")
+	public static WebElement PageLoader;
+	
+	
 
 	public static String taskid;
+	
+	public static String taskid1;
+	
+	 //static Map<String,String> Task = new HashMap<>(); 
+	
+	static List<String> zoom = new ArrayList<>();
+
 	
 	
 
 	public static <performDBLCLICK> void story1(int i) throws Exception
 	{   
-		waitForElement1(Click_EntitySearch);
+		waitForElement(Click_EntitySearch);
 		if(Click_EntitySearch.isDisplayed())
 		{
 			System.out.println("Clicking on entity search");
@@ -150,6 +166,8 @@ public class story1 extends GenericMethods{
 			acc.moveToElement(Click_Contactppl).click(Click_Contactppl).build().perform();
 			Click_Contactppl.click();
         }
+		
+		Thread.sleep(8000);
 		click_element1(Click_AddNewContact);
         Thread.sleep(5000);
 
@@ -208,11 +226,34 @@ public class story1 extends GenericMethods{
 	    Btnt_Yes.click();
 //	    waitForElement1(Click_NUser);
 //		performDBLCLICK(Click_NUser);
+		 //Thread.sleep(90000);
 		
 		  if (i==1)
 		  {   
 			  waitForElement1(Click_NUser1);
 			  performDBLCLICK(Click_NUser1);
+//		      Actions act = new Actions(driver);
+//			 act=driver.findElement(By.xpath("//.*[text()='"+FirstName+"']")).build().perform();
+			    //Actions act = new Actions(driver);
+			    //act.doubleClick(driver.findElement(By.xpath("//.*[text()='"+FirstName+"']"))).build().perform();
+				//act.moveToElement(driver.findElement(By.xpath("//.*[text()='"+FirstName+"']"))).doubleClick().build().perform();
+				//act.moveTo(driver.findElement(By.xpath("//.*[text()='"+FirstName+"']"))).doubleClick().build().perform();
+
+//			  String firstName=getData("FirstName","story1",1);
+//			 System.out.println(firstName);	
+//			 WebElement e1= driver.findElement(By.xpath("//.*[text()='"+firstName+"']"));
+//			 System.out.println(e1.getText());	
+//
+//			    Actions act = new Actions(driver);
+//           act.moveToElement(e1).doubleClick().build().perform();
+		   //waitForElement1(e1);
+
+			// performDBLCLICK(e1);
+//     	  String firstName=getData("FirstName","story1",1);
+//			 System.out.println(firstName);	
+//			 driver.findElement(By.xpath("//.*[text()='"+firstName+"']")).click();
+			 //System.out.println(e1.getText());	  
+		  
 
 		  }
 		  else if (i==2)
@@ -247,6 +288,28 @@ public class story1 extends GenericMethods{
 		waitForElement1(Btnt_RolesP);
 		//Btnt_RolesP.click();
 		click_element1(Btnt_RolesP);
+		
+		
+		try
+		{
+		
+//			waitForElement(Create_NUser);
+			Create_NUser.click();
+			Thread.sleep(2000);
+			waitForElement1(Btnt_RolesP);
+			//Btnt_RolesP.click();
+			click_element1(Btnt_RolesP);
+			
+		}
+		catch (Exception e)
+		{
+			
+	}
+		
+		
+		
+		
+		
 		 //waitForElement1(Btnt_SaveANew);
 		 //click_element1(Btnt_SaveANew);
 		 //Btnt_SaveANew.click();
@@ -306,6 +369,14 @@ public class story1 extends GenericMethods{
         taskid= DBConnection.dbConnect();
         
         System.out.println(taskid);
+        
+        //Task.put(FirstName+Surname.substring(0, 1),taskid);
+        
+        zoom.add(taskid);
+
+       
+        
+
 	}
 
 

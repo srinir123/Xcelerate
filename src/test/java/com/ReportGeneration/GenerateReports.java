@@ -65,7 +65,7 @@ public class GenerateReports {
 	{
 		extent.flush();
 		//extent.close();
-		sendMail();
+	//	sendMail();
 		
 	}
 
@@ -159,7 +159,7 @@ public class GenerateReports {
 						message.setFrom(new InternetAddress("selenium.xcelerate@gmail.com"));
 			 
 						// Set the recipient address
-						message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("srinir@insuregroup.co.za, lancen@insuregroup.co.za"));
+						message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("srinivas@repalas.com"));
 			            
 			                        // Add the subject link
 						message.setSubject("Testing Subject");

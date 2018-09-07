@@ -12,7 +12,7 @@ public class Tc_22_ISOPAIN_Fintegrate_Project extends GenericMethods{
 	@Test
 	public static void evaluateTestcase() throws Exception {
 		
-		GenericMethods.LaunchBrowser1("chrome");
+		GenericMethods.LaunchBrowser("chrome");
         Login lgn=PageFactory.initElements(driver, Login.class);
   
 
