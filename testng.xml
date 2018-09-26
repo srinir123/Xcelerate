@@ -10,9 +10,7 @@
   <test name="Test">
     <classes>
     
-
-
-          <class name="com.TestScripts.Tc_03_CollectionImport"/> 
+          <class name="com.TestScripts.Tc_25_QuoteCreation"/> 
 
 
     </classes>

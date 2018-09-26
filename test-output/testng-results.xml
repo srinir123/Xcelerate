@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="110374" started-at="2018-09-07T07:14:35Z" finished-at="2018-09-07T07:16:26Z">
+  <suite name="Suite" duration-ms="246450" started-at="2018-09-26T10:01:35Z" finished-at="2018-09-26T10:05:41Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="110374" started-at="2018-09-07T07:14:35Z" finished-at="2018-09-07T07:16:26Z">
-      <class name="com.TestScripts.Tc_03_CollectionImport">
-        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_03_CollectionImport@69ea3742]" name="evaluateTestcase" duration-ms="109394" started-at="2018-09-07T09:14:36Z" finished-at="2018-09-07T09:16:25Z">
+    <test name="Test" duration-ms="246450" started-at="2018-09-26T10:01:35Z" finished-at="2018-09-26T10:05:41Z">
+      <class name="com.TestScripts.Tc_08_Journals">
+        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_08_Journals@4bec1f0c]" name="evaluateTestcase" duration-ms="58095" started-at="2018-09-26T12:04:43Z" finished-at="2018-09-26T12:05:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- evaluateTestcase -->
-      </class> <!-- com.TestScripts.Tc_03_CollectionImport -->
+      </class> <!-- com.TestScripts.Tc_08_Journals -->
+      <class name="com.TestScripts.Tc_07_NominatedPayments">
+        <test-method status="PASS" signature="evaluateTestcase()[pri:0, instance:com.TestScripts.Tc_07_NominatedPayments@4b952a2d]" name="evaluateTestcase" duration-ms="187378" started-at="2018-09-26T12:01:35Z" finished-at="2018-09-26T12:04:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- evaluateTestcase -->
+      </class> <!-- com.TestScripts.Tc_07_NominatedPayments -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -13,8 +13,8 @@
 
            
     
+          <class name="com.TestScripts.Tc_03_CollectionImport"/> 
           <class name="com.TestScripts.Tc_04_PaymentImport"/>     
-     
             
     
     
