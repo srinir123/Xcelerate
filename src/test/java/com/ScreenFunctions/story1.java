@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -76,10 +75,10 @@ public class story1 extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")  
 	public static WebElement Btnt_Yes;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='12']")
+	@FindBy(how=How.XPATH,using="//*[text()='AAA19']")
 	public static WebElement Click_NUser1;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='14']")
+	@FindBy(how=How.XPATH,using="//*[text()='AAA20']")
 	public static WebElement Click_NUser2;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSetupUser']")

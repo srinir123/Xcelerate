@@ -25,8 +25,16 @@ public class Journals extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Collection Period Balances']")
 	public static WebElement Click_CollPeriodBalances;
 	
+	//*[@id="QuoteID"]/option[1]
+	
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
 	public static WebElement Dropd_Agreement; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id='QuoteInterestCalculationGroupID']")
+	public static WebElement Dropd_interestgroup; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id='QuoteSubAccountID']")
+	public static WebElement Dropd_Subacc;
 
 	@FindBy(how=How.XPATH,using="//*[@id='BucketID']")
 	public static WebElement Dropd_BucketID; 
@@ -106,6 +114,21 @@ public class Journals extends GenericMethods{
     String Agreement_Name=getData("Agreement_Name","Journals",1);
 
 		Dropd_Agreement.sendKeys(Agreement_Name);
+		
+        waitForElement(Dropd_interestgroup);
+		
+	    String InterestGroup=getData("InterestGroup","Journals",1);
+
+	    Dropd_interestgroup.sendKeys(InterestGroup);
+	    
+	    
+        waitForElement(Dropd_Subacc);
+		
+        String SubAccount_Name=getData("SubAccount_Name","Journals",1);
+
+        Dropd_Subacc.sendKeys(SubAccount_Name);
+        //Dropd_Subacc.sendKeys("MMFIX - MMX i-FIX Collections");
+        
 		waitForElement(Dropd_BucketID);
 		
 	    String BucketID=getData("BucketID","Journals",1);
@@ -152,13 +175,19 @@ public class Journals extends GenericMethods{
         
 	    try
 		{
-			//waitForElement(Btn_Exceptions);
+			waitForElement(Btn_Exceptions);
 			Btn_Exceptions.click();
+			
+			Thread.sleep(3000);
+
 			
 			if (Btn_Exceptions.isDisplayed())
 			{
+				Thread.sleep(3000);
 			waitForElement(Btn_Save);
 			Btn_Save.click();
+			Thread.sleep(3000);
+
 			waitForElement(Btn_Yes1);
 			Btn_Yes1.click();
 			}
@@ -167,7 +196,7 @@ public class Journals extends GenericMethods{
 		{
 			
      	}
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		System.out.println("The Journal transaction has been added sucessfully");
 		LogEvent("Pass","The Journal transaction has been added sucessfully");
 

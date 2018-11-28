@@ -80,6 +80,8 @@ public class Recall_Journals extends GenericMethods{
 		Set_fromActionDate.click();
 		Click_oldperiod.click();
 		Click_oldperiod.click();
+		Click_oldperiod.click();
+		Click_oldperiod.click();
 		
 		Click_ActionDate.click();
 		waitForElement(Set_ToActionDate);
@@ -91,18 +93,18 @@ public class Recall_Journals extends GenericMethods{
 		btn_Search.click();
 		Thread.sleep(22000);
 
-		try
-		{
-			Btn_close.click();
-			}
-		
-		catch (Exception e)
-		{
-
-		}
-		Thread.sleep(4000);
-		try
-		{
+//		try
+//		{
+//			Btn_close.click();
+//			}
+//		
+//		catch (Exception e)
+//		{
+//
+//		}
+//		Thread.sleep(4000);
+//		try
+//		{
 			waitForElement(Click_Recallbtn);
 			Click_Recallbtn.click();
 			waitForElement(Btn_Recall);
@@ -112,12 +114,12 @@ public class Recall_Journals extends GenericMethods{
 
 		    waitForElement(Btn_Yes);
 			Btn_Yes.click();
-			}
+			//}
 		
-		catch (Exception e)
-		{
-
-		}
+//		catch (Exception e)
+//		{
+//
+//		}
 
 
 		

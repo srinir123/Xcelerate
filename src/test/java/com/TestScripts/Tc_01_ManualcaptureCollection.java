@@ -34,7 +34,7 @@ public class Tc_01_ManualcaptureCollection extends GenericMethods{
 			Thread.sleep(3000);
 			a_mcc.Authorization_MCC();
 			Thread.sleep(3000);
-			lgn.launch_Application9();
+			lgn.launch_Application10();
 			Thread.sleep(3000);
 			a1_mcc.Authorization1_MCC();
 			Thread.sleep(3000);

@@ -185,7 +185,7 @@ public class B2BSetup extends GenericMethods{
 		Thread.sleep(8000);
 		Btn_ChooseFile.click();
 		Thread.sleep(3000);
-		String[]cmd={"SchemaFile.exe","C:\\Users\\srinir.SOLARSYSTEM\\Documents\\test114.xsd"}; 
+		String[]cmd={"SchemaFile.exe","C:\\Users\\srinir.SOLARSYSTEM\\Documents\\test129.xsd"}; 
 
 		Process autoitprocess=Runtime.getRuntime().exec(cmd);
         

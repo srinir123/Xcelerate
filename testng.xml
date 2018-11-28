@@ -10,10 +10,11 @@
   <test name="Test">
     <classes>
     
-          <class name="com.TestScripts.Tc_25_QuoteCreation"/> 
-
-
-    </classes>
+          <class name="com.TestScripts.Tc_21_BankAccountCreation"/>         
+    
+    
+    
+              </classes>
     </test> <!-- Test -->
   </suite> <!-- Suite -->        
      

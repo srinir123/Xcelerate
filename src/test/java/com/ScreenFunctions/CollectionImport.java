@@ -8,7 +8,10 @@ import com.GenericFunctions.GenericMethods;
 
 public class CollectionImport extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
-	public static WebElement Dropd_Agreement; 
+	public static WebElement Dropd_Agreement;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='QuoteSubAccountID']")
+	public static WebElement Dropd_Subacc;
 
 	@FindBy(how=How.XPATH,using="//*[@id='BucketID']")
 	public static WebElement Dropd_BucketID; 
@@ -73,13 +76,21 @@ public class CollectionImport extends GenericMethods{
 	
 	   String Agreement_Name=getData("Agreement_Name","CollectionImport",1);
 
-	    Dropd_Agreement.sendKeys("Agreement_Name");
-	
+	    Dropd_Agreement.sendKeys(Agreement_Name);
+	    
+        waitForElement(Dropd_Subacc);
+		
+        String SubAccount_Name=getData("SubAccount_Name","CollectionImport",1);
+
+        Dropd_Subacc.sendKeys(SubAccount_Name);
+	    
 		waitForElement(Dropd_BucketID);
 		
 		String BucketID=getData("BucketID","CollectionImport",1);
 
 		Dropd_BucketID.sendKeys(BucketID);
+		
+		Thread.sleep(5000);
 		
 		waitForElement(btn_CollImport);	
 		btn_CollImport.click();

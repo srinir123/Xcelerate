@@ -25,7 +25,6 @@ public class PaymentImport extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Collection Period Balances']")
 	public static WebElement Click_CollPeriodBalances;
 	
-	
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
 	public static WebElement Dropd_Agreement; 
 

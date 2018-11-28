@@ -445,8 +445,10 @@ public class Scene3 extends GenericMethods{
 		waitForElement(btn_Save);
 		btn_Save.click();
 		
-		waitForElement(Click_Yes1);
-		Click_Yes1.click();
+		waitForElement(Click_Yes);
+		Click_Yes.click();
+		
+		Thread.sleep(8000);
 
 		
 		waitForElement(Click_Entitylinktypeid);
@@ -460,10 +462,10 @@ public class Scene3 extends GenericMethods{
 		waitForElement(btn_Save);
 		btn_Save.click();
 		
-		waitForElement(Click_Yes1);
-		Click_Yes1.click();
+		waitForElement(Click_Yes);
+		Click_Yes.click();
 		
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		
 //		

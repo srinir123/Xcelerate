@@ -27,6 +27,12 @@ public class Journals_SUMD extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[@id='QuoteID']")
 	public static WebElement Dropd_Agreement; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id='QuoteInterestCalculationGroupID']")
+	public static WebElement Dropd_interestgroup; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id='QuoteSubAccountID']")
+	public static WebElement Dropd_Subacc;
 
 	@FindBy(how=How.XPATH,using="//*[@id='BucketID']")
 	public static WebElement Dropd_BucketID; 
@@ -109,6 +115,22 @@ public class Journals_SUMD extends GenericMethods{
     String Agreement_Name=getData("Agreement_Name","Journals_SUMD",i,j);
 
 		Dropd_Agreement.sendKeys(Agreement_Name);
+		
+		
+//        waitForElement(Dropd_interestgroup);
+//		
+//	    String InterestGroup=getData("InterestGroup","Journals_SUMD",i,j);
+//
+//	    Dropd_interestgroup.sendKeys(InterestGroup);
+//	    
+//	    
+//        waitForElement(Dropd_Subacc);
+//		
+//        String SubAccount_Name=getData("SubAccount_Name","Journals_SUMD",i,j);
+//
+//        Dropd_Subacc.sendKeys(SubAccount_Name);
+        
+	    
 		waitForElement(Dropd_BucketID);
 		
 	    String BucketID=getData("BucketID","Journals_SUMD",i,j);

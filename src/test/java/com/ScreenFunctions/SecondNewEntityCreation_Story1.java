@@ -938,7 +938,7 @@ Thread.sleep(14000);
 			waitForElement(Click_Yes1);
 			Click_Yes1.click();
 			
-		Thread.sleep(9000);	
+		Thread.sleep(11000);	
 			
 			waitForElement(Click_BtnAdd);
 			Click_BtnAdd.click();
@@ -996,7 +996,7 @@ Thread.sleep(14000);
 			waitForElement(Click_Yes1);
 			Click_Yes1.click();
 			
-			Thread.sleep(8000);
+			Thread.sleep(9000);
 			
 			waitForElement(Click_BtnAdd);
 			Click_BtnAdd.click();

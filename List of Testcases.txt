@@ -25,6 +25,7 @@
           <class name="com.TestScripts.Tc_23_FeeTest"/> 
           <class name="com.TestScripts.Tc_25_QuoteCreation"/> 
           <class name="com.TestScripts.Tc_26_B2BSetup"/>
+          <class name="com.TestScripts.Tc_27_AcbEntryclassSetup"/>
           
           <class name="com.TestScripts.Tc_01_ManualcaptureCollection_MUMD"/>  
           <class name="com.TestScripts.Tc_01_ManualcaptureCollection_SUMD"/>
