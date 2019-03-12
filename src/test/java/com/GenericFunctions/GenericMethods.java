@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,9 +19,9 @@ import com.codoid.products.fillo.Recordset;
 
 public class GenericMethods extends GenerateReports {
 //UAT	
-//public static  String UAT_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
+public static  String UAT_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
 //PROD
-public static  String UAT_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";
+//public static  String UAT_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";
 //DEV
 //public static  String UAT_url="http://172.20.92.22:81/smi-30450/#";
 public static  String Dev_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";
@@ -47,6 +48,27 @@ public static Connection connection;
 			
 			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 			driver=new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.get(UAT_url);
+			
+			
+			
+			break;
+			
+			
+		}
+		
+		
+	}
+	
+	public static void LaunchBrowser2(String browser)
+	{
+		switch(browser.toLowerCase())
+		{
+		case "firefox":
+			
+			System.setProperty("webdriver.firefox.driver", "Firefox Installer.exe");
+			driver=new FirefoxDriver();
 			driver.manage().window().maximize();
 			driver.get(UAT_url);
 			

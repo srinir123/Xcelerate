@@ -75,10 +75,10 @@ public class story1 extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")  
 	public static WebElement Btnt_Yes;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='AAA19']")
+	@FindBy(how=How.XPATH,using="//*[text()='AAb11']")
 	public static WebElement Click_NUser1;
 	
-	@FindBy(how=How.XPATH,using="//*[text()='AAA20']")
+	@FindBy(how=How.XPATH,using="//*[text()='AAb12']")
 	public static WebElement Click_NUser2;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='btnSetupUser']")

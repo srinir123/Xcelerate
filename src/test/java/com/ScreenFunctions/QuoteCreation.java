@@ -3,10 +3,13 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
+import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
 
 public class QuoteCreation extends GenericMethods{
@@ -94,6 +97,34 @@ public class QuoteCreation extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="(//*[@id='btnModify'])[8]")
 	public static WebElement Click_Turnday;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='resultsGrid']/tbody/tr/td[1]")
+	public static WebElement Click_quote;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnQuote_submit']")
+	public static WebElement Click_Btnquote_submit;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
+	public static WebElement Btn_logout;
+	
+	@FindBy(how=How.ID,using="txtUsername")
+	public static WebElement Edi_Username;
+	
+	@FindBy(how=How.ID,using="txtPassword")
+	public static WebElement Edi_Password;
+	
+	@FindBy(how=How.ID,using="btnLogin")
+	public static WebElement Btn_Loginbtn;
+	
+	@FindBy(how=How.ID,using="//*[@id='btnAgreement_accept']")
+	public static WebElement Btn_Agreement_accept;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='collapse314']/div/ul/li[3]/ul/li[1]/a")
+	public static WebElement Click_Agreements;
+	
+	
+	
+	public static String taskid;
 	
 	
 	public static <performDBLCLICK> void QuoteCreation() throws Exception   
@@ -320,6 +351,55 @@ click_element(Click_OpenInterestGroups);
 					 
 					 waitForElement(Btn_Yes);
 					 Btn_Yes.click();
+					 
+						waitForElement(Click_Qtotes);
+						Click_Qtotes.click();
+						
+						waitForElement(Click_quote);
+						performDBLCLICK(Click_quote);
+						//Click_quote.isSelected();
+						//Click_quote.click();
+				
+						
+						
+						waitForElement(Click_Btnquote_submit);
+						Click_Btnquote_submit.click();
+						
+						 waitForElement(Btn_Yes);
+						 Btn_Yes.click();
+						 
+						 Thread.sleep(2000);
+						 
+						 waitForElement(Btn_Yes);
+						 Btn_Yes.click();
+						 
+						 waitForElement(Btn_logout);
+						 Btn_logout.click();	
+						 
+							waitForElement(Edi_Username);	           
+				            Edi_Username.sendKeys("theab");
+				            Edi_Password.sendKeys("P@ssw0rd");
+				            Btn_Loginbtn.click();
+				            
+				        	taskid= DBConnection.dbConnect();
+				    		
+				    		System.out.println(taskid);
+				    		
+				    		Thread.sleep(3000);
+				    		System.out.println(QuoteCreation.taskid);
+				    		//Thread.sleep(10000);
+				    		
+				    		driver.findElement(By.xpath("//td[text()='"+QuoteCreation.taskid+"']")).click();
+				    		
+				    		Thread.sleep(6000);
+				    		waitForElement(Btn_Agreement_accept);
+				    		Btn_Agreement_accept.click();
+				    		
+				    		 waitForElement(Btn_Yes);
+							 Btn_Yes.click();
+
+							 waitForElement(Click_Agreements);
+							 Click_Agreements.click();
 
 
     

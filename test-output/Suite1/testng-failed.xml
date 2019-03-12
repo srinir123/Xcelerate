@@ -6,11 +6,11 @@
   </listeners>
   <test name="Test1(failed)">
     <classes>
-      <class name="com.TestScripts.Tc_08_Journals">
+      <class name="com.TestScripts.ISO_Story">
         <methods>
           <include name="evaluateTestcase"/>
         </methods>
-      </class> <!-- com.TestScripts.Tc_08_Journals -->
+      </class> <!-- com.TestScripts.ISO_Story -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

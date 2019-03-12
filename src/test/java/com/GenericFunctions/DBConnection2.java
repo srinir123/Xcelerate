@@ -28,7 +28,7 @@ public class DBConnection2 extends GenericMethods {
 	      String entityName=getData("EntityName","story1",2); 
 
 	      //String queryString = "exec [Peter].dbo.[Get_NextTask] '"+environment.trim()+"','"+client.trim()+"'";
-	      String queryString = "exec [Peter].dbo.[Get_NextTask] '"+environment.trim()+"','"+entityName.trim()+"'"; 
+	      String queryString = "exec [Peter].dbo.[GetNextTask] '"+environment.trim()+"','"+entityName.trim()+"'"; 
 	     // String queryString = "select * from bank";
 	      ResultSet rs = statement.executeQuery(queryString);
 	      while (rs.next()) {

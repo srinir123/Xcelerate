@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 05 11:02:32 CAT 2018</td>
+<td>Started on:</td><td>Fri Feb 15 10:30:35 CAT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>40 seconds (40235 ms)</td>
+<tr><td>Total time:</td><td>103 seconds (103959 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,35 +75,43 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.TestScripts.Tc_08_Journals.evaluateTestcase()'><b>evaluateTestcase</b><br>Test class: com.TestScripts.Tc_08_Journals</td>
+<td title='com.TestScripts.ISO_Story.evaluateTestcase()'><b>evaluateTestcase</b><br>Test class: com.TestScripts.ISO_Story</td>
 <td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=69.0.3497.100)
+  (Session info: chrome=71.0.3578.98)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 4.01 seconds
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
 System info: host: &apos;SriniR_Dell&apos;, ip: &apos;172.20.94.44&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\SRINIR~1.SOL\AppData\Local\Temp\scoped_dir23224_31067}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=69.0.3497.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 996bc2c2a6b022ee966a326e997ddce2
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\SRINIR~1.SOL\AppData\Local\Temp\scoped_dir63928_27982}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=71.0.3578.98, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 020f4ee1e40974804a44965b4adb3372
+*** Element info: {Using=id, value=txtUsername}
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:335)
-	at com.ReportGeneration.GenerateReports.takeScreenshot(GenerateReports.java:114)
-	at com.ReportGeneration.GenerateReports.LogEvent(GenerateReports.java:83)
-	at com.ScreenFunctions.Login.launch_Application(Login.java:115)
-	at com.TestScripts.Tc_08_Journals.evaluateTestcase(Tc_08_Journals.java:21)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace669725336", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace669725336'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=69.0.3497.100)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy5.toString(Unknown Source)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at com.GenericFunctions.GenericMethods.waitForElement(GenericMethods.java:175)
+	at com.ScreenFunctions.Login.launch_Application14(Login.java:279)
+	at com.TestScripts.ISO_Story.evaluateTestcase(ISO_Story.java:142)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace238431319", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace238431319'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=71.0.3578.98)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 4.01 seconds
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
 System info: host: &apos;SriniR_Dell&apos;, ip: &apos;172.20.94.44&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\SRINIR~1.SOL\AppData\Local\Temp\scoped_dir23224_31067}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=69.0.3497.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 996bc2c2a6b022ee966a326e997ddce2
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\SRINIR~1.SOL\AppData\Local\Temp\scoped_dir63928_27982}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=71.0.3578.98, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 020f4ee1e40974804a44965b4adb3372
+*** Element info: {Using=id, value=txtUsername}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -111,12 +119,18 @@ Session ID: 996bc2c2a6b022ee966a326e997ddce2
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:335)
-	at com.ReportGeneration.GenerateReports.takeScreenshot(GenerateReports.java:114)
-	at com.ReportGeneration.GenerateReports.LogEvent(GenerateReports.java:83)
-	at com.ScreenFunctions.Login.launch_Application(Login.java:115)
-	at com.TestScripts.Tc_08_Journals.evaluateTestcase(Tc_08_Journals.java:21)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy5.toString(Unknown Source)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at com.GenericFunctions.GenericMethods.waitForElement(GenericMethods.java:175)
+	at com.ScreenFunctions.Login.launch_Application14(Login.java:279)
+	at com.TestScripts.ISO_Story.evaluateTestcase(ISO_Story.java:142)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -143,19 +157,19 @@ Session ID: 996bc2c2a6b022ee966a326e997ddce2
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>31</td>
-<td>com.TestScripts.Tc_08_Journals@69ea3742</td></tr>
+<td>94</td>
+<td>com.TestScripts.ISO_Story@69ea3742</td></tr>
 <tr>
-<td title='com.TestScripts.Tc_08_Journals.evaluateTestcase()'><b>evaluateTestcase</b><br>Test class: com.TestScripts.Tc_08_Journals</td>
+<td title='com.TestScripts.ISO_Story.evaluateTestcase()'><b>evaluateTestcase</b><br>Test class: com.TestScripts.ISO_Story</td>
 <td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=69.0.3497.100)
+  (Session info: chrome=71.0.3578.98)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 4.01 seconds
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
 System info: host: &apos;SriniR_Dell&apos;, ip: &apos;172.20.94.44&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\SRINIR~1.SOL\AppData\Local\Temp\scoped_dir23224_31067}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=69.0.3497.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 996bc2c2a6b022ee966a326e997ddce2
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\SRINIR~1.SOL\AppData\Local\Temp\scoped_dir63928_27982}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=71.0.3578.98, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 020f4ee1e40974804a44965b4adb3372
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
@@ -164,16 +178,16 @@ Session ID: 996bc2c2a6b022ee966a326e997ddce2
 	at com.ReportGeneration.GenerateReports.takeScreenshot(GenerateReports.java:114)
 	at com.ReportGeneration.GenerateReports.LogEvent(GenerateReports.java:83)
 	at com.GenericFunctions.TestNgListners.onTestFailure(TestNgListners.java:43)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace458998685", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace458998685'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=69.0.3497.100)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1520656618", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1520656618'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=71.0.3578.98)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 4.01 seconds
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
 System info: host: &apos;SriniR_Dell&apos;, ip: &apos;172.20.94.44&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\SRINIR~1.SOL\AppData\Local\Temp\scoped_dir23224_31067}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=69.0.3497.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 996bc2c2a6b022ee966a326e997ddce2
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\SRINIR~1.SOL\AppData\Local\Temp\scoped_dir63928_27982}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=71.0.3578.98, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 020f4ee1e40974804a44965b4adb3372
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -209,8 +223,8 @@ Session ID: 996bc2c2a6b022ee966a326e997ddce2
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>35</td>
-<td>com.TestScripts.Tc_08_Journals@69ea3742</td></tr>
+<td>99</td>
+<td>com.TestScripts.ISO_Story@69ea3742</td></tr>
 </table><p>
 </body>
 </html>

@@ -38,7 +38,7 @@ public class NewUser_creation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='Surname']")
 	public static WebElement Edi_Surname;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='Designation']")
+	@FindBy(how=How.XPATH,using="//*[@id='Designation']") 
 	public static WebElement Edi_Designation;
 		
 	@FindBy(how=How.XPATH,using="//*[@id='IDNumber']")

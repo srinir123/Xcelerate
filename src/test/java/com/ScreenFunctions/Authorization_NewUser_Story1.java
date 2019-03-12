@@ -103,9 +103,9 @@ public class Authorization_NewUser_Story1 extends GenericMethods{
 					
 					System.out.println(story1.taskid);
 					driver.findElement(By.xpath("//td[text()='"+story1.zoom.get(1)+"']")).click();
-					Thread.sleep(4000);
+					Thread.sleep(9000);
 
-				//waitForElement(Click_btnAccept);
+				waitForElement(Click_btnAccept);
 				//Click_btnAccept.click();
 				click_element(Click_btnAccept);
 				waitForElement(Click_Yes);

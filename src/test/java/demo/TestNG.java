@@ -12,7 +12,7 @@ public class TestNG {
 
 	{
 
-		String OTP = NewDBConnection_OTP.dbConnect2();
+		String OTP = NewDBConnection_OTP.dbConnect2(0);
 		System.out.println(OTP);
 
 //	private void GetDateinJava() {

@@ -9,10 +9,14 @@
 </listeners>
   <test name="Test">
     <classes>
+           
+
     
-          <class name="com.TestScripts.Tc_21_BankAccountCreation"/>         
-    
-    
+ 
+       
+
+
+      <class name="com.TestScripts.ISO_Story"/>
     
               </classes>
     </test> <!-- Test -->

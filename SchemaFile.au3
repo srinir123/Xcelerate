@@ -1,5 +1,13 @@
 ControlFocus("Open", "", "Edit1")
 
-ControlSetText("Open", "", "Edit1", "C:\Users\srinir.SOLARSYSTEM\Documents\test129.xsd")
+ControlSetText("Open", "", "Edit1", "C:\Users\srinir.SOLARSYSTEM\Documents\fileName.xsd")
+
+Sleep(2000)
 
 ControlClick("Open", "", "Button1")
+
+Sleep(1000)
+
+ControlClick("Open", "", "Button1")
+
+

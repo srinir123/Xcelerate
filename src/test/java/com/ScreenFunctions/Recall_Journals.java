@@ -58,6 +58,42 @@ public class Recall_Journals extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='manualTransactionGrid']/tbody/tr[1]/td[9]/button[1]/i")
 	public static WebElement Click_Note;
 	
+	@FindBy(how=How.XPATH,using="//*[text()= 'Ok']")
+	public static WebElement Btn_Ok;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='manualTransactionGrid']/tbody/tr/td[9]/button[1]/i")
+	public static WebElement Btn_Note_Click;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnNewNote']")
+	public static WebElement Btn_NewNote;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='txtNoteName']")
+	public static WebElement Edit_NoteName;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='txtNoteDetails']")
+	public static WebElement Edit_NotesDetails;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnSaveNote']")
+	public static WebElement Btn_Save;
+	
+	@FindBy(how=How.XPATH,using="	//*[@id='btnCloseNotes']")
+	public static WebElement Btn_Close;
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -107,6 +143,32 @@ public class Recall_Journals extends GenericMethods{
 //		{
 			waitForElement(Click_Recallbtn);
 			Click_Recallbtn.click();
+			waitForElement(Btn_Recall);
+			//Thread.sleep(8000);
+
+			Btn_Recall.click();
+			
+			waitForElement(Btn_Ok);
+			Btn_Ok.click();
+			
+			waitForElement(Btn_Note_Click);
+			Btn_Note_Click.click();
+			
+			waitForElement(Btn_NewNote);
+			Btn_NewNote.click();
+			
+			waitForElement(Edit_NoteName);
+			Edit_NoteName.sendKeys("test");
+			
+			waitForElement(Edit_NotesDetails);
+			Edit_NotesDetails.sendKeys("test");
+			
+			waitForElement(Btn_Save);
+			Btn_Save.click();
+			
+			waitForElement(Btn_Close);
+			Btn_Close.click();
+			
 			waitForElement(Btn_Recall);
 			//Thread.sleep(8000);
 

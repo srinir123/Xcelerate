@@ -1,4 +1,4 @@
- package com.TestScripts;
+package com.TestScripts;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -7,7 +7,7 @@ import com.ScreenFunctions.Authorization_ISOPAIN;
 import com.ScreenFunctions.ISOPAIN;
 import com.ScreenFunctions.Login;
 
-public class Tc_22_ISOPAIN_Fintegrate_Project extends GenericMethods{
+public class Tc_22_ISO_ISOPAIN_Fintegrate_Project extends GenericMethods{
 
 	@Test
 	public static void evaluateTestcase() throws Exception {

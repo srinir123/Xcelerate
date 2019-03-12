@@ -19,6 +19,7 @@ QuoteCreation qc=PageFactory.initElements(driver, QuoteCreation.class);
 
 lgn.launch_Application();
 qc.QuoteCreation();
+
 Thread.sleep(5000);
 
 	}

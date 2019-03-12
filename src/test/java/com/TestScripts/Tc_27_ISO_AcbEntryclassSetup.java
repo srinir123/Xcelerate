@@ -18,7 +18,7 @@ public class Tc_27_ISO_AcbEntryclassSetup extends GenericMethods{
          ACBEntryclass acb=PageFactory.initElements(driver, ACBEntryclass.class);
          //Authorization_ISOPAIN aiso=PageFactory.initElements(driver, Authorization_ISOPAIN.class);
 	
-		lgn.launch_Application();
+		lgn.launch_Application11();
 		acb.ACBEntryclass();
 //		lgn.launch_Application1();
 //		Thread.sleep(3000);

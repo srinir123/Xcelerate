@@ -225,8 +225,7 @@ public class CollPeriodBalances_MCP extends GenericMethods{
 
 	//	driver.quit();
 			waitForElement(Btn_logout);
-	    	
-			Btn_logout.click();	
+	    	Btn_logout.click();	
 			Thread.sleep(3000);
 
 			waitForElement(taskid);

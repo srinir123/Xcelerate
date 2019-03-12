@@ -36,10 +36,10 @@ public class ACBEntryclass extends GenericMethods{
 	@FindBy(how=How.XPATH,using="(//*[@id='DrCrInd'])[2]")
 	public static WebElement Drop_DebORCre;
 	
-	@FindBy(how=How.XPATH,using="(//*[@id='ServiceChannelID'])[2]")
+	@FindBy(how=How.XPATH,using="(//*[@id='ServiceChannelID']/option[last()])[2]")
 	public static WebElement Drop_ServicechannelID;
 	
-	@FindBy(how=How.XPATH,using="(//*[@id='B2BFileSchemaId'])[2]")
+	@FindBy(how=How.XPATH,using="(//*[@id='B2BFileSchemaId'])[2]") 
 	public static WebElement Drop_B2BfILEid;
 
 	@FindBy(how=How.XPATH,using="(//*[@id='btnSaveOne'])[2]") 
@@ -47,6 +47,19 @@ public class ACBEntryclass extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")
 	public static WebElement Btn_Yes;
+	
+	@FindBy(how=How.XPATH,using="(//*[@id='btnClose'])[2]")
+	public static WebElement Click_CloseWindow;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnClose']")
+	public static WebElement Click_CloseWindow2;
+
+	@FindBy(how=How.XPATH,using="//*[@id='SendPath']")
+	public static WebElement Edit_SendPath;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='ReceivePath']")
+	public static WebElement Edit_ReceivePath;
+	
 	
 	
 	
@@ -61,19 +74,19 @@ public class ACBEntryclass extends GenericMethods{
 	
 
 	
-	  waitForElement(Click_Paramm);
-	
-	if(Click_Paramm.isDisplayed())
-	{
-		System.out.println("Clicking on entity search");
-		
-		Actions acc=new Actions(driver);
-		
-		acc.moveToElement(Click_Paramm).click(Click_Paramm).build().perform();
-		Click_Paramm.click();
-	}
-
-	Thread.sleep(6000);
+//	  waitForElement(Click_Paramm);
+//	
+//	if(Click_Paramm.isDisplayed())
+//	{
+//		System.out.println("Clicking on entity search");
+//		
+//		Actions acc=new Actions(driver);
+//		
+//		acc.moveToElement(Click_Paramm).click(Click_Paramm).build().perform();
+//		Click_Paramm.click();
+//	}
+//
+//	Thread.sleep(6000);
 
 	
 	waitForElement1(Click_ACBEntryClass);
@@ -84,59 +97,92 @@ public class ACBEntryclass extends GenericMethods{
 	
 	waitForElement(Edi_EntryCcode);
 	
-    String EntryCcode_Name=getData("EntryCcode_Name","ACBEbtryClass",1);
+    String EntryCcode_Name=getData("EntryCcode_Name","story1",4);
 
     Edi_EntryCcode.sendKeys(EntryCcode_Name);
     
     
 	waitForElement(Edi_Desp);
 	
-    String Desp_Name=getData("Desp_Name","ACBEbtryClass",1);
+    String Desp_Name=getData("Desp_Name","story1",4);
 
     Edi_Desp.sendKeys(Desp_Name);
     
 	waitForElement(Drop_ServiceType);
 	
-    String ServiceType_Name=getData("ServiceType_Name","ACBEbtryClass",1);
+    String ServiceType_Name=getData("ServiceType_Name","story1",4);
 
     Drop_ServiceType.sendKeys(ServiceType_Name);
     
     
 	waitForElement(Drop_Naedotrackdaysid);
 	
-    String Naedotrackdaysid=getData("Naedotrackdaysid","ACBEbtryClass",1);
+    String Naedotrackdaysid=getData("Naedotrackdaysid","story1",4);
 
     Drop_Naedotrackdaysid.sendKeys(Naedotrackdaysid);
     
 	waitForElement(Drp_Serviceid);
 	
-    String Serviceid=getData("Serviceid","ACBEbtryClass",1);
+    String Serviceid=getData("Serviceid","story1",4);
 
     Drp_Serviceid.sendKeys(Serviceid);
     
 	waitForElement(Drop_DebORCre);
 	
-    String DebORCre=getData("DebORCre","ACBEbtryClass",1);
+    String DebORCre=getData("DebORCre","story1",4);
 
     Drop_DebORCre.sendKeys(DebORCre);
     
 	waitForElement(Drop_ServicechannelID);
 	
-    String ServicechannelID=getData("ServicechannelID","ACBEbtryClass",1);
+   // String ServicechannelID=getData("ServicechannelID","story1",4); 
 
-    Drop_ServicechannelID.sendKeys(ServicechannelID);
+    Drop_ServicechannelID.click();
+//    Thread.sleep(1000);
+//    Drop_ServicechannelID.click();
     
 	waitForElement(Drop_B2BfILEid);
 	
-    String B2BfILEid=getData("B2BfILEid","ACBEbtryClass",1);
+   //String B2BfILEid=getData("B2BfILEid","story1",4);   
 
-    Drop_B2BfILEid.sendKeys(B2BfILEid);
+    Drop_B2BfILEid.sendKeys("Collection Request File");
+//    Thread.sleep(1000);
+//    Drop_B2BfILEid.click();
+    
+    waitForElement(Edit_SendPath);
+    Edit_SendPath.sendKeys("P8/IN/");
+    
+    waitForElement(Edit_ReceivePath);
+    Edit_ReceivePath.sendKeys("P8/OUT/");
     
     waitForElement(Click_Save);
     Click_Save.click();
     
     waitForElement(Btn_Yes);
     Btn_Yes.click();
+    
+    Thread.sleep(5000);
+    
+    waitForElement(Click_CloseWindow);
+    Click_CloseWindow.click();
+    
+    waitForElement(Btn_Yes);
+    Btn_Yes.click();
+    
+    
+	try
+	{
+	
+	    //waitForElement(Click_CloseWindow);
+	    Click_CloseWindow2.click();
+	    Thread.sleep(3000);
+	    //waitForElement(Btn_Yes);
+	    Btn_Yes.click();
+	}
+	catch (Exception e)
+	{
+		
+}
     
     
     
