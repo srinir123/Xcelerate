@@ -114,7 +114,7 @@ public class AddNewB2BUser_ISO_Story extends GenericMethods{
 	@FindBy(how=How.XPATH,using="(//*[@id='StatusID'])[2]")
 	public static WebElement Edi_Status_B2B;
 
-	@FindBy(how=How.XPATH,using="//*[@id='B2BUserID']")
+	@FindBy(how=How.XPATH,using="//*[@id='B2BUserID']/option[last()]")
 	public static WebElement Edi_B2BUser; 
 
 	@FindBy(how=How.XPATH,using="(//*[@id='btnSaveOne'])[1]")
@@ -140,6 +140,13 @@ public class AddNewB2BUser_ISO_Story extends GenericMethods{
 	
 	@FindBy(how=How.ID,using="btnLogin")
 	public static WebElement Btn_Loginbtn;
+
+	@FindBy(how=How.XPATH,using="//*[@id='AbbreviatedReference']")
+	public static WebElement Edit_AbbRef;
+	
+	
+	
+	
 	
 	
 			public static String taskid;
@@ -148,138 +155,138 @@ public class AddNewB2BUser_ISO_Story extends GenericMethods{
 	public static void AddNewB2BUser_ISO_Story() throws Exception {
 
 	
-
-	
-	  waitForElement(Click_Paramm);
-	
-	if(Click_Paramm.isDisplayed())
-	{
-		System.out.println("Clicking on entity search");
-		
-		Actions acc=new Actions(driver);
-		
-		acc.moveToElement(Click_Paramm).click(Click_Paramm).build().perform();
-		Click_Paramm.click();
-	}
-
-	waitForElement1(Click_B2BUser);
-	Click_B2BUser.click();
-	Thread.sleep(6000);
-	waitForElement(btn_Add);
-	btn_Add.click();
-	
-	waitForElement(Edi_B2Buser);
-	
-    //String B2BUser_Name=getData("B2BUser_Name","story1",1);
-
-    Edi_B2Buser.sendKeys("EJKQXD2");
-    
-    
-    
-	waitForElement(Edi_Password);
-	
-    String Edi_Password_Name=getData("Edi_Password_Name","story1",1);
-
-    Edi_Password.sendKeys(Edi_Password_Name);
-    
-    
-    waitForElement(Btn_SelectFile);
-    Btn_SelectFile.click();
-    Thread.sleep(4000);
-    
-    StringSelection ss9 = new StringSelection("C:\\Users\\srinir.SOLARSYSTEM\\Documents\\IOM PrivateOpenSSH_ForWINSCP.ppk");
-    
-	System.out.println(ss9);
-
-    Thread.sleep(3000);
-    
-    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss9, null);
-
-    Thread.sleep(3000);
-
-    Robot robot = new Robot();
-
-
-
-    robot.keyPress(KeyEvent.VK_CONTROL);
-    
-    Thread.sleep(2000);
-
-    robot.keyPress(KeyEvent.VK_V);
-
-
-    Thread.sleep(3000);
-
-    robot.keyPress(KeyEvent.VK_ENTER); 
-    
-
-
-	waitForElement(Edi_UserDesp);
-	
-    String User_Descriptiom=getData("User_Descriptiom","story1",1);
-
-    Edi_UserDesp.sendKeys(User_Descriptiom);
-    
-    
-	waitForElement(Edit_SSHKeyPwd);
-	
-    String SSHKeyPwd=getData("SSHKeyPwd","story1",1);
-
-    Edit_SSHKeyPwd.sendKeys(SSHKeyPwd);
-
-    
-    waitForElement(Edi_Status_B2B);
-
-    String Status1=getData("Status1","story1",1);
-
-    Edi_Status_B2B.sendKeys(Status1);
-    
-    waitForElement(Drop_Service);
-	
-    String Service=getData("Service","story1",1);
-
-    Drop_Service.sendKeys(Service);
-    
-	waitForElement(Drop_Servicetype);
-	
-    String Servicetype=getData("Servicetype","story1",1);
-
-    Drop_Servicetype.sendKeys(Servicetype);
-    
-    Thread.sleep(2000);
-    
-    waitForElement(Btn_Filter);
-    Btn_Filter.click();
-    Thread.sleep(1000);
-    //waitForElement(Click_Tickbox1);
-    Click_Tickbox1.click();
-    
-    //waitForElement(Click_Tickbox2);
-    Click_Tickbox2.click();
-
-    //waitForElement(Click_Tickbox3);
-    Click_Tickbox3.click();
- 
-    Thread.sleep(2000);
-    
-waitForElement(Btn_Save);
-Btn_Save.click();
-
-waitForElement(Btn_Yes);
-Btn_Yes.click();
-
-Thread.sleep(6000);
-
-waitForElement(Btn_Close);
-Btn_Close.click();
-
-Thread.sleep(2000);
-
-waitForElement(Btn_Yes1);
-Btn_Yes1.click();
-
-waitForElement(Btn_X);
-Btn_X.click();
+//
+//	
+//	  waitForElement(Click_Paramm);
+//	
+//	if(Click_Paramm.isDisplayed())
+//	{
+//		System.out.println("Clicking on entity search");
+//		
+//		Actions acc=new Actions(driver);
+//		
+//		acc.moveToElement(Click_Paramm).click(Click_Paramm).build().perform();
+//		Click_Paramm.click();
+//	}
+//
+//	waitForElement1(Click_B2BUser);
+//	Click_B2BUser.click();
+//	Thread.sleep(6000);
+//	waitForElement(btn_Add);
+//	btn_Add.click();
+//	
+//	waitForElement(Edi_B2Buser);
+//	
+//    //String B2BUser_Name=getData("B2BUser_Name","story1",1);
+//
+//    Edi_B2Buser.sendKeys("EJKQXD2");
+//    
+//    
+//    
+//	waitForElement(Edi_Password);
+//	
+//    String Edi_Password_Name=getData("Edi_Password_Name","story1",1);
+//
+//    Edi_Password.sendKeys(Edi_Password_Name);
+//    
+//    
+//    waitForElement(Btn_SelectFile);
+//    Btn_SelectFile.click();
+//    Thread.sleep(4000);
+//    
+//    StringSelection ss9 = new StringSelection("C:\\Users\\srinir.SOLARSYSTEM\\Documents\\IOM PrivateOpenSSH_ForWINSCP.ppk");
+//    
+//	System.out.println(ss9);
+//
+//    Thread.sleep(3000);
+//    
+//    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss9, null);
+//
+//    Thread.sleep(3000);
+//
+//    Robot robot = new Robot();
+//
+//
+//
+//    robot.keyPress(KeyEvent.VK_CONTROL);
+//    
+//    Thread.sleep(2000);
+//
+//    robot.keyPress(KeyEvent.VK_V);
+//
+//
+//    Thread.sleep(3000);
+//
+//    robot.keyPress(KeyEvent.VK_ENTER); 
+//    
+//
+//
+//	waitForElement(Edi_UserDesp);
+//	
+//    String User_Descriptiom=getData("User_Descriptiom","story1",1);
+//
+//    Edi_UserDesp.sendKeys(User_Descriptiom);
+//    
+//    
+//	waitForElement(Edit_SSHKeyPwd);
+//	
+//    String SSHKeyPwd=getData("SSHKeyPwd","story1",1);
+//
+//    Edit_SSHKeyPwd.sendKeys(SSHKeyPwd);
+//
+//    
+//    waitForElement(Edi_Status_B2B);
+//
+//    String Status1=getData("Status1","story1",1);
+//
+//    Edi_Status_B2B.sendKeys(Status1);
+//    
+//    waitForElement(Drop_Service);
+//	
+//    String Service=getData("Service","story1",1);
+//
+//    Drop_Service.sendKeys(Service);
+//    
+//	waitForElement(Drop_Servicetype);
+//	
+//    String Servicetype=getData("Servicetype","story1",1);
+//
+//    Drop_Servicetype.sendKeys(Servicetype);
+//    
+//    Thread.sleep(2000);
+//    
+//    waitForElement(Btn_Filter);
+//    Btn_Filter.click();
+//    Thread.sleep(1000);
+//    //waitForElement(Click_Tickbox1);
+//    Click_Tickbox1.click();
+//    
+//    //waitForElement(Click_Tickbox2);
+//    Click_Tickbox2.click();
+//
+//    //waitForElement(Click_Tickbox3);
+//    Click_Tickbox3.click();
+// 
+//    Thread.sleep(2000);
+//    
+//waitForElement(Btn_Save);
+//Btn_Save.click();
+//
+//waitForElement(Btn_Yes);
+//Btn_Yes.click();
+//
+//Thread.sleep(6000);
+//
+//waitForElement(Btn_Close);
+//Btn_Close.click();
+//
+//Thread.sleep(2000);
+//
+//waitForElement(Btn_Yes1);
+//Btn_Yes1.click();
+//
+//waitForElement(Btn_X);
+//Btn_X.click();
 		Thread.sleep(10000);
 		waitForElement(Btn_logout);
 		Btn_logout.click();	
@@ -355,11 +362,18 @@ String BankAccType=getData("BankAccType","story1",1);
 
 Dropd_BankAccType.sendKeys(BankAccType);
 
-waitForElement(Edi_SubAcc);
 
-String SubAcc=getData("SubAcc","story1",1);
+waitForElement(Edit_AbbRef);
 
-Edi_SubAcc.sendKeys(SubAcc);
+Edit_AbbRef.sendKeys("INSURE");
+
+
+//waitForElement(Edi_SubAcc);
+//
+//String SubAcc=getData("SubAcc","story1",1);
+//
+//Edi_SubAcc.sendKeys(SubAcc);
+
 
 waitForElement(Edi_Status);
 
@@ -369,9 +383,9 @@ Edi_Status.sendKeys(Status);
 
 waitForElement(Edi_B2BUser);
 
-String B2BUser=getData("B2BUser","story1",1);
+//String B2BUser=getData("B2BUser","story1",1);
 
-Edi_B2BUser.sendKeys(B2BUser);
+Edi_B2BUser.click();
 
 waitForElement(Btn_Save1);
 Btn_Save1.click();

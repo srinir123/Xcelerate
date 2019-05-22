@@ -230,7 +230,7 @@ public class iso_story extends GenericMethods{
 	    Btnt_Yes.click();
 
 		
-		  Thread.sleep(20000);			  
+		  Thread.sleep(40000);			  
 		  
 			  //waitForElement1(Click_NUser1);
 			  //performDBLCLICK(Click_NUser1);

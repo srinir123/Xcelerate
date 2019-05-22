@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -101,6 +103,9 @@ public class story1 extends GenericMethods{
 
 	@FindBy(how=How.XPATH,using="//*[@id='RolesGrid']/tbody/tr[12]/td[1]/input")
 	public static WebElement TakeonUser;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='RolesGrid']/tbody/tr[3]/td[1]/input")
+	public static WebElement ServiceUser;
 		
 	@FindBy(how=How.XPATH,using="(//*[@id='btnSave'])[2]")
 	public static WebElement Btn_Save;
@@ -226,11 +231,24 @@ public class story1 extends GenericMethods{
 //	    waitForElement1(Click_NUser);
 //		performDBLCLICK(Click_NUser);
 		 //Thread.sleep(90000);
-		
+	  Thread.sleep(35000);
 		  if (i==1)
 		  {   
-			  waitForElement1(Click_NUser1);
-			  performDBLCLICK(Click_NUser1);
+			  //waitForElement1(Click_NUser1);
+			  //performDBLCLICK(Click_NUser1);
+			  
+				String Username=getData("FirstName","story1",1);	
+
+			    
+				System.out.println(Username);
+				
+			
+
+				Actions actions = new Actions(driver);
+				WebElement elementLocator = driver.findElement(By.xpath("//td[text()='"+Username+"']"));
+				Thread.sleep(2000);
+				actions.doubleClick(elementLocator).perform();
+			  
 //		      Actions act = new Actions(driver);
 //			 act=driver.findElement(By.xpath("//.*[text()='"+FirstName+"']")).build().perform();
 			    //Actions act = new Actions(driver);
@@ -257,8 +275,20 @@ public class story1 extends GenericMethods{
 		  }
 		  else if (i==2)
 		  {
-			  waitForElement1(Click_NUser2);
-			  performDBLCLICK(Click_NUser2);
+			  //waitForElement1(Click_NUser2);
+			  //performDBLCLICK(Click_NUser2);
+			  
+				String Username=getData("FirstName","story1",2);	
+
+			    
+				System.out.println(Username);
+				
+			
+
+				Actions actions = new Actions(driver);
+				WebElement elementLocator = driver.findElement(By.xpath("//td[text()='"+Username+"']"));
+				Thread.sleep(2000);
+				actions.doubleClick(elementLocator).perform();
 		  }
 		  
 //		  Thread.sleep(60000);
@@ -336,6 +366,7 @@ public class story1 extends GenericMethods{
 		  }
 		  else if (i==2)
 		  {
+			     click_element(ServiceUser);
 			     click_element(TakeonUser);
 				 waitForElement(Btn_Save);
 				 Btn_Save.click();

@@ -54,10 +54,10 @@ public class ACBEntryclass_Pmt extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnClose']")
 	public static WebElement Click_CloseWindow2;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='SendPath']")
+	@FindBy(how=How.XPATH,using="(//*[@id='SendPath'])[2]")
 	public static WebElement Edit_SendPath;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='ReceivePath']")
+	@FindBy(how=How.XPATH,using="(//*[@id='ReceivePath'])[2]")
 	public static WebElement Edit_ReceivePath;
 	
 	

@@ -680,19 +680,19 @@ Thread.sleep(3000);
 	      Click_ClrsyMmbld.click();
 	      
 	      waitForElement(Edit_Mmbld2);
-	      Edit_Mmbld2.sendKeys("NominatedBranchCode");
+	      Edit_Mmbld2.sendKeys("HomingBranchNumber"); 
 	      
 	      waitForElement(Click_Brnchld3);
 	      Click_Brnchld3.click();
 	      
 	      waitForElement(Edit_Id2);
-	      Edit_Id2.sendKeys("NominatedBranchCode");
+	      Edit_Id2.sendKeys("HomingBranchNumber"); 
 	      
 	      waitForElement(Click_Cdtr1);
 	      Click_Cdtr1.click();
 	      
 	      waitForElement(Edit_Nm1);
-	      Edit_Nm1.sendKeys("HomingAccountHolder");
+	      Edit_Nm1.sendKeys("HomingAccountHolder"); 
 	      
 	      waitForElement(Click_Cdtracct1);
 	      Click_Cdtracct1.click();
@@ -704,7 +704,7 @@ Thread.sleep(3000);
 	      Click_Oth.click();
 	      
 	      waitForElement(Edit_Id3);
-	      Edit_Id3.sendKeys("NominatedAccountNumber");
+	      Edit_Id3.sendKeys("HomingAccountNumber"); 
 	      
 	      waitForElement(Click_Tp2);
 	      Click_Tp2.click();

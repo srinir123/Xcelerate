@@ -339,7 +339,7 @@ Thread.sleep(3000);
 		
 		Thread.sleep(10000);
 //		waitForElement(Click_AddEntity);
-////		Thread.sleep(3000);
+//		Thread.sleep(3000);
 //		Click_AddEntity.click();
 //
 //		
@@ -515,74 +515,74 @@ Thread.sleep(3000);
 //        System.out.println("The new Entity has been created successfully");
 //    	LogEvent("Pass","The new Entity has been created successfully");
 //    
-////        Thread.sleep(3000);
-////
-////        
-////        waitForElement1(Click_EntitySearch);
-////		if(Click_EntitySearch.isDisplayed())
-////		{
-////			System.out.println("Clicking on entity search");
-////			
-////			Actions acc=new Actions(driver);
-////			
-////			
-////			acc.moveToElement(Click_EntitySearch).click(Click_EntitySearch).build().perform();
-////			Click_EntitySearch.click();
-////        }
-////
-////
-////		//Click_EntitySearch.click();
-////		waitForElement(Edi_EntitySearch);
-////		
-////	     String EntityName1=getData("EntityName","story1",1);
-////
-////		Edi_EntitySearch.sendKeys(EntityName1);
-////		waitForElement(Btn_Search);
-////		Btn_Search.click();
-////		
-////		waitForElement(Click_SearchResults);
-////		Click_SearchResults.click();
-////		waitForElement(Btn_Open);
-////		Btn_Open.click();
-////		
-////		waitForElement(Click_Qtotes);
-////		Click_Qtotes.click();
-////		waitForElement(Btn_Createqtote);
-////		Btn_Createqtote.click();
-////		
-////		waitForElement(Edi_Quotename);
-////		
-////	     String Quotename=getData("QuoteName","story1",1);
-////
-////	     Edi_Quotename.sendKeys(Quotename);
-////		
-////		waitForElement(Edi_Agreetypeid);
-////		
-////	     String AgreementType=getData("AgreementType","story1",1);
-////
-////	     Edi_Agreetypeid.sendKeys(AgreementType);
-////	     
-////	     waitForElement(Btn_Continue);
-////	     Btn_Continue.click();
-////	     
-////	     waitForElement(Btn_SubmitApproval);
-////	     click_element(Btn_SubmitApproval);
-////	     waitForElement(Btn_Yes);
-////	     Btn_Yes.click();
-////	     waitForElement(Btn_Yes);
-////	     click_element(Btn_Yes);
-////
-////        
-////       Thread.sleep(3000);
-//        
+//        Thread.sleep(3000);
 //
-//    	//driver.quit();
-//    	waitForElement(Btn_logout);
-//    	Btn_logout.click();
-		
-//        taskid= DBConnection1.dbConnect1();
 //        
-//        System.out.println(taskid);
+//        waitForElement1(Click_EntitySearch);
+//		if(Click_EntitySearch.isDisplayed())
+//		{
+//			System.out.println("Clicking on entity search");
+//			
+//			Actions acc=new Actions(driver);
+//			
+//			
+//			acc.moveToElement(Click_EntitySearch).click(Click_EntitySearch).build().perform();
+//			Click_EntitySearch.click();
+//        }
+//
+//
+//		//Click_EntitySearch.click();
+//		waitForElement(Edi_EntitySearch);
+//		
+//	     String EntityName1=getData("EntityName","story1",1);
+//
+//		Edi_EntitySearch.sendKeys(EntityName1);
+//		waitForElement(Btn_Search);
+//		Btn_Search.click();
+//		
+//		waitForElement(Click_SearchResults);
+//		Click_SearchResults.click();
+//		waitForElement(Btn_Open);
+//		Btn_Open.click();
+//		
+//		waitForElement(Click_Qtotes);
+//		Click_Qtotes.click();
+//		waitForElement(Btn_Createqtote);
+//		Btn_Createqtote.click();
+//		
+//		waitForElement(Edi_Quotename);
+//		
+//	     String Quotename=getData("QuoteName","story1",1);
+//
+//	     Edi_Quotename.sendKeys(Quotename);
+//		
+//		waitForElement(Edi_Agreetypeid);
+//		
+//	     String AgreementType=getData("AgreementType","story1",1);
+//
+//	     Edi_Agreetypeid.sendKeys(AgreementType);
+//	     
+//	     waitForElement(Btn_Continue);
+//	     Btn_Continue.click();
+//	     
+//	     waitForElement(Btn_SubmitApproval);
+//	     click_element(Btn_SubmitApproval);
+//	     waitForElement(Btn_Yes);
+//	     Btn_Yes.click();
+//	     waitForElement(Btn_Yes);
+//	     click_element(Btn_Yes);
+//
+//        
+//       Thread.sleep(3000);
+        
+
+    	//driver.quit();
+    	waitForElement(Btn_logout);
+    	Btn_logout.click();
+		
+        taskid= DBConnection1.dbConnect1();
+        
+        System.out.println(taskid);
 
 	}
 }

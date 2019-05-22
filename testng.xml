@@ -10,13 +10,14 @@
   <test name="Test">
     <classes>
            
+  
+  
+  
+          <class name="com.TestScripts.Tc_01_ManualcaptureCollection"/>
 
-    
  
-       
 
 
-      <class name="com.TestScripts.ISO_Story"/>
     
               </classes>
     </test> <!-- Test -->
@@ -25,7 +26,7 @@
        
     
     
-
+     
 
 
 

@@ -75,6 +75,7 @@ public class B2BSetup_CollectionXSD extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[@id='treeView']/ul/li/ul/li/ul/li[2]/ul/li[6]/ul/li[2]/label[1]")
 	public static WebElement Click_SvcLvl;
+	//*[@id="treeView"]/ul/li/ul/li/ul/li[2]/ul/li[6]/ul/li[2]/ul/li[1]/div/input
 	
 	@FindBy(how=How.XPATH,using="//*[@id='treeView']/ul/li/ul/li/ul/li[2]/ul/li[6]/ul/li[2]/ul/li[1]/div/select")
 	public static WebElement Edi_Cd;
@@ -479,7 +480,7 @@ public class B2BSetup_CollectionXSD extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='treeView']/ul/li/ul/li/ul/li[1]/ul/li[1]/div/select")
 	public static WebElement Edit_GrpHdr;
 	
-	@FindBy(how=How.XPATH,using="//*[@id=treeView']/ul/li/ul/li/ul/li[2]/ul/li[6]/ul/li[2]/ul/li[1]/div/input")
+	@FindBy(how=How.XPATH,using="//*[@id='treeView']/ul/li/ul/li/ul/li[2]/ul/li[6]/ul/li[2]/ul/li[1]/div/input")
 	public static WebElement Edi_CDVariable; 
 	
 	@FindBy(how=How.XPATH,using="//*[@id='treeView']/ul/li/ul/li/ul/li[2]/ul/li[3]/div/select")
@@ -832,19 +833,19 @@ Thread.sleep(4000);
 	      Click_ClrSysMmbId1.click();
 	      
 	      waitForElement(Edit_MmbId);
-	      Edit_MmbId.sendKeys("NominatedBranchCode");
+	      Edit_MmbId.sendKeys("HomingBranchNumber"); 
 	      
 	      waitForElement(Click_Brnchld1);
 	      Click_Brnchld1.click();
 	      
 	      waitForElement(Edit_Id);
-	      Edit_Id.sendKeys("NominatedBranchCode");
+	      Edit_Id.sendKeys("HomingBranchNumber"); 
 	      
 	      waitForElement(Click_Dbtr);
 	      Click_Dbtr.click();
 	      
 	      waitForElement(Edit_Nm);
-	      Edit_Nm.sendKeys("NominatedAccountHolder");
+	      Edit_Nm.sendKeys("HomingAccountHolder"); 
 	      
 	      waitForElement(Click_DbtrAcct);
 	      Click_DbtrAcct.click();
@@ -859,7 +860,7 @@ Thread.sleep(4000);
 	      Click_Other1.click();
 	      
 	      waitForElement(Edit_Id5);
-	      Edit_Id5.sendKeys("NominatedAccountNumber");
+	      Edit_Id5.sendKeys("HomingAccountNumber"); 
 	      
 	      waitForElement(Click_Tp1);
 	      Click_Tp1.click();

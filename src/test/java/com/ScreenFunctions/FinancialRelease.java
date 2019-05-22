@@ -34,8 +34,6 @@ public class FinancialRelease extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='financialReleaseAuthorisationResultsGrid']/tbody/tr/td[9]")
 	public static WebElement Amount_Check;
 
-	
-		
 	@FindBy(how=How.XPATH,using="//*[@id='EntityID']")
 	public static WebElement Dropd_EnityID;
 	
@@ -135,7 +133,7 @@ public class FinancialRelease extends GenericMethods{
         Thread.sleep(6000);
         System.out.println("Row1");
         waitForElement(GetData_ServiceChannel);
-        String expectedData1 = "XHost604";
+        String expectedData1 = "XHost5678";
         System.out.println("Expected Results is:");
         System.out.println(expectedData1);
         String data1 = driver.findElement(By.xpath("//*[@id='transactionDetails']/fieldset/div[4]/div[4]/input")).getAttribute("value");
@@ -181,7 +179,7 @@ public class FinancialRelease extends GenericMethods{
   Thread.sleep(6000);
   System.out.println("Row5");
   waitForElement(GetData_ServiceChannel);
-  String expectedData5 = "XHost604";
+  String expectedData5 = "XHost5678";
   System.out.println("Expected Results is:");
   System.out.println(expectedData5);
   String data5 = driver.findElement(By.xpath("//*[@id='transactionDetails']/fieldset/div[4]/div[4]/input")).getAttribute("value");
@@ -228,7 +226,7 @@ Row9.click();
 Thread.sleep(6000);
 System.out.println("Row9");
 waitForElement(GetData_ServiceChannel);
-String expectedData9 = "XHost604";
+String expectedData9 = "XHost5678";
 System.out.println("Expected Results is:");
 System.out.println(expectedData9);
 String data9 = driver.findElement(By.xpath("//*[@id='transactionDetails']/fieldset/div[4]/div[4]/input")).getAttribute("value");
@@ -369,7 +367,7 @@ Row12.click();
 Thread.sleep(6000);
 System.out.println("Row12");
 waitForElement(GetData_ServiceChannel);
-String expectedData12 = "XHost604";
+String expectedData12 = "XHost5678";
 System.out.println("Expected Results is:");
 System.out.println(expectedData12);
 String data12 = driver.findElement(By.xpath("//*[@id='transactionDetails']/fieldset/div[4]/div[4]/input")).getAttribute("value");
@@ -510,7 +508,7 @@ Row15.click();
 Thread.sleep(6000);
 System.out.println("Row15");
 waitForElement(GetData_ServiceChannel);
-String expectedData15 = "XHost604";
+String expectedData15 = "XHost5678";
 System.out.println("Expected Results is:");
 System.out.println(expectedData15);
 String data15 = driver.findElement(By.xpath("//*[@id='transactionDetails']/fieldset/div[4]/div[4]/input")).getAttribute("value");
@@ -559,7 +557,7 @@ if(!data1515.equals(expectedData1515))
        
 		waitForElement(Edi_ServiceChannel);
         //String EntityName=getData("EntityName","story1",1);
-        Edi_ServiceChannel.sendKeys("XHost604");
+        Edi_ServiceChannel.sendKeys("XHost5678");
         
         Thread.sleep(2000);
         

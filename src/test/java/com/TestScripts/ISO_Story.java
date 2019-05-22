@@ -69,7 +69,7 @@ ACBEntryclass_Pmt acbp=PageFactory.initElements(driver, ACBEntryclass_Pmt.class)
 NewServiceChannel_ISO_Story nsc=PageFactory.initElements(driver, NewServiceChannel_ISO_Story.class);
 B2BSetup_PaymentXSD b2bp=PageFactory.initElements(driver, B2BSetup_PaymentXSD.class);
 NewEntityCreation_ISOStory nec=PageFactory.initElements(driver, NewEntityCreation_ISOStory.class);
-Authorization_NewEntity_Story1 Ane=PageFactory.initElements(driver, Authorization_NewEntity_Story1.class);
+//Authorization_NewEntity_Story1 Ane=PageFactory.initElements(driver, Authorization_NewEntity_Story1.class);
 
 InterestGroupNSubAccount_Creation igsb=PageFactory.initElements(driver, InterestGroupNSubAccount_Creation.class);
 
@@ -132,10 +132,10 @@ BankBatchCreation bbc=PageFactory.initElements(driver, BankBatchCreation.class);
 //lgn1.launch_Application2();
 //Anu.Authorization_NewUser_ISO_Story();
 //nbc.NewB2BUserCreation_ISO_Story();
-
-
-//****************New B2B Setup*********************
-
+//
+//
+////****************New B2B Setup*********************
+//
 //lgn1.launch_Application11();
 //b2bc.B2BSetup_CollectionXSD();
 //nsc.NewServiceChannel_ISO_Story();
@@ -143,13 +143,13 @@ BankBatchCreation bbc=PageFactory.initElements(driver, BankBatchCreation.class);
 //b2bp.B2BSetup_PaymentXSD();
 //acbp.ACBEntryclass_Pmt();
 //ab2b.AddNewB2BUser_ISO_Story();
-
-
-//****************New Entity Creation*********************
-
-//lgn1.launch_Application14();
-//nec.NewEntityCreation_ISOStory();
-//igsb.InterestGroupNSubAccount_Creation();
+//
+//
+////****************New Entity Creation*********************
+//
+lgn1.launch_Application14();
+nec.NewEntityCreation_ISOStory();
+/////////igsb.InterestGroupNSubAccount_Creation();
 //
 //
 ////****************Transactions and Authorization*********************
@@ -170,14 +170,14 @@ BankBatchCreation bbc=PageFactory.initElements(driver, BankBatchCreation.class);
 //mcp.CollPeriodBalances_MCP_ISO_Story();
 //lgn1.launch_Application6();
 //amcp.Authorization_MCP_ISOStory();
-
-//****************Financial Release*******************
-              
-lgn1.launch_Application3();
-fs.FinancialRelease();
 //
-lgn1.launch_Application15();
-bbc.BankBatchCreation();
+////****************Financial Release*******************
+//              
+//lgn1.launch_Application3();
+//fs.FinancialRelease();
+////
+//lgn1.launch_Application15();
+//bbc.BankBatchCreation();
 
 
 

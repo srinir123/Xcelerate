@@ -744,14 +744,7 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
         
         waitForElement(Btn_subYes);
         Btn_subYes.click();
-        
-        
-        
-        
-        
-        
-        
-        
+              
         
         System.out.println("The new Entity has been created successfully");
     	LogEvent("Pass","The new Entity has been created successfully");
@@ -1301,7 +1294,7 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
 		waitForElement(Click_Yes2);
 		Click_Yes2.click();
 		
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 		
 		waitForElement(Click_BtnAdd);
 		Click_BtnAdd.click();
@@ -1359,7 +1352,7 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
 		waitForElement(Click_Yes2);
 		Click_Yes2.click();
 		
-		Thread.sleep(10000);
+		Thread.sleep(12000);
 		
 		waitForElement(Click_BtnAdd);
 		Click_BtnAdd.click();
