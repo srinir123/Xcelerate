@@ -764,14 +764,14 @@ Thread.sleep(4000);
 	      waitForElement(edi_id);
 	      edi_id.sendKeys("AbbreviatedReference");
 	      
-	      waitForElement(Click_Cdtracct);
-	      Click_Cdtracct.click();
-	      
-	      waitForElement(Click_ID);
-	      Click_ID.click();
-	      
-	      waitForElement(Edit_IBAN);
-	      Edit_IBAN.sendKeys("IGTransactionalBankAccountNumber");
+//1	      waitForElement(Click_Cdtracct);
+//	      Click_Cdtracct.click();
+//	      
+//	      waitForElement(Click_ID);
+//	      Click_ID.click();
+//	      
+//	      waitForElement(Edit_IBAN);
+//	      Edit_IBAN.sendKeys("IGTransactionalBankAccountNumber");
 	      
 	      waitForElement(Click_Other);
 	      Click_Other.click();
@@ -782,8 +782,9 @@ Thread.sleep(4000);
 	      waitForElement(Click_Tp);
 	      Click_Tp.click();
 	      
+//2
 	      waitForElement(Edit_CD);
-	      Edit_CD.sendKeys("AccountType");
+	      Edit_CD.sendKeys("TransactionalBankAccountTypeCode"); 
 	      
 	      waitForElement(Click_CDtrAgt);
 	      Click_CDtrAgt.click();	
@@ -847,14 +848,14 @@ Thread.sleep(4000);
 	      waitForElement(Edit_Nm);
 	      Edit_Nm.sendKeys("HomingAccountHolder"); 
 	      
-	      waitForElement(Click_DbtrAcct);
-	      Click_DbtrAcct.click();
-	      
-	      waitForElement(Click_Id1);
-	      Click_Id1.click();
-	      
-	      waitForElement(Edit_IBAN1);
-	      Edit_IBAN1.sendKeys("NominatedAccountNumber");
+//3	      waitForElement(Click_DbtrAcct);
+//	      Click_DbtrAcct.click();
+//	      
+//	      waitForElement(Click_Id1);
+//	      Click_Id1.click();
+//	      
+//	      waitForElement(Edit_IBAN1);
+//	      Edit_IBAN1.sendKeys("NominatedAccountNumber");
 	      
 	      waitForElement(Click_Other1);
 	      Click_Other1.click();
@@ -976,17 +977,17 @@ Tick_truncate.click();
 waitForElement(Edit_Direction);
 Edit_Direction.sendKeys("Incoming");
 
-waitForElement(Click_Doc);
-Click_Doc.click();
-
-waitForElement(Click_CstmrPmtStsRpt);
-Click_CstmrPmtStsRpt.click();
-
-waitForElement(Click_GrpHdr1);
-Click_GrpHdr1.click();
-
-waitForElement(Edit_GrpHdr);
-Edit_GrpHdr.sendKeys("B2BBatchID");
+//waitForElement(Click_Doc);
+//Click_Doc.click();
+//
+//waitForElement(Click_CstmrPmtStsRpt);
+//Click_CstmrPmtStsRpt.click();
+//
+//waitForElement(Click_GrpHdr1);
+//Click_GrpHdr1.click();
+//
+//waitForElement(Edit_GrpHdr);
+//Edit_GrpHdr.sendKeys("B2BBatchID");
 
 waitForElement(Click_Schemainfo);
 Click_Schemainfo.click(); 
@@ -1092,17 +1093,17 @@ Tick_truncate.click();
 waitForElement(Edit_Direction);
 Edit_Direction.sendKeys("Incoming");
 
-waitForElement(Click_Doc);
-Click_Doc.click();
-
-waitForElement(Click_CstmrPmtStsRpt);
-Click_CstmrPmtStsRpt.click();
-
-waitForElement(Click_GrpHdr1);
-Click_GrpHdr1.click();
-
-waitForElement(Edit_GrpHdr);
-Edit_GrpHdr.sendKeys("B2BBatchID");
+//waitForElement(Click_Doc);
+//Click_Doc.click();
+//
+//waitForElement(Click_CstmrPmtStsRpt);
+//Click_CstmrPmtStsRpt.click();
+//
+//waitForElement(Click_GrpHdr1);
+//Click_GrpHdr1.click();
+//
+//waitForElement(Edit_GrpHdr);
+//Edit_GrpHdr.sendKeys("B2BBatchID");
 
 waitForElement(Click_Schemainfo);
 Click_Schemainfo.click(); 

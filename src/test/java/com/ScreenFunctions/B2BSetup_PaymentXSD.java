@@ -629,7 +629,7 @@ Thread.sleep(3000);
 	      Click_Tp1.click();
 	      
 	      waitForElement(Edit_CD1);
-	      Edit_CD1.sendKeys("Static");
+	      Edit_CD1.sendKeys("TransactionalBankAccountTypeCode");
 	      
 	      waitForElement(Edit_CD1Variable);
 	      Edit_CD1Variable.sendKeys("CACC");
@@ -820,17 +820,17 @@ Tick_truncate.click();
 waitForElement(Edit_Direction);
 Edit_Direction.sendKeys("Incoming");
 
-waitForElement(Click_Doc);
-Click_Doc.click();
+//waitForElement(Click_Doc);
+//Click_Doc.click();
 
-waitForElement(Click_CstmrPmtStsRpt);
-Click_CstmrPmtStsRpt.click();
-	      
-waitForElement(Click_GrpHdr1);
-Click_GrpHdr1.click();
-
-waitForElement(Edit_MsgId);
-Edit_MsgId.sendKeys("B2BBatchID");
+//waitForElement(Click_CstmrPmtStsRpt);
+//Click_CstmrPmtStsRpt.click();
+//	      
+//waitForElement(Click_GrpHdr1);
+//Click_GrpHdr1.click();
+//
+//waitForElement(Edit_MsgId);
+//Edit_MsgId.sendKeys("B2BBatchID");
 
 waitForElement(Click_Schemainfo);
 Click_Schemainfo.click(); 
@@ -936,18 +936,18 @@ Tick_truncate.click();
 waitForElement(Edit_Direction);
 Edit_Direction.sendKeys("Incoming");
 
-waitForElement(Click_Doc);
-Click_Doc.click();
+//waitForElement(Click_Doc);
+//Click_Doc.click();
 
-waitForElement(Click_CstmrPmtStsRpt);
-Click_CstmrPmtStsRpt.click();
-	      
-waitForElement(Click_GrpHdr1);
-Click_GrpHdr1.click();
-
-waitForElement(Edit_MsgId);
-Edit_MsgId.sendKeys("B2BBatchID");
-
+//waitForElement(Click_CstmrPmtStsRpt);
+//Click_CstmrPmtStsRpt.click();
+//	      
+//waitForElement(Click_GrpHdr1);
+//Click_GrpHdr1.click();
+//
+//waitForElement(Edit_MsgId);
+//Edit_MsgId.sendKeys("B2BBatchID");
+//
 waitForElement(Click_Schemainfo);
 Click_Schemainfo.click(); 
 
