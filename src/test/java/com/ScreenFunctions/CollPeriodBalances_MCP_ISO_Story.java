@@ -106,6 +106,10 @@ public class CollPeriodBalances_MCP_ISO_Story extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[@id='transactionDetails']/fieldset/div[4]/div[4]/input")
 	public static WebElement Copy_ServiceChannel;
+	
+
+
+
 
 	
 	
@@ -490,6 +494,9 @@ public class CollPeriodBalances_MCP_ISO_Story extends GenericMethods{
 			     Thread.sleep(8000);
 			     System.out.println("Data entered sucessfully for all the fields");
 					LogEvent("Pass","Data entered sucessfully for all the fieldd in MCP tc");
+					
+					
+					
 					
 //				waitForElement(Copy_ServiceChannel);
 //				Copy_ServiceChannel.getText();

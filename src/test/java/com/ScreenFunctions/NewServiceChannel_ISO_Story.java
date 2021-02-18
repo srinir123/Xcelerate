@@ -18,20 +18,6 @@ public class NewServiceChannel_ISO_Story extends GenericMethods{
 	@FindBy(how=How.XPATH,using="(//*[@id='btnAdd'])[2]")
 	public static WebElement btn_Add;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 	@FindBy(how=How.XPATH,using="(//*[@id='ShortDescription'])[2]")
 	public static WebElement Edit_ShortDesp;
 	

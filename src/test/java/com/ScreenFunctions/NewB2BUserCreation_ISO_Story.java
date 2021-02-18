@@ -309,7 +309,7 @@ Thread.sleep(3000);
 		System.out.println("OTP");
 		System.out.println(OTP);
         
-		Thread.sleep(6000);
+		Thread.sleep(15000);
 		//String OTP=getData("OTP","story1",0);
 
 		Edit_Otp.sendKeys(OTP);

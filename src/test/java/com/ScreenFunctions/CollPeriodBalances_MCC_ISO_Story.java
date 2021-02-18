@@ -110,11 +110,15 @@ waitForElement(Click_EntitySearch);
 		waitForElement(Edi_EntitySearch);
 		
 		String Entity_Name=getData("EntityName","story1",1);
+		Thread.sleep(2000);
 		Edi_EntitySearch.sendKeys(Entity_Name);
+		//Thread.sleep(6000);
 		waitForElement(Btn_Search);
 		Btn_Search.click();
+		Thread.sleep(3000);
 		waitForElement(Click_SearchResults);
 		Click_SearchResults.click();
+		Thread.sleep(2000);
 		Btn_Open.click();
 	waitForElement(Click_CollPeriodBalances);
 	Click_CollPeriodBalances.click();
@@ -177,7 +181,7 @@ Thread.sleep(6000);
 
 		//String Amount=getData("Amount","story1",4);
 
-		Edi_Amount.sendKeys("10.05");
+		Edi_Amount.sendKeys("10000.05");
 
 		String TransRef=getData("TransRef","story1",4);
 

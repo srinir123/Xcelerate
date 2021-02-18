@@ -70,6 +70,7 @@ public class CollectionImport_ISO_Story extends GenericMethods{
 	waitForElement(Edi_EntitySearch);
 	
 	String Entity_Name1=getData("EntityName","story1",1);
+	Thread.sleep(4000);
 	Edi_EntitySearch.sendKeys(Entity_Name1);
 	waitForElement(Btn_Search);
 	Btn_Search.click();

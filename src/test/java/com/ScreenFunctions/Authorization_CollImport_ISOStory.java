@@ -41,6 +41,8 @@ public class Authorization_CollImport_ISOStory extends GenericMethods{
 		Click_Dashboard.click();
 		Thread.sleep(10000);
 		Click_Dashboard.click();
+		Thread.sleep(5000);
+		Click_Dashboard.click();
 		System.out.println(Review_CImportfiles.taskid);
 		Thread.sleep(6000);
 		

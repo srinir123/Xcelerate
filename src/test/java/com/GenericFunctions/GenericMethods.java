@@ -19,9 +19,9 @@ import com.codoid.products.fillo.Recordset;
 
 public class GenericMethods extends GenerateReports {
 //UAT	
-//public static  String UAT_url="http://172.20.92.19/Login/LogOn?ReturnUrl=%2f";
-//PROD
-public static  String UAT_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";
+//public static  String UAT_url="http://172.21.91.7/Login/LogOn?ReturnUrl=%2f";
+public static  String UAT_url="http://sa-igmappx.solarsystem.ioh.co.za/Login/LogOn?ReturnUrl=%2f";
+//public static  String UAT_url="http://172.21.91.6/Login/LogOn?ReturnUrl=%2f";
 //DEV
 //public static  String UAT_url="http://172.20.92.22:81/smi-31249/Login/LogOn?ReturnUrl=%2f";
 public static  String Dev_url="http://172.20.92.18/Login/LogOn?ReturnUrl=%2f";

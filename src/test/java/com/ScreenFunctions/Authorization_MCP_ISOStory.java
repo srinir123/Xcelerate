@@ -16,6 +16,9 @@ public class Authorization_MCP_ISOStory extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//button[contains(text(),'Yes')]")
 	public static WebElement Click_Yes;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='manualTabTab']")
+	public static WebElement Click_ManualTab;
+	
 	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
 	public static WebElement Btn_logout;
 	
@@ -44,11 +47,11 @@ public class Authorization_MCP_ISOStory extends GenericMethods{
 		Click_Yes.click();
 		waitForElement(Btn_logout);
     	Btn_logout.click();	
-        //driver.quit();
+
 		Thread.sleep(2000);
     	waitForElement(taskid);
         taskid= DBConnection.dbConnect();
-		//Thread.sleep(2000);
+
 
         System.out.println(taskid);
 	}
@@ -56,7 +59,7 @@ public class Authorization_MCP_ISOStory extends GenericMethods{
 
 
 	private static void waitForElement(String taskid2) {
-		// TODO Auto-generated method stub
+
 		
 	}
 	}

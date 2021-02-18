@@ -4,6 +4,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
 
 public class Journals extends GenericMethods{
@@ -77,9 +78,15 @@ public class Journals extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[contains(text(), 'Yes')]")
 	public static WebElement Btn_Yes1;
-
-
 	
+	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
+	public static WebElement Btn_logout;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='btnClose']")
+	public static WebElement Btn_close;
+
+
+	public static String taskid;
 
 	
 	public static void Journals() throws Exception 
@@ -197,10 +204,20 @@ public class Journals extends GenericMethods{
 			
      	}
 		Thread.sleep(6000);
+		waitForElement(Btn_close);
+		Btn_close.click();
 		System.out.println("The Journal transaction has been added sucessfully");
 		LogEvent("Pass","The Journal transaction has been added sucessfully");
 
-	    driver.quit();	
-}
+	    //driver.quit();	
+		waitForElement(Btn_logout);
+    	Btn_logout.click();
+		Thread.sleep(5000);
+
+    	taskid= DBConnection.dbConnect();
+		
+		System.out.println(taskid);
+	
+	}
 }	
 	

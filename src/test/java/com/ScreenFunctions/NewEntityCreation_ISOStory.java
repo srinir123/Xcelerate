@@ -15,7 +15,7 @@ import com.GenericFunctions.GenericMethods;
 import com.GenericFunctions.NewDBConnection_OTP_Story1;
 
 public class NewEntityCreation_ISOStory extends GenericMethods{
-
+	
 	@FindBy(how=How.XPATH,using="//*[text()='Add Entity']")
 	public static WebElement Click_AddEntity;
 	
@@ -389,7 +389,14 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='accordGroups']")
 	public static WebElement Click_InterestGrp;
 	
-	@FindBy(how=How.XPATH,using="(//*[@class='accordion-toggle'])[last()]")
+//	@FindBy(how=How.XPATH,using="(//*[@class='accordion-toggle'])[last()]")//*[@id="accordGroups"]/div/div[1]/a/i
+//	public static WebElement Click_Subacc;
+	
+	//@FindBy(how=How.XPATH,using="/html/body/div[2]/div[5]/div/div[2]/div/div[2]/div/fieldset/div/div/div[2]/div/div[8]/div[1]/a/text()")   //(//*[@id='accordGroups']/div/div[1]/a/i //*[@id='collapseGroup1424']/div/div[8]/div[1]/a
+    //public static WebElement Click_Subacc; 
+	
+	//@FindBy(how=How.XPATH,using="(//*[@class='accordion-toggle disabled'])[last()]")
+	@FindBy(how=How.XPATH,using="(/html/body/div[2]/div[5]/div/div[2]/div/div[2]/div/fieldset/div/div/div[2]/div/div[8]/div[1]/a)")
 	public static WebElement Click_Subacc;
 	
 	@FindBy(how=How.XPATH,using="(//*[text()= 'Sub Account Settings'])[last()]")
@@ -643,8 +650,8 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
 
         String MobilePhone1=getData("MobilePhone1","story1",1);
 
-        Edi_MobilePhone.sendKeys(MobilePhone1);
-
+         Edi_MobilePhone.sendKeys(MobilePhone1);
+       // Edi_Telephone.sendKeys("00917799005938");
 
         String Fax1=getData("Fax1","story1",1);
 
@@ -862,11 +869,10 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
     	Click_EntitySearch.click();
     	}
     
-    	
-    	waitForElement(Edi_EntitySearch);
-    	
-    	String Entity_Name1=getData("EntityName","story1",1);
-    	Edi_EntitySearch.sendKeys(Entity_Name1);
+       	waitForElement(Edi_EntitySearch);
+     	String Entity_Name1=getData("EntityName","story1",1);
+     	Thread.sleep(4000);   
+     	Edi_EntitySearch.sendKeys(Entity_Name1);
     	waitForElement(Btn_Search);
     	Btn_Search.click();
     	waitForElement(Click_SearchResults);
@@ -900,7 +906,15 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
 		waitForElement(Click_VerifyEntityInfo);
 		Click_VerifyEntityInfo.click();
 		
+		Thread.sleep(3000);
+//		waitForElement(Click_Yes);
+//		click_element(Click_Yes);
+		
 		waitForElement(Click_Yes);
+		Click_Yes.click();
+		
+		Thread.sleep(3000);
+		
 		Click_Yes.click();
         
     	
@@ -912,10 +926,17 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
   		waitForElement(Click_VerifyEntityInfo);
   		Click_VerifyEntityInfo.click();
   		
+  		Thread.sleep(3000);
+  		
   		waitForElement(Click_Yes);
   		Click_Yes.click();
- 
-		
+  		Thread.sleep(3000);
+
+//  		waitForElement(Click_Yes);
+//  		Click_Yes.click();
+//  		
+//  		Thread.sleep(3000);
+  		
     	waitForElement(Btn_logout);
     	Btn_logout.click();
     	
@@ -944,6 +965,7 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
     	waitForElement(Edi_EntitySearch);
     	
     	String Entity_Name2=getData("EntityName","story1",1);
+    	Thread.sleep(4000);
     	Edi_EntitySearch.sendKeys(Entity_Name2);
     	waitForElement(Btn_Search);
     	Btn_Search.click();
@@ -958,7 +980,7 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
     	Btnt_AddNew.click();
     	
     	waitForElement(Edit_SysType);
-    	Edit_SysType.sendKeys("Standard Epic");
+    	Edit_SysType.sendKeys("Standard Epic"); //Standard Epic
     	
     	waitForElement(Edit_Service);
     	Edit_Service.sendKeys("Collections");
@@ -1117,7 +1139,7 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
        	waitForElement1(Click_InterestGrp);
        	click_element1(Click_InterestGrp);
 
-		
+/////////////		
 		waitForElement(Click_Subacc);
 		Click_Subacc.click();
 		
@@ -1128,34 +1150,34 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
 		
 		Thread.sleep(2000);
 		
-		Edit_SubAcName.clear();
-		
-		waitForElement(Edit_SubAcName);
-		
-		Edit_SubAcName.sendKeys("XAcc0001");
-		
-		Thread.sleep(2000);
-		
-		Edit_ForcedRef.clear();
-		
-		waitForElement(Edit_ForcedRef);
-		
-		Edit_ForcedRef.sendKeys("X0001");
-		
-		Thread.sleep(2000);
-		
-		Edit_SubAccCode.clear();
-		
-		waitForElement(Edit_SubAccCode);
-	
-		Edit_SubAccCode.sendKeys("X0001");
-		
-		Thread.sleep(2000);
-	
-		waitForElement(Click_Save_SubAcc);
-		Click_Save_SubAcc.click();
-		
-		Thread.sleep(8000);
+//		Edit_SubAcName.clear();
+//		
+//		waitForElement(Edit_SubAcName);
+//		
+//		Edit_SubAcName.sendKeys("XAcc0001");
+//		
+//		Thread.sleep(2000);
+//		
+//		Edit_ForcedRef.clear();
+//		
+//		waitForElement(Edit_ForcedRef);
+//		
+//		Edit_ForcedRef.sendKeys("X0001");
+//		
+//		Thread.sleep(2000);
+//		
+//		Edit_SubAccCode.clear();
+//		
+//		waitForElement(Edit_SubAccCode);
+//	
+//		Edit_SubAccCode.sendKeys("X0001");
+//		
+//		Thread.sleep(2000);
+//	
+//		waitForElement(Click_Save_SubAcc);
+//		Click_Save_SubAcc.click();
+//		
+//		Thread.sleep(8000);
 		
 		waitForElement(Click_LinkSystems);
 		Click_LinkSystems.click();	
@@ -1197,7 +1219,7 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
 
     	Thread.sleep(5000);
         
-        Edi_Username.sendKeys("idahm");
+        Edi_Username.sendKeys("thenjiwem");
         Edi_Password.sendKeys("P@ssw0rd");
         Btn_Loginbtn.click();
         
@@ -1219,6 +1241,7 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
     	waitForElement(Edi_EntitySearch);
     	
     	String Entity_Name3=getData("EntityName","story1",1);
+    	Thread.sleep(4000);
     	Edi_EntitySearch.sendKeys(Entity_Name3);
     	waitForElement(Btn_Search);
     	Btn_Search.click();
@@ -1420,7 +1443,7 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
 			Thread.sleep(3000);
 			
 			waitForElement(Edi_Username);	           
-            Edi_Username.sendKeys("charlc");
+            Edi_Username.sendKeys("grantd");
             //arleneg
             Edi_Password.sendKeys("P@ssw0rd");
             Btn_Loginbtn.click();
@@ -1477,9 +1500,9 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
 			waitForElement(Click_Yes2);
 			Click_Yes2.click();
 			
-			Thread.sleep(10000);
-			
-			taskid= DBConnection.dbConnect();
+//			Thread.sleep(10000);
+//			
+//			taskid= DBConnection.dbConnect();
 			Thread.sleep(3000);
 			
 			waitForElement(Btn_logout);
@@ -1489,5 +1512,6 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
 
         
 	}
+	
 }
 	 

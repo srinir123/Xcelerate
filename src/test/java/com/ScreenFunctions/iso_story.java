@@ -1,4 +1,4 @@
-package com.ScreenFunctions;
+package com.ScreenFunctions;	
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 import com.GenericFunctions.DBConnection;
+import com.GenericFunctions.DBConnectionNEW;
 import com.GenericFunctions.GenericMethods;
 
 public class iso_story extends GenericMethods{
@@ -205,7 +206,7 @@ public class iso_story extends GenericMethods{
         String MobilePhone=getData("MobilePhone","story1",4);
 
 		Edi_MobilePhone.sendKeys(MobilePhone);
-
+           
         String Fax=getData("Fax","story1",4);
 
 		Edi_Fax.sendKeys(Fax);

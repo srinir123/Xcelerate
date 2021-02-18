@@ -3,6 +3,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.GenericFunctions.GenericMethods;
+import com.ScreenFunctions.Authorization_Journal;
 import com.ScreenFunctions.Dashboard;
 import com.ScreenFunctions.Journals;
 import com.ScreenFunctions.Login;
@@ -18,9 +19,14 @@ public class Tc_08_Journals extends GenericMethods{
 
          Journals jnls=PageFactory.initElements(driver, Journals.class );
 
+         Authorization_Journal aj=PageFactory.initElements(driver, Authorization_Journal.class );
+         
 		lgn.launch_Application();
         jnls.Journals();		
 		Thread.sleep(5000);
+		lgn.launch_Application10();
+		aj.Authorization_Journal();
+		
 
 	}
 

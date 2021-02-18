@@ -126,7 +126,7 @@ public class FinancialRelease extends GenericMethods{
         waitForElement(Click_BtnSearch);
         Click_BtnSearch.click();
         
-        Thread.sleep(6000);
+        Thread.sleep(12000);
  //Row1       
         waitForElement(Row1);
         Row1.click();
@@ -226,7 +226,7 @@ Row9.click();
 Thread.sleep(6000);
 System.out.println("Row9");
 waitForElement(GetData_ServiceChannel);
-String expectedData9 = "XHost5678";
+String expectedData9 = "FNB Online";
 System.out.println("Expected Results is:");
 System.out.println(expectedData9);
 String data9 = driver.findElement(By.xpath("//*[@id='transactionDetails']/fieldset/div[4]/div[4]/input")).getAttribute("value");
@@ -320,7 +320,7 @@ Row11.click();
 Thread.sleep(6000);
 System.out.println("Row11");
 waitForElement(GetData_ServiceChannel);
-String expectedData11n = "FNB Online";
+String expectedData11n = "XHost5678";
 System.out.println("Expected Results is:");
 System.out.println(expectedData11n);
 String data11n = driver.findElement(By.xpath("//*[@id='transactionDetails']/fieldset/div[4]/div[4]/input")).getAttribute("value");

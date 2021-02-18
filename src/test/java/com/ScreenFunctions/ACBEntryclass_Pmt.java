@@ -71,19 +71,19 @@ public class ACBEntryclass_Pmt extends GenericMethods{
 	
 
 	
-//	  waitForElement(Click_Paramm);
-//	
-//	if(Click_Paramm.isDisplayed())
-//	{
-//		System.out.println("Clicking on entity search");
-//		
-//		Actions acc=new Actions(driver);
-//		
-//		acc.moveToElement(Click_Paramm).click(Click_Paramm).build().perform();
-//		Click_Paramm.click();
-//	}
-//
-//	Thread.sleep(6000);
+	  waitForElement(Click_Paramm);
+	
+	if(Click_Paramm.isDisplayed())
+	{
+		System.out.println("Clicking on entity search");
+		
+		Actions acc=new Actions(driver);
+		
+		acc.moveToElement(Click_Paramm).click(Click_Paramm).build().perform();
+		Click_Paramm.click();
+	}
+
+	Thread.sleep(6000);
 
 	
 	waitForElement1(Click_ACBEntryClass);

@@ -12,11 +12,12 @@ public class newconnection_Pwdreset extends GenericMethods {
 	   try {
 	 	  
 	 	  	  
-	 	  String url="jdbc:sqlserver://172.20.92.20:1433;databaseName=Xcelerate";
-	 	  
-	 	  String username="Peter";
-	 	  
-	 	  String password="P@ssw0rd";
+		 	  String url="jdbc:sqlserver://sa-igmsqlx.solarsystem.ioh.co.za;databaseName=xcelerate";
+		   //String url="jdbc:sqlserver://172.21.91.5;databaseName=xcelerate_UAT";
+		 	  
+		 	  String username= "Peter";//"xdev";// sa 
+		 	  
+		 	  String password="P@ssw0rd";//L0c@lAdm1n
 	       
 	 	  Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 	      Connection conn = DriverManager.getConnection(url,username, password);

@@ -1,5 +1,10 @@
-         <class name="com.TestScripts.STORY1"/> 
+         
          <class name="com.TestScripts.ISO_Story"/> 
+         <class name="com.TestScripts.Tc_08_Journals"/>
+         <class name="com.TestScripts.Tc_15_Recall_Collection"/>
+         
+         
+         <class name="com.TestScripts.STORY1"/> 
           
           <class name="com.TestScripts.Tc_01_ManualcaptureCollection"/>
           <class name="com.TestScripts.Tc_02_ManualcapturePayment"/> 
@@ -25,8 +30,8 @@
           <class name="com.TestScripts.Tc_22_ISOPAIN_Fintegrate_Project"/> 
           <class name="com.TestScripts.Tc_23_FeeTest"/> 
           <class name="com.TestScripts.Tc_25_QuoteCreation"/> 
-  <class name="com.TestScripts.Tc_26_ISO_B2BSetup"/>
-            <class name="com.TestScripts.Tc_27_AcbEntryclassSetup"/>
+          <class name="com.TestScripts.Tc_26_ISO_B2BSetup"/>
+          <class name="com.TestScripts.Tc_27_AcbEntryclassSetup"/>
           
           <class name="com.TestScripts.Tc_01_ManualcaptureCollection_MUMD"/>  
           <class name="com.TestScripts.Tc_01_ManualcaptureCollection_SUMD"/>
