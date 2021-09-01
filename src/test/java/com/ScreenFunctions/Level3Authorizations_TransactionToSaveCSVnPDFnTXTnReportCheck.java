@@ -174,7 +174,7 @@ public class Level3Authorizations_TransactionToSaveCSVnPDFnTXTnReportCheck exten
 	@FindBy(how=How.XPATH,using="//*[@id='fileTabtab']")
 	public static WebElement Tab_Importfiles;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='filesGrid']/tbody/tr/td")
+	@FindBy(how=How.XPATH,using="//*[@id='filesGrid']/tbody/tr[last()]/td[1]") //*[@id='filesGrid']/tbody/tr/td[1]
 	public static WebElement Click_fileImp;
 	
 	
@@ -223,6 +223,8 @@ public class Level3Authorizations_TransactionToSaveCSVnPDFnTXTnReportCheck exten
 		
 		waitForElement(Tab_Importfiles);
 		Tab_Importfiles.click();
+		
+		Thread.sleep(2000);
 		
 		waitForElement(Click_fileImp);
 		Click_fileImp.click();
@@ -369,6 +371,9 @@ public class Level3Authorizations_TransactionToSaveCSVnPDFnTXTnReportCheck exten
 
 		LogEvent("Pass","The Transaction has been Saved to TXT, PDF and CSV sucessfully");
 		 System.out.println("The Transaction has been Saved to TXT, PDF and CSV sucessfully");
+		 
+			waitForElement(Btn_logout);
+			Btn_logout.click();	
 //		driver.quit();
 }
 }

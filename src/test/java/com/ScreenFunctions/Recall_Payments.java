@@ -1,4 +1,9 @@
 package com.ScreenFunctions;
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.ArrayList;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -6,6 +11,7 @@ import org.openqa.selenium.support.How;
 
 import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
+import com.sun.xml.bind.v2.schemagen.xmlschema.List;
 
 public class Recall_Payments extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Transaction Search']")
@@ -65,6 +71,9 @@ public class Recall_Payments extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='manualTransactionGrid']/tbody/tr[1]/td[9]/button[1]/i")
 	public static WebElement Click_Notes;
 	
+	@FindBy(how=How.XPATH,using="	(//*[@id='btnNote']/i)[1]")
+	public static WebElement Click_Notes1;
+	
 	@FindBy(how=How.XPATH,using="//*[@id='btnNewNote']")
 	public static WebElement Click_AddNotes;
 	
@@ -86,16 +95,36 @@ public class Recall_Payments extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='TransactionStatusID']/option[8]")
 	public static WebElement Edit_TransStatus;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='vPaymentsTotal']/ul/li/div[1]/span[1]")
+	public static WebElement DoubleClick;
+	
+	@FindBy(how=How.XPATH,using="(//*[@id='recallSingleTransaction'])[1]")
+	public static WebElement recallFromGroup ;
+	
+	
+	
+	
 	
 	
 	
 	public static String taskid;
 	
-	
+
 	
 	
 	public static void Recall_Payments() throws Exception 
-	{  waitForElement(Click_TransactionSearch);
+	{	
+//		LocalDate currentDay = LocalDate.now();     
+//		
+//		System.out.println(currentDay);
+//		
+//		Set_fromActionDate.submit();
+
+		
+
+		
+	
+	  waitForElement(Click_TransactionSearch);
 	
 	if(Click_TransactionSearch.isDisplayed())
 	{
@@ -107,10 +136,19 @@ public class Recall_Payments extends GenericMethods{
 		Click_TransactionSearch.click();
 	}
 	
-		waitForElement1(Set_fromActionDate);
-		Set_fromActionDate.click();
-		Click_oldperiod.click();
-		Click_oldperiod.click();
+
+
+	
+
+		
+					
+			
+			waitForElement1(Set_fromActionDate);
+			Set_fromActionDate.click();
+Click_oldperiod.click();
+Click_oldperiod.click();
+		
+		 
 		
 
 		Click_ActionDate.click();
@@ -136,6 +174,8 @@ public class Recall_Payments extends GenericMethods{
 
 		}
         Thread.sleep(2000);
+        
+        
 		try
 		{
 			waitForElement(Click_Recallbtn);
@@ -143,11 +183,50 @@ public class Recall_Payments extends GenericMethods{
 			
 			Thread.sleep(2000);
 			
-			waitForElement(Click_Recallbtn);
-			Click_Recallbtn.click();
+//			waitForElement(Click_Recallbtn);
+//			Click_Recallbtn.click();
+//			
+//			Thread.sleep(2000);		
+			try
+			{
+performDBLCLICK(DoubleClick);
+Thread.sleep(2000);	
+//recallFromGroup.click();
+//Thread.sleep(2000);	
+//Click_ok.click();
+//Thread.sleep(2000);	
+Click_Notes1.click();
+Thread.sleep(2000);	
+Click_AddNotes.click();
+Thread.sleep(2000);	
+Edit_Notesname.sendKeys("test");
+Thread.sleep(2000);	
+Edit_NotesDetails.sendKeys("test");
+Thread.sleep(2000);	
+Click_Save.click();
+Thread.sleep(2000);	
+Click_Close.click();
+Thread.sleep(2000);	
+Btn_Recall.click();
+Thread.sleep(2000);	
+Btn_Yes.click();
+				}
 			
-			waitForElement(Click_ok);
-			Click_ok.click();
+			catch (Exception e)
+			{
+
+			}
+			
+		Thread.sleep(2000);
+			
+//			waitForElement(Click_Recallbtn);
+//			Click_Recallbtn.click();		
+//			
+//			
+//			
+//			
+//			waitForElement(Click_ok);
+//			Click_ok.click();
 			
 			waitForElement(Click_Notes);
 			Click_Notes.click();
@@ -172,6 +251,9 @@ public class Recall_Payments extends GenericMethods{
 			
 			
 			waitForElement(Btn_Recall);
+			
+			Click_ok.click();
+			Thread.sleep(2000);	
 
 
 			Btn_Recall.click();

@@ -16,6 +16,7 @@ import org.openqa.selenium.support.How;
 import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.DBConnection1;
 import com.GenericFunctions.GenericMethods;
+import com.GenericFunctions.GetDateinJava;
 import com.GenericFunctions.NewDBConnection_OTP_Story1;
 
 public class FissionTest extends GenericMethods{
@@ -783,6 +784,8 @@ Click_Save3.click();
 waitForElement(Btnt_Yes1);
 Btnt_Yes1.click();
 
+Thread.sleep(2000);
+
 waitForElement(Click_Contactppl);
 Click_Contactppl.click();
 
@@ -814,7 +817,7 @@ catch (Exception e)
 waitForElement(Click_Save4);
 Click_Save4.click();
 
-Thread.sleep(4000);
+Thread.sleep(5000);
 
 
 waitForElement(Click_Close);

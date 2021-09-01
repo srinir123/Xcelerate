@@ -22,6 +22,13 @@ public class Authorization_MCP_ISOStory extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
 	public static WebElement Btn_logout;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='fileTabtab']")
+	public static WebElement Tab_Importfiles;
+
+	@FindBy(how=How.XPATH,using="//*[@id='filesGrid']/tbody/tr/td")
+	public static WebElement Click_fileImp;
+
+	
 	
 	
 	
@@ -38,6 +45,31 @@ public class Authorization_MCP_ISOStory extends GenericMethods{
 		Thread.sleep(15000);
 		
 		driver.findElement(By.xpath("//td[text()='"+CollPeriodBalances_MCP_ISO_Story.taskid+"']")).click();
+	
+		
+//		//Level 2 Import auth
+//Thread.sleep(2000);
+//
+//		
+//		waitForElement(Tab_Importfiles);
+//		Tab_Importfiles.click();
+//		
+//		waitForElement(Click_fileImp);
+//		Click_fileImp.click();
+//		
+//		waitForElement(Click_btnProcess);
+//		Click_btnProcess.click();
+//		
+//		Thread.sleep(2000);
+//		waitForElement(Click_Yes);
+//		Click_Yes.click();
+//
+//		Thread.sleep(4000);
+//		
+//		//Level 2 Import auth finished
+		
+		waitForElement(Click_ManualTab);
+		Click_ManualTab.click();
 
 		waitForElement(Click_btnProcess);
 		Click_btnProcess.click();

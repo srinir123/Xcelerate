@@ -189,7 +189,7 @@ public class Login extends GenericMethods {
 		public static void launch_Application2()
 		{
 			waitForElement(Edi_Username);	           
-            Edi_Username.sendKeys("hermanv");
+            Edi_Username.sendKeys("hermanv"); 
             Edi_Password.sendKeys("P@ssw0rd");
             Btn_Loginbtn.click();
 									
@@ -241,7 +241,7 @@ public class Login extends GenericMethods {
 		public static void launch_Application9()
 		{
 			waitForElement(Edi_Username);	           
-            Edi_Username.sendKeys("sophies");
+            Edi_Username.sendKeys("lindiwem");   //sophies
             Edi_Password.sendKeys("P@ssw0rd");
             Btn_Loginbtn.click();
 									
@@ -297,7 +297,7 @@ public class Login extends GenericMethods {
 		public static void launch_Application16()
 		{
 			waitForElement(Edi_Username);	           
-            Edi_Username.sendKeys("buliz");
+            Edi_Username.sendKeys("sophies");  //buliz
             //arleneg
             Edi_Password.sendKeys("P@ssw0rd");
             Btn_Loginbtn.click();

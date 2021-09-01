@@ -746,7 +746,7 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
         Btnt_YesSLE.click();
 
                         
-       Thread.sleep(40000);
+       Thread.sleep(25000);
         Btn_NextLE.click();
         
         waitForElement(Btn_subYes);
@@ -1219,7 +1219,7 @@ public class NewEntityCreation_ISOStory extends GenericMethods{
 
     	Thread.sleep(5000);
         
-        Edi_Username.sendKeys("thenjiwem");
+        Edi_Username.sendKeys("idahm");
         Edi_Password.sendKeys("P@ssw0rd");
         Btn_Loginbtn.click();
         

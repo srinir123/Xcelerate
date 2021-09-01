@@ -33,6 +33,8 @@ public static Fillo fillo;
 
 public static Connection connection;
 
+// Usefull methods 1. performDBLCLICK 2. waitUntilPageLoaded 3.waitForElement1 4.waitForElement12 5.click_element 6.click_element1
+
 
 
 	
@@ -60,7 +62,9 @@ public static Connection connection;
 		
 		
 	}
+
 	
+
 	public static void LaunchBrowser2(String browser)
 	{
 		switch(browser.toLowerCase())

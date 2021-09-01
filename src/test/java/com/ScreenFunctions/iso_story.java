@@ -154,9 +154,10 @@ public class iso_story extends GenericMethods{
 		
 		//Click_EntitySearch.click();
 		waitForElement(Edi_EntitySearch);
-		Edi_EntitySearch.sendKeys("Insure group managers");
+		Edi_EntitySearch.sendKeys("Qsure");
 		waitForElement(Btn_Search);
 		Btn_Search.click();
+		Thread.sleep(3000);
 		waitForElement(Click_SearchResults);
 		Click_SearchResults.click();
 		waitForElement(Btn_Open);
@@ -337,7 +338,7 @@ public class iso_story extends GenericMethods{
         
         System.out.println(taskid);
         
-        //Task.put(FirstName+Surname.substring(0, 1),taskid);
+
         
         //zoom.add(taskid);
 

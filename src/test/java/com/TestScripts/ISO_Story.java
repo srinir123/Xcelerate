@@ -43,11 +43,6 @@ import com.ScreenFunctions.SecondNewEntityCreation_Story1;
 import com.ScreenFunctions.iso_story;
 import com.ScreenFunctions.story1;
 
-
-
-
-
-
 public class ISO_Story extends GenericMethods
 {
 
@@ -136,19 +131,7 @@ FissionTest ft=PageFactory.initElements(driver, FissionTest.class);
 
 
 
-
- 	
-//****************New User Creation*********************Password reset is an issue in Prod only
-//lgn.launch_Application();
-//Thread.sleep(2000);
-//Is.iso_story();
-//lgn1.launch_Application2();
-//Anu.Authorization_NewUser_ISO_Story();
-//nbc.NewB2BUserCreation_ISO_Story();
-													
-//
-////****************New B2B Setup*********************
-//
+////****************New B2B Setup*********************Currently not using
 //lgn1.launch_Application11();
 //b2bc.B2BSetup_CollectionXSD();
 //nsc.NewServiceChannel_ISO_Story();
@@ -156,57 +139,71 @@ FissionTest ft=PageFactory.initElements(driver, FissionTest.class);
 //b2bp.B2BSetup_PaymentXSD();
 //acbp.ACBEntryclass_Pmt();
 //ab2b.AddNewB2BUser_ISO_Story();
-//
-//
-////****************New Entity Creation*********************
-//
-//lgn1.launch_Application14();
-//nec.NewEntityCreation_ISOStory();
 
+
+//******************This is part of Entity creation but not using currently******************* 
 /////////igsb.InterestGroupNSubAccount_Creation();   
 
-////****************Transactions and Authorization*********************
+
+
+
+
+
+
+ 	
+
+//lgn.launch_Application(); ////****************New User Creation*********************
+//Thread.sleep(2000);
+//Is.iso_story();
+//lgn1.launch_Application2();
+//Anu.Authorization_NewUser_ISO_Story();
+//nbc.NewB2BUserCreation_ISO_Story();
 //
-//lgn1.launch_Application9();
+//
+//lgn1.launch_Application14();   ////****************New Entity Creation*********************
+//nec.NewEntityCreation_ISOStory();
+
+
+
+//lgn1.launch_Application9();  ////****************Transactions and Authorization*********************
 //cis.CollectionImport_ISO_Story();
 //rcif.Review_CImportfiles();
 //lgn1.launch_Application16();
-//authcimport.Authorization_CollImport_ISOStory();
+//authcimport.Authorization_CollImport_ISOStory();   
+//lgn1.launch_Application9();
+//pis.PaymentImport_ISO_Story();
+//rpif.Review_PImportfiles();
+//lgn1.launch_Application6();
+//authpimport.Authorization_PmtImport_ISOStory();  //issue to authorize
 lgn1.launch_Application9();
-pis.PaymentImport_ISO_Story();
-rpif.Review_PImportfiles();
-lgn1.launch_Application6();
-authpimport.Authorization_PmtImport_ISOStory();
-lgn1.launch_Application9();
-mcc.CollPeriodBalances_MCC_ISO_Story();
+//mcc.CollPeriodBalances_MCC_ISO_Story();
 npi.NominatedPayments_ISO_Story();
 mcp.CollPeriodBalances_MCP_ISO_Story();
 lgn1.launch_Application6();
 amcp.Authorization_MCP_ISOStory();
 lgn1.launch_Application7();  
 trnchk.Level3Authorizations_TransactionToSaveCSVnPDFnTXTnReportCheck();      
-lgn1.launch_Application9();
-j.Journal_ISO_Story();
-lgn1.launch_Application6();
-aj.Authorization_Journal();
-lgn1.launch_Application9();
-r.Recall_Payments();
-lgn1.launch_Application6();
-ar.Autorization_Recall();
-//lgn1.launch_Application7(); 														// Thead to authorize level import and manual capture payments also 
-//ft.FissionTest();
-////
-////****************Financial Release*******************
-// 
 //lgn1.launch_Application9();
-//trnchk.TransactionToSaveCSVnPDFnTXTnReportCheck();
-//
+//j.Journal_ISO_Story();
+//lgn1.launch_Application6();
+//aj.Authorization_Journal(); //can't do due to 0 balance
+//lgn1.launch_Application9();
+//r.Recall_Payments();
+//lgn1.launch_Application6();
+//ar.Autorization_Recall();
+
+
+//*****************Fission Test************************
+//lgn1.launch_Application7(); 										
+//ft.FissionTest();
+
+
+////****************Financial Release*******************
 //lgn1.launch_Application3();
 //fs.FinancialRelease();
-//
 //lgn1.launch_Application15();
 //bbc.BankBatchCreation();
-////////
+
 
 
 

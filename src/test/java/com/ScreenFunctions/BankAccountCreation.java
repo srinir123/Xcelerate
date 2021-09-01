@@ -130,6 +130,9 @@ public class BankAccountCreation extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='resultsGrid']/thead/tr/th[1]/div")
 	public static WebElement Click_PacsuserHeader;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='resultsGrid']/tbody/tr[last()]/td[1]")
+	public static WebElement Click_PacsuserHeader1;
+	
 	@FindBy(how=How.XPATH,using="//*[@id='resultsGrid']/tbody/tr[1]/td[1]")
 	public static WebElement Click_PacsuserCode;
 	
@@ -150,6 +153,10 @@ public class BankAccountCreation extends GenericMethods{
 	
 	@FindBy(how=How.XPATH,using="//*[text()= 'Yes']")
 	public static WebElement btn_Yes;
+
+	@FindBy(how=How.XPATH,using="//*[@id='AbbreviatedReference']")
+	public static WebElement Edit_Abbref;
+	//*[@id="AbbreviatedReference"]
 	
 	
 	
@@ -167,7 +174,7 @@ public class BankAccountCreation extends GenericMethods{
 	
 	if(Click_Paramaintenance.isDisplayed())
 	{
-		System.out.println("Clicking on entity search");
+		System.out.println("Clicking on Paramaintenance search");
 		
 		Actions acc=new Actions(driver);
 		
@@ -220,9 +227,7 @@ public class BankAccountCreation extends GenericMethods{
 		waitForElement(Btn_Yes1);
 		Btn_Yes1.click();
 		
-		
-		
-		
+			
 		
 		waitForElement(Click_EntitySearch);
 
@@ -238,6 +243,7 @@ public class BankAccountCreation extends GenericMethods{
 
 		waitForElement(Edi_EntitySearch);
 
+		Thread.sleep(3000);
 		Edi_EntitySearch.sendKeys("Insure group");
 		waitForElement(Btn_Search);
 		Btn_Search.click();
@@ -336,6 +342,9 @@ public class BankAccountCreation extends GenericMethods{
 
 		Edi_CreAgreeLim.sendKeys(CreAgreeLim);
 		
+		waitForElement(Edit_Abbref);
+		Edit_Abbref.sendKeys("test");
+		
 		waitForElement(Radio_dailyCr);
 		Radio_dailyCr.click();
 	
@@ -391,6 +400,12 @@ public class BankAccountCreation extends GenericMethods{
 		btn_Save.click();
 		waitForElement(btn_Yes);
 		btn_Yes.click();
+
+		
+		//trial
+		waitForElement(Click_PacsuserHeader1);
+		Click_PacsuserHeader1.click();
+		Click_PacsuserCode.click();
 		
 		
 		waitForElement(Dropd_ServiceId);
@@ -415,7 +430,7 @@ public class BankAccountCreation extends GenericMethods{
 		btn_Yes.click();
 		
 		
-		//Thread.sleep(2000);
+		Thread.sleep(2000);
 		
 		
 		

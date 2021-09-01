@@ -36,7 +36,7 @@ public class Authorization_PmtImport_ISOStory extends GenericMethods{
 	{   
 		Thread.sleep(3000);
 		System.out.println(Review_PImportfiles.taskid);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 		
 		driver.findElement(By.xpath("//td[text()='"+Review_PImportfiles.taskid+"']")).click();
 		
