@@ -19,9 +19,7 @@ public class Authorization1_MCC extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[@id='btnLogout2']")
 	public static WebElement Btn_logout;
 	
-	
-	
-	public static String taskid;
+		public static String taskid;
 
 	
 	
