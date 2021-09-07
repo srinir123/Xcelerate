@@ -22,7 +22,6 @@ public class Authorization1_MCC extends GenericMethods{
 		public static String taskid;
 
 	
-	
 
 	public static void Authorization1_MCC() throws Exception 
 	{   
