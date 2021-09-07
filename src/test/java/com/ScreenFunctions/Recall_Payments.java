@@ -11,7 +11,7 @@ import org.openqa.selenium.support.How;
 
 import com.GenericFunctions.DBConnection;
 import com.GenericFunctions.GenericMethods;
-import com.sun.xml.bind.v2.schemagen.xmlschema.List;
+//import com.sun.xml.bind.v2.schemagen.xmlschema.List;
 
 public class Recall_Payments extends GenericMethods{
 	@FindBy(how=How.XPATH,using="//*[text()= 'Transaction Search']")

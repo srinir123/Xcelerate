@@ -1,9 +1,4 @@
 package com.ScreenFunctions;	
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 import com.GenericFunctions.DBConnection;
-import com.GenericFunctions.DBConnectionNEW;
 import com.GenericFunctions.GenericMethods;
 
 public class iso_story extends GenericMethods{

@@ -20,7 +20,7 @@ public class DBConnectionNEW extends GenericMethods {
 		     
 		   
 	
-		   if(URL3.equals("jdbc:sqlserver://172.21.91.5;databaseName=xcelerate_UAT")) {
+		   if(URL3.equals("jdbc:sqlserver://172.21.90.16;databaseName=xcelerate_PROD")) {
 			   
 	           	 //System.out.println("Test result is: Failed!");
 			   //String url1="jdbc:sqlserver://172.21.91.5;databaseName=xcelerate_UAT";
@@ -54,7 +54,7 @@ public class DBConnectionNEW extends GenericMethods {
 		           {     	 System.out.println("Not Connected!");
 		           }
 	
-		   if(!URL3.equals("jdbc:sqlserver://172.21.91.5;databaseName=xcelerate_UAT")) {
+		   if(!URL3.equals("jdbc:sqlserver://172.21.90.16;databaseName=xcelerate_PROD")) {
 				    	
 				    	   String url2="jdbc:sqlserver://sa-igmsqlx.solarsystem.ioh.co.za;databaseName=xcelerate";
 					 	  

@@ -21,7 +21,7 @@ public class NewDBConnection_OTP_ISOStory extends GenericMethods {
 	 	  
 	 	  	  
 		 	//String url="jdbc:sqlserver://sa-igmsqlx.solarsystem.ioh.co.za;databaseName=xcelerate";
-		 	 String url="jdbc:sqlserver://172.21.91.5;databaseName=xcelerate_UAT";
+		 	 String url="jdbc:sqlserver://172.21.90.16;databaseName=xcelerate_PROD";
 		 	  String username="Peter";
 		 	  
 		 	  String password="P@ssw0rd";

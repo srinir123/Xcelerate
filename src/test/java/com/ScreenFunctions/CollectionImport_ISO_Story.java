@@ -149,7 +149,7 @@ public class CollectionImport_ISO_Story extends GenericMethods{
 //		waitForElement(btn_CollImportFile);	
 //		btn_CollImportFile.click();
 		Thread.sleep(2000);
-		String[]cmd={"Collectionattachment.exe","C:\\Users\\srinir.SOLARSYSTEM\\Desktop\\Sample Transactions\\Large file processing\\2 records file_new.csv"}; 
+		String[]cmd={"Collectionattachment.exe","C:\\Users\\SriniR\\OneDrive - Q Sure Hosting\\Desktop\\Sample Transactions\\Large file processing\\Sample Transactions\\Large file processing\\Collecton file.csv"}; 
 
 		Process autoitprocess=Runtime.getRuntime().exec(cmd);
         

@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,8 +20,9 @@ import com.codoid.products.fillo.Recordset;
 
 public class GenericMethods extends GenerateReports {
 //UAT	
+//public static  String UAT_url="http://https://www.bing.com/search?q=java+runtime+environment&cvid=5fd4633e8b024fd3b2faa8a77e2d093c&aqs=edge.6.69i59i450l7.77509293j0j1&FORM=ANSPA1&PC=U531";
 //public static  String UAT_url="http://172.21.91.7/Login/LogOn?ReturnUrl=%2f";
-public static  String UAT_url="http://sa-igmappx.solarsystem.ioh.co.za/Login/LogOn?ReturnUrl=%2f";
+public static  String UAT_url="http://sa-qsuredevappx/";
 //public static  String UAT_url="http://172.21.91.6/Login/LogOn?ReturnUrl=%2f";
 //DEV
 //public static  String UAT_url="http://172.20.92.22:81/smi-31249/Login/LogOn?ReturnUrl=%2f";
@@ -48,8 +50,14 @@ public static Connection connection;
 		{
 		case "chrome":
 			
-			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-			driver=new ChromeDriver();
+//			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//			driver=new ChromeDriver();
+			// Set the driver path
+			System.setProperty("webdriver.edge.driver", "msedgedriver.exe");
+
+			// Start Edge Session
+			driver = new EdgeDriver();
+			
 			driver.manage().window().maximize();
 			driver.get(UAT_url);
 			

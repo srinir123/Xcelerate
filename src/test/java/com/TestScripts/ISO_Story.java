@@ -152,12 +152,12 @@ FissionTest ft=PageFactory.initElements(driver, FissionTest.class);
 
  	
 
-//lgn.launch_Application(); ////****************New User Creation*********************
-//Thread.sleep(2000);
-//Is.iso_story();
-//lgn1.launch_Application2();
-//Anu.Authorization_NewUser_ISO_Story();
-//nbc.NewB2BUserCreation_ISO_Story();
+lgn.launch_Application7(); ////****************New User Creation*********************
+Thread.sleep(2000);
+Is.iso_story();
+lgn1.launch_Application2();
+Anu.Authorization_NewUser_ISO_Story();
+nbc.NewB2BUserCreation_ISO_Story();
 //
 //
 //lgn1.launch_Application14();   ////****************New Entity Creation*********************
@@ -175,14 +175,14 @@ FissionTest ft=PageFactory.initElements(driver, FissionTest.class);
 //rpif.Review_PImportfiles();
 //lgn1.launch_Application6();
 //authpimport.Authorization_PmtImport_ISOStory();  //issue to authorize
-lgn1.launch_Application9();
+//lgn1.launch_Application9();
 //mcc.CollPeriodBalances_MCC_ISO_Story();
-npi.NominatedPayments_ISO_Story();
-mcp.CollPeriodBalances_MCP_ISO_Story();
-lgn1.launch_Application6();
-amcp.Authorization_MCP_ISOStory();
-lgn1.launch_Application7();  
-trnchk.Level3Authorizations_TransactionToSaveCSVnPDFnTXTnReportCheck();      
+//npi.NominatedPayments_ISO_Story();
+//mcp.CollPeriodBalances_MCP_ISO_Story();
+//lgn1.launch_Application6();
+//amcp.Authorization_MCP_ISOStory();
+//lgn1.launch_Application7();  
+//trnchk.Level3Authorizations_TransactionToSaveCSVnPDFnTXTnReportCheck();      
 //lgn1.launch_Application9();
 //j.Journal_ISO_Story();
 //lgn1.launch_Application6();
