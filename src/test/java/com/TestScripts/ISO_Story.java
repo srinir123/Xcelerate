@@ -154,6 +154,7 @@ FissionTest ft=PageFactory.initElements(driver, FissionTest.class);
 
 lgn.launch_Application7(); ////****************New User Creation*********************
 Thread.sleep(2000);
+Thread.sleep(2000);
 Is.iso_story();
 lgn1.launch_Application2();
 Anu.Authorization_NewUser_ISO_Story();
